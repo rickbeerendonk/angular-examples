@@ -3,5 +3,15 @@
   "version": "0.1.0",
   "description": "Examples for Angular",
   "author": "Rick Beerendonk",
-  "license": "MPL-2.0"
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/rickbeerendonk/angular-examples/issues"
+  },
+  "homepage": "https://github.com/rickbeerendonk/angular-examples#readme",
+  "scripts": {
+    "openserver": "node \"./Util 01 - Static File Server/static-file-server.js\" 8080"
+  },
+  "dependencies": {
+    "mime-types": "^2.1.17"
+  }
 }
