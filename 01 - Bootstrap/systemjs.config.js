@@ -36,6 +36,7 @@ System.config({
   },
   transpiler: 'ts',
   typescriptOptions: {
+    module: 'system',
     tsconfig: true
   }
 });
