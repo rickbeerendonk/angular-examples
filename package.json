@@ -16,6 +16,7 @@
     "openserver": "node \"./Util 01 - Static File Server/static-file-server.js\" 8070"
   },
   "devDependencies": {
+    "@types/node": "^9.4.6",
     "@types/systemjs": "^0.20.6"
   },
   "dependencies": {
