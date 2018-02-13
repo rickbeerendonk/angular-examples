@@ -16,8 +16,9 @@ System.config({
     '@angular/platform-browser-dynamic': 'npm:@angular/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.js'
   },
   packages: {
-    '.': { 
-      defaultExtension: 'ts' 
+    'app': { 
+      defaultExtension: 'ts',
+      main: './bootstrap.ts'
     },
     'rxjs': { 
       defaultExtension: 'js' 

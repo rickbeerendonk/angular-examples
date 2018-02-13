@@ -26,7 +26,12 @@
 
     <script src="systemjs.config.js"></script>
     <script>
-        System.import('bootstrap.ts').catch(function (err) { console.error(err); } );
+        System.import('app').catch(function (err) {
+            console.error(err); 
+            document.body.style.backgroundColor = 'red'; 
+            document.body.style.color = 'white';
+            document.body.innerText = err;
+        });
     </script>
 </body>
 
