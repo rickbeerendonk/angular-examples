@@ -8,9 +8,12 @@ import Greeting from './GreetingComponent';
 @Component({
   selector: 'app',
   template: `
-  <div data-replace="true">Should be replaced.</div>
-  <br>
-  <div data-replace="false">Should not be replaced.</div>
+  <greeting>Should be replaced.</greeting>
+  <groet>Should be replaced.</groet>
+  <div class="replace">Should be replaced.</div>
+  <div data-replace>Should be replaced.</div>
+  <div data-should-replace="true">Should be replaced.</div>
+  <div>Should not be replaced.</div>
   `
 })
 class AppComponent {

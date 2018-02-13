@@ -9,7 +9,6 @@ import Greeting from './GreetingComponent';
   selector: 'app',
   template: `
   <greeting>Should be replaced.</greeting>
-  <br>
   <div>Should not be replaced.</div>
   `
 })
