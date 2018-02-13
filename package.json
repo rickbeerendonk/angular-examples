@@ -4,14 +4,29 @@
   "description": "Examples for Angular",
   "author": "Rick Beerendonk",
   "license": "MPL-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rickbeerendonk/angular-examples.git"
+  },
   "bugs": {
     "url": "https://github.com/rickbeerendonk/angular-examples/issues"
   },
   "homepage": "https://github.com/rickbeerendonk/angular-examples#readme",
   "scripts": {
-    "openserver": "node \"./Util 01 - Static File Server/static-file-server.js\" 8080"
+    "openserver": "node \"./Util 01 - Static File Server/static-file-server.js\" 8070"
   },
   "dependencies": {
-    "mime-types": "^2.1.17"
+    "@angular/common": "^5.2.4",
+    "@angular/compiler": "^5.2.4",
+    "@angular/core": "^5.2.4",
+    "@angular/platform-browser": "^5.2.4",
+    "@angular/platform-browser-dynamic": "^5.2.4",
+    "core-js": "^2.5.3",
+    "mime-types": "^2.1.17",
+    "plugin-typescript": "8.0.0",
+    "rxjs": "^5.5.6",
+    "systemjs": "0.21.0",
+    "typescript": "2.7.1",
+    "zone.js": "0.8.20"
   }
 }
