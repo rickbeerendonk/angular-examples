@@ -1,0 +1,8 @@
+/*! Mozilla Public License Version 2.0 !*/
+/*! Copyright © 2018 Rick Beerendonk   !*/
+
+/* Style only apply to this component, not the parent nor the child components */
+
+div {
+  color: #d676ff
+}
