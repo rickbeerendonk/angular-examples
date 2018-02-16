@@ -5,7 +5,10 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'greeting',
-  template: '<h1>{{"Hello titlecase PIPE" | titlecase}}</h1>'
+  template: `
+    <h1>
+      {{"Hello titlecase PIPE" | titlecase}}
+    </h1>`
 })
 export class GreetingComponent {
 }
