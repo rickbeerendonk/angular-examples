@@ -15,8 +15,8 @@ import {
 @Component({
   moduleId: __moduleName /* Use __moduleName in SystemJS and module.id in commonjs */,
   selector: 'greeting',
-  templateUrl: 'greeting.component.html',
-  styleUrls: ['greeting.component.css'],
+  templateUrl: './greeting.component.html',
+  styleUrls: ['./greeting.component.css'],
   animations: [
     trigger('componentState', [
       state('normal', style({})),
