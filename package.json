@@ -20,11 +20,12 @@
     "@types/systemjs": "^0.20.6"
   },
   "dependencies": {
-    "@angular/common": "^6.0.0-beta.3",
-    "@angular/compiler": "^6.0.0-beta.3",
-    "@angular/core": "^6.0.0-beta.3",
-    "@angular/platform-browser": "^6.0.0-beta.3",
-    "@angular/platform-browser-dynamic": "^6.0.0-beta.3",
+    "@angular/animations": "^6.0.0-beta.4",
+    "@angular/common": "^6.0.0-beta.4",
+    "@angular/compiler": "^6.0.0-beta.4",
+    "@angular/core": "^6.0.0-beta.4",
+    "@angular/platform-browser": "^6.0.0-beta.4",
+    "@angular/platform-browser-dynamic": "^6.0.0-beta.4",
     "core-js": "^2.5.3",
     "mime-types": "^2.1.17",
     "plugin-typescript": "8.0.0",
