@@ -27,11 +27,11 @@
     "@angular/platform-browser": "^6.0.0-beta.4",
     "@angular/platform-browser-dynamic": "^6.0.0-beta.4",
     "core-js": "^2.5.3",
-    "mime-types": "^2.1.17",
+    "mime-types": "^2.1.18",
     "plugin-typescript": "8.0.0",
     "rxjs": "^5.5.6",
     "systemjs": "0.21.0",
-    "typescript": "2.7.1",
+    "typescript": "2.7.2",
     "zone.js": "0.8.20"
   }
 }
