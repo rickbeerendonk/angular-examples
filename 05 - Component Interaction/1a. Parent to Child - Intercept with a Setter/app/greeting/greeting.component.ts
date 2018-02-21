@@ -10,5 +10,15 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./greeting.component.css']
 })
 export class GreetingComponent {
-  @Input() name: string;
+  private _name: string;
+
+  @Input()
+  set name(name: string) {
+    console.log('GreetingComponent.name = ' + name);
+    this._name = name;
+  }
+
+  get name(): string { 
+    return this._name; 
+  }
 }
