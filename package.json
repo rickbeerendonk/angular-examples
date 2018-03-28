@@ -16,22 +16,22 @@
     "openserver": "node \"./Util 01 - Static File Server/static-file-server.js\" 8070"
   },
   "devDependencies": {
-    "@types/node": "^9.4.7",
+    "@types/node": "^9.6.0",
     "@types/systemjs": "^0.20.6"
   },
   "dependencies": {
-    "@angular/animations": "^6.0.0-beta.7",
-    "@angular/common": "^6.0.0-beta.7",
-    "@angular/compiler": "^6.0.0-beta.7",
-    "@angular/core": "^6.0.0-beta.7",
-    "@angular/platform-browser": "^6.0.0-beta.7",
-    "@angular/platform-browser-dynamic": "^6.0.0-beta.7",
-    "core-js": "^2.5.3",
+    "@angular/animations": "^6.0.0-rc.0",
+    "@angular/common": "^6.0.0-rc.0",
+    "@angular/compiler": "^6.0.0-rc.0",
+    "@angular/core": "^6.0.0-rc.0",
+    "@angular/platform-browser": "^6.0.0-rc.0",
+    "@angular/platform-browser-dynamic": "^6.0.0-rc.0",
+    "core-js": "^2.5.4",
     "mime-types": "^2.1.18",
     "plugin-typescript": "8.0.0",
-    "rxjs": "^5.5.7",
+    "rxjs": "^5.5.8",
     "systemjs": "0.21.0",
-    "typescript": "2.7.2",
+    "typescript": "2.8.1",
     "zone.js": "0.8.20"
   }
 }
