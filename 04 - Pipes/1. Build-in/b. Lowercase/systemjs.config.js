@@ -21,7 +21,11 @@ System.config({
       main: './bootstrap.ts'
     },
     'rxjs': { 
-      defaultExtension: 'js' 
+      defaultExtension: 'js',
+      main: 'index.js',
+      map: {
+        './operators': './operators/index.js'
+      }
     },
     'ts': {
       main: 'lib/plugin.js'
