@@ -20,7 +20,7 @@ import {
   animations: [
     trigger('componentState', [
       state('normal', style({})),
-      state('special',   style({
+      state('special', style({
         backgroundColor: '#d676ff',
         color: '#444',
         transform: 'scale(2) translate(50px, 50px)'
