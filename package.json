@@ -17,23 +17,23 @@
     "openserver_new": "node \"./Util 02 - HTTP and REST servers/server.js\" 8070"
   },
   "devDependencies": {
-    "@types/node": "^10.3.0",
+    "@types/node": "^10.5.2",
     "@types/systemjs": "^0.20.6"
   },
   "dependencies": {
-    "@angular/animations": "^6.0.3",
-    "@angular/common": "^6.0.3",
-    "@angular/compiler": "^6.0.3",
-    "@angular/core": "^6.0.3",
-    "@angular/platform-browser": "^6.0.3",
-    "@angular/platform-browser-dynamic": "^6.0.3",
+    "@angular/animations": "^6.0.9",
+    "@angular/common": "^6.0.9",
+    "@angular/compiler": "^6.0.9",
+    "@angular/core": "^6.0.9",
+    "@angular/platform-browser": "^6.0.9",
+    "@angular/platform-browser-dynamic": "^6.0.9",
     "core-js": "^2.5.7",
     "http-server": "0.11.1",
     "mime-types": "^2.1.18",
     "plugin-typescript": "8.0.0",
-    "rxjs": "^6.2.0",
+    "rxjs": "^6.2.1",
     "systemjs": "^0.21.4",
-    "typescript": "2.9.1",
+    "typescript": "2.9.2",
     "zone.js": "0.8.26"
   }
 }
