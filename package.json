@@ -17,7 +17,7 @@
     "openserver_new": "node \"./Util 02 - HTTP and REST servers/server.js\" 8070"
   },
   "devDependencies": {
-    "@types/node": "^10.5.4",
+    "@types/node": "^10.5.5",
     "@types/systemjs": "^0.20.6"
   },
   "dependencies": {
