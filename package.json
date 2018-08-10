@@ -17,16 +17,16 @@
     "openserver_new": "node \"./Util 02 - HTTP and REST servers/server.js\" 8070"
   },
   "devDependencies": {
-    "@types/node": "^10.5.7",
+    "@types/node": "^10.9.1",
     "@types/systemjs": "^0.20.6"
   },
   "dependencies": {
-    "@angular/animations": "^6.1.2",
-    "@angular/common": "^6.1.2",
-    "@angular/compiler": "^6.1.2",
-    "@angular/core": "^6.1.2",
-    "@angular/platform-browser": "^6.1.2",
-    "@angular/platform-browser-dynamic": "^6.1.2",
+    "@angular/animations": "^6.1.4",
+    "@angular/common": "^6.1.4",
+    "@angular/compiler": "^6.1.4",
+    "@angular/core": "^6.1.4",
+    "@angular/platform-browser": "^6.1.4",
+    "@angular/platform-browser-dynamic": "^6.1.4",
     "core-js": "^2.5.7",
     "http-server": "0.11.1",
     "mime-types": "^2.1.19",
