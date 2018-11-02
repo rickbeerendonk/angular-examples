@@ -17,7 +17,7 @@
     "openserver_new": "node \"./Util 02 - HTTP and REST servers/server.js\" 8070"
   },
   "devDependencies": {
-    "@types/node": "^10.12.1",
+    "@types/node": "^10.12.2",
     "@types/systemjs": "^0.20.6"
   },
   "dependencies": {
@@ -33,7 +33,7 @@
     "plugin-typescript": "^8.0.0",
     "rxjs": "^6.3.3",
     "systemjs": "^0.21.5",
-    "typescript": "^3.1.5",
+    "typescript": "^3.1.6",
     "zone.js": "0.8.26"
   }
 }
