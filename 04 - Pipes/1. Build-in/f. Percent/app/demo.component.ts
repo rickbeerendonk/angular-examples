@@ -11,7 +11,7 @@ Documentation: https://angular.io/guide/i18n#setting-up-locale
 */
 
 @Component({
-  selector: 'greeting',
+  selector: 'demo',
   template: `
   <p>
     {{12.34567 | percent}}
@@ -35,5 +35,5 @@ Documentation: https://angular.io/guide/i18n#setting-up-locale
   </p>
 `
 })
-export class GreetingComponent {
+export class DemoComponent {
 }

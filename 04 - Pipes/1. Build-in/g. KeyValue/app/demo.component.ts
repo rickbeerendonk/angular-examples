@@ -4,7 +4,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'greeting',
+  selector: 'demo',
   template: `
     <h1>Object</h1>
 
@@ -55,7 +55,7 @@ import { Component } from '@angular/core';
     </ul>
   `
 })
-export class GreetingComponent {
+export class DemoComponent {
   obj = {
     // Reverse order to show output is by default in alphanumerical ascending order.
     prop2: 'Two',
