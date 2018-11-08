@@ -15,4 +15,4 @@ registerLocaleData(localeNl, 'nl');
   declarations: [DemoComponent],
   bootstrap: [DemoComponent]
 })
-export class AppModule { }
+export class AppModule {}

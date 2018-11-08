@@ -11,6 +11,6 @@ import { LoggerService } from '../services/logger.service';
   imports: [CommonModule],
   declarations: [GreetingComponent],
   exports: [GreetingComponent],
-  providers: [LoggerService],
+  providers: [LoggerService]
 })
-export class GreetingModule { }
+export class GreetingModule {}

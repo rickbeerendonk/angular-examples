@@ -8,5 +8,4 @@ import { Component } from '@angular/core';
   selector: 'greeting',
   templateUrl: './greeting.component.html'
 })
-export class GreetingComponent {
-}
+export class GreetingComponent {}

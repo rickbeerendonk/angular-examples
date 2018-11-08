@@ -13,21 +13,19 @@ Documentation: https://angular.io/guide/i18n#setting-up-locale
 @Component({
   selector: 'demo',
   template: `
-  <p>
-    {{ 'US' | i18nSelect:countryMap }}
-    <br>
-    {{ 'NO' | i18nSelect:countryMap }}
-    <br>
-    {{ 'NL' | i18nSelect:countryMap }}
-    <br>
-    {{ 'CO' | i18nSelect:countryMap }}
-  </p>
+    <p>
+      {{ 'US' | i18nSelect: countryMap }} <br />
+      {{ 'NO' | i18nSelect: countryMap }} <br />
+      {{ 'NL' | i18nSelect: countryMap }} <br />
+      {{ 'CO' | i18nSelect: countryMap }}
+    </p>
   `
 })
 export class DemoComponent {
   countryMap: Object = {
-    'NL': 'The Netherlands', 
-    'NO': 'Norway', 
-    'US': 'United States',
-    'other': '(unknown)'};
+    NL: 'The Netherlands',
+    NO: 'Norway',
+    US: 'United States',
+    other: '(unknown)'
+  };
 }

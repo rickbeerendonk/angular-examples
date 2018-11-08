@@ -18,7 +18,7 @@ export class GreetingComponent {
     this._name = name;
   }
 
-  get name(): string { 
-    return this._name; 
+  get name(): string {
+    return this._name;
   }
 }

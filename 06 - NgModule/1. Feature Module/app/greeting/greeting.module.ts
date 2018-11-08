@@ -11,4 +11,4 @@ import { GreetingComponent } from './greeting.component';
   declarations: [GreetingComponent],
   exports: [GreetingComponent]
 })
-export class GreetingModule { }
+export class GreetingModule {}

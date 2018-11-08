@@ -7,5 +7,4 @@ import { Component } from '@angular/core';
   selector: 'child',
   template: '<div>Child component</div>'
 })
-export class ChildComponent {
-}
+export class ChildComponent {}

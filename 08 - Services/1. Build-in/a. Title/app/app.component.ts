@@ -8,14 +8,13 @@ import { Title } from '@angular/platform-browser';
   selector: 'app',
   template: `
     <h1>Title Demo</h1>
-    <div>
-      Old title: {{oldTitle}}
-    </div>`
+    <div>Old title: {{ oldTitle }}</div>
+  `
 })
 export class AppComponent {
   oldTitle: string;
 
-  constructor (title: Title) {
+  constructor(title: Title) {
     this.oldTitle = title.getTitle();
     title.setTitle('Title Demo');
   }

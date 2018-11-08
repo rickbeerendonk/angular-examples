@@ -13,18 +13,17 @@ Documentation: https://angular.io/guide/i18n#setting-up-locale
 @Component({
   selector: 'demo',
   template: `
-  <p>
-    {{ 0 | i18nPlural:numberMap }}
-    <strong> = Default</strong>
-    <br>
-    {{ 1 | i18nPlural:numberMap }}
-    <strong> = Default</strong>
-    <br>
-    {{ 9 | i18nPlural:numberMap }}
-    <strong> = Default</strong>
-  </p>
+    <p>
+      {{ 0 | i18nPlural: numberMap }} <strong> = Default</strong> <br />
+      {{ 1 | i18nPlural: numberMap }} <strong> = Default</strong> <br />
+      {{ 9 | i18nPlural: numberMap }} <strong> = Default</strong>
+    </p>
   `
 })
 export class DemoComponent {
-  numberMap: {[count: string]: string} = {'=0': 'No items.', '=1': 'One item.', 'other': '# items.'};
+  numberMap: { [count: string]: string } = {
+    '=0': 'No items.',
+    '=1': 'One item.',
+    other: '# items.'
+  };
 }

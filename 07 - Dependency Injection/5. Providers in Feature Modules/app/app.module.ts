@@ -11,7 +11,7 @@ import { GreetingModule } from './greeting/greeting.module';
 @NgModule({
   imports: [BrowserModule, GreetingModule],
   declarations: [AppComponent],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent]
   //providers: [LoggerService],
 })
-export class AppModule { }
+export class AppModule {}

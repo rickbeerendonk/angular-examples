@@ -12,6 +12,6 @@ import { LoggerService } from './services/logger.service';
   imports: [BrowserModule, GreetingModule],
   declarations: [AppComponent],
   bootstrap: [AppComponent],
-  providers: [LoggerService],
+  providers: [LoggerService]
 })
-export class AppModule { }
+export class AppModule {}

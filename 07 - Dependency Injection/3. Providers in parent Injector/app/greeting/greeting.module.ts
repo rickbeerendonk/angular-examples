@@ -9,6 +9,6 @@ import { GreetingComponent } from './greeting.component';
 @NgModule({
   imports: [CommonModule],
   declarations: [GreetingComponent],
-  exports: [GreetingComponent],
+  exports: [GreetingComponent]
 })
-export class GreetingModule { }
+export class GreetingModule {}

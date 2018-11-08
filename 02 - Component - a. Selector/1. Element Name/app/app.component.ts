@@ -6,9 +6,8 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app',
   template: `
-  <greeting>Should be replaced.</greeting>
-  <div>Should not be replaced.</div>
+    <greeting>Should be replaced.</greeting>
+    <div>Should not be replaced.</div>
   `
 })
-export class AppComponent {
-}
+export class AppComponent {}

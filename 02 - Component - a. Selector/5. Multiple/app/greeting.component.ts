@@ -4,8 +4,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'greeting, groet, .replace, [data-replace], [data-should-replace=true]',
+  selector:
+    'greeting, groet, .replace, [data-replace], [data-should-replace=true]',
   template: '<h1>Hello World</h1>'
 })
-export class GreetingComponent {
-}
+export class GreetingComponent {}

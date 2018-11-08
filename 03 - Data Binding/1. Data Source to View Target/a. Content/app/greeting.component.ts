@@ -6,9 +6,8 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'greeting',
   template: `
-    <h1>
-      Hello {{name}}!
-    </h1>`
+    <h1>Hello {{ name }}!</h1>
+  `
 })
 export class GreetingComponent {
   name: string = 'World';

@@ -6,9 +6,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'greeting',
   template: `
-    <h1>
-      Hello {{["Invisible", "Slice", "Remove"] | slice:1:2}} Pipe
-    </h1>`
+    <h1>Hello {{ ['Invisible', 'Slice', 'Remove'] | slice: 1:2 }} Pipe</h1>
+  `
 })
-export class GreetingComponent {
-}
+export class GreetingComponent {}

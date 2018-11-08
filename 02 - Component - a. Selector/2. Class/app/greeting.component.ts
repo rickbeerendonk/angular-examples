@@ -7,5 +7,4 @@ import { Component } from '@angular/core';
   selector: '.replace',
   template: '<h1>Hello World</h1>'
 })
-export class GreetingComponent {
-}
+export class GreetingComponent {}

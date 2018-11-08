@@ -11,4 +11,4 @@ import { DemoComponent } from './demo.component';
   declarations: [DemoComponent],
   bootstrap: [DemoComponent]
 })
-export class AppModule { }
+export class AppModule {}

@@ -7,5 +7,4 @@ import { Component } from '@angular/core';
   selector: 'greeting',
   templateUrl: './app/greeting.component.html'
 })
-export class GreetingComponent {
-}
+export class GreetingComponent {}

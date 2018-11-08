@@ -14,10 +14,10 @@ registerLocaleData(localeNl, 'nl');
 @NgModule({
   providers: [
     /* Dutch is the default now instead of en-US */
-    { provide: LOCALE_ID, useValue: "nl-NL" }
+    { provide: LOCALE_ID, useValue: 'nl-NL' }
   ],
   imports: [BrowserModule],
   declarations: [DemoComponent],
   bootstrap: [DemoComponent]
 })
-export class AppModule { }
+export class AppModule {}

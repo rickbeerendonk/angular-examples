@@ -12,4 +12,4 @@ import { GreetingComponent } from './greeting/greeting.component';
   declarations: [AppComponent, GreetingComponent],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

@@ -13,9 +13,13 @@ export class GreetingComponent implements OnChanges {
   @Input()
   name: string;
 
-  ngOnChanges(changes: {[propKey: string]: SimpleChange}) {
+  ngOnChanges(changes: { [propKey: string]: SimpleChange }) {
     for (const propName in changes) {
-      console.log(`GreetingComponent.${propName} = ${changes[propName].currentValue} (was: ${changes[propName].previousValue})`)
+      console.log(
+        `GreetingComponent.${propName} = ${
+          changes[propName].currentValue
+        } (was: ${changes[propName].previousValue})`
+      );
     }
   }
 }

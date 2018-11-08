@@ -11,4 +11,4 @@ import { ClickMeComponent } from './clickme.component';
   declarations: [ClickMeComponent],
   bootstrap: [ClickMeComponent]
 })
-export class AppModule { }
+export class AppModule {}
