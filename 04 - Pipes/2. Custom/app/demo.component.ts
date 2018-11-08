@@ -4,11 +4,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'greeting',
+  selector: 'demo',
   template: `
     <p>{{ 'one,two,three' | csv }}</p>
     <p>{{ 'one-two-three' | csv: '-' }}</p>
     <p>{{ 'one,two,three' | csv: '':'..' }}</p>
   `
 })
-export class GreetingComponent {}
+export class DemoComponent {}

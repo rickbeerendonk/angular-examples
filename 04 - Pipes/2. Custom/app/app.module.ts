@@ -5,11 +5,11 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { CsvPipe } from './csv.pipe';
-import { GreetingComponent } from './greeting.component';
+import { DemoComponent } from './demo.component';
 
 @NgModule({
   imports: [BrowserModule],
-  declarations: [CsvPipe, GreetingComponent],
-  bootstrap: [GreetingComponent]
+  declarations: [CsvPipe, DemoComponent],
+  bootstrap: [DemoComponent]
 })
 export class AppModule {}
