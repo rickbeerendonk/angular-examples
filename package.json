@@ -29,12 +29,12 @@
     "@types/systemjs": "^0.20.6"
   },
   "dependencies": {
-    "@angular/animations": "^7.0.4",
-    "@angular/common": "^7.0.4",
-    "@angular/compiler": "^7.0.4",
-    "@angular/core": "^7.0.4",
-    "@angular/platform-browser": "^7.0.4",
-    "@angular/platform-browser-dynamic": "^7.0.4",
+    "@angular/animations": "^7.1.0",
+    "@angular/common": "^7.1.0",
+    "@angular/compiler": "^7.1.0",
+    "@angular/core": "^7.1.0",
+    "@angular/platform-browser": "^7.1.0",
+    "@angular/platform-browser-dynamic": "^7.1.0",
     "core-js": "^2.5.7",
     "http-server": "^0.11.1",
     "husky": "^1.2.0",
