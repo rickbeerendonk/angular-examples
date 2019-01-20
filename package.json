@@ -1,9 +1,9 @@
 {
   "name": "angular-examples",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Examples for Angular",
   "author": "Rick Beerendonk",
-  "license": "MPL-2.0",
+  "license": "EUPL-1.2",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rickbeerendonk/angular-examples.git"

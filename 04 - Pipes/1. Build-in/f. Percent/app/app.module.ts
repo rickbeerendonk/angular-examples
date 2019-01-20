@@ -1,5 +1,5 @@
-/*! Mozilla Public License Version 2.0 !*/
-/*! Copyright © 2018 Rick Beerendonk   !*/
+/*! European Union Public License version 1.2 !*/
+/*! Copyright © 2018 Rick Beerendonk          !*/
 
 import { registerLocaleData } from '@angular/common';
 import localeFr from '@angular/common/locales/fr';

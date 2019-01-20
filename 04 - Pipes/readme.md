@@ -10,6 +10,10 @@ https://angular.io/api?type=pipe
 
 New in Angular 6.1
 
----
+## License
+
+European Union Public Licence version 1.2
+
+## Copyright
 
 Copyright © 2018 Rick Beerendonk

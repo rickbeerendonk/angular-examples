@@ -7,8 +7,10 @@ To open examples you'll need to install a number of libraries:
 1. Open command line in the root folder
 2. Run `npm install`
 
-# Licence
+## Licence
 
-Mozilla Public License Version 2.0
+European Union Public Licence version 1.2
+
+## Copyright
 
 Copyright © 2017-2019 Rick Beerendonk
