@@ -1,7 +1,7 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2019 Rick Beerendonk          !*/
 
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   moduleId: __moduleName /* Use __moduleName in SystemJS and module.id in commonjs */,
@@ -9,6 +9,4 @@ import { Component, Input } from '@angular/core';
   templateUrl: './container.component.html',
   styleUrls: ['./container.component.css']
 })
-export class ContainerComponent {
-  @Input() name: string;
-}
+export class ContainerComponent {}
