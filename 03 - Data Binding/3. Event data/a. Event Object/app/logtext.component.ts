@@ -11,6 +11,8 @@ import { Component } from '@angular/core';
   `
 })
 export class LogTextComponent {
+  // Component has too much awareness of the template details
+
   text: string = '';
 
   onKeyUp(event: KeyboardEvent) {
