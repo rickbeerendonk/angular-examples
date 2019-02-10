@@ -1,7 +1,9 @@
 # Data Binding
 
 ## Documentation
-https://angular.io/guide/displaying-data
+
+* https://angular.io/guide/displaying-data
+* https://angular.io/guide/user-input
 
 ## License
 
