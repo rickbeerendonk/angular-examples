@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'logtext',
   template: `
-    <input #text (keyup)="(0)" />
+    <input autofocus #text (keyup)="(0)" />
     <h1>{{ text.value }}</h1>
   ` // onKeyUp not handled, but Angular will update bindings after event.
 })
