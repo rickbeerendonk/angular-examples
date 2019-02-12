@@ -4,11 +4,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { MatchComponent } from './match.component';
+import { QueueComponent } from './queue.component';
 
 @NgModule({
   imports: [BrowserModule],
-  declarations: [MatchComponent],
-  bootstrap: [MatchComponent]
+  declarations: [QueueComponent],
+  bootstrap: [QueueComponent]
 })
 export class AppModule {}
