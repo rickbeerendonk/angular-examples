@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
   templateUrl: './demo.component.html'
 })
 export class DemoComponent {
-  person: Object = {
+  person = {
     name: 'Jan Jansen',
     dob: new Date(1951, 11, 24),
     retired: true,
