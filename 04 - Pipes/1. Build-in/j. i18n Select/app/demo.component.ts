@@ -11,15 +11,9 @@ Documentation: https://angular.io/guide/i18n#setting-up-locale
 */
 
 @Component({
+  moduleId: __moduleName /* Use __moduleName in SystemJS and module.id in commonjs */,
   selector: 'demo',
-  template: `
-    <p>
-      {{ 'US' | i18nSelect: countryMap }} <br />
-      {{ 'NO' | i18nSelect: countryMap }} <br />
-      {{ 'NL' | i18nSelect: countryMap }} <br />
-      {{ 'CO' | i18nSelect: countryMap }}
-    </p>
-  `
+  templateUrl: './demo.component.html'
 })
 export class DemoComponent {
   countryMap: Object = {

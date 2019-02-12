@@ -4,56 +4,9 @@
 import { Component } from '@angular/core';
 
 @Component({
+  moduleId: __moduleName /* Use __moduleName in SystemJS and module.id in commonjs */,
   selector: 'demo',
-  template: `
-    <h1>Object</h1>
-
-    <h2>Default order</h2>
-    <ul>
-      <li *ngFor="let prop of (obj | keyvalue)">
-        {{ prop.key }}: {{ prop.value }}
-      </li>
-    </ul>
-
-    <h2>Compare function order</h2>
-    <ul>
-      <li *ngFor="let prop of (obj | keyvalue: compareDesc)">
-        {{ prop.key }}: {{ prop.value }}
-      </li>
-    </ul>
-
-    <h1>Map</h1>
-
-    <h2>Default order</h2>
-    <ul>
-      <li *ngFor="let item of (map | keyvalue)">
-        {{ item.key }}: {{ item.value }}
-      </li>
-    </ul>
-
-    <h2>Compare function order</h2>
-    <ul>
-      <li *ngFor="let item of (map | keyvalue: compareDesc)">
-        {{ item.key }}: {{ item.value }}
-      </li>
-    </ul>
-
-    <h1>Array</h1>
-
-    <h2>Default order</h2>
-    <ul>
-      <li *ngFor="let item of (arr | keyvalue)">
-        {{ item.key }}: {{ item.value }}
-      </li>
-    </ul>
-
-    <h2>Compare function order</h2>
-    <ul>
-      <li *ngFor="let item of (arr | keyvalue: compareDesc)">
-        {{ item.key }}: {{ item.value }}
-      </li>
-    </ul>
-  `
+  templateUrl: './demo.component.html'
 })
 export class DemoComponent {
   obj = {

@@ -4,9 +4,8 @@
 import { Component } from '@angular/core';
 
 @Component({
+  moduleId: __moduleName /* Use __moduleName in SystemJS and module.id in commonjs */,
   selector: 'greeting',
-  template: `
-    <h1>{{ 'Hello Slice Pipe' | slice: 6:11 }}</h1>
-  `
+  templateUrl: './greeting.component.html'
 })
 export class GreetingComponent {}

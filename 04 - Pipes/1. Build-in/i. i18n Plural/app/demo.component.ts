@@ -11,19 +11,14 @@ Documentation: https://angular.io/guide/i18n#setting-up-locale
 */
 
 @Component({
+  moduleId: __moduleName /* Use __moduleName in SystemJS and module.id in commonjs */,
   selector: 'demo',
-  template: `
-    <p>
-      {{ 0 | i18nPlural: numberMap }} <strong> = Default</strong> <br />
-      {{ 1 | i18nPlural: numberMap }} <strong> = Default</strong> <br />
-      {{ 9 | i18nPlural: numberMap }} <strong> = Default</strong>
-    </p>
-  `
+  templateUrl: './demo.component.html'
 })
 export class DemoComponent {
   numberMap: { [count: string]: string } = {
-    '=0': 'No items.',
-    '=1': 'One item.',
-    other: '# items.'
+    '=0': 'no items',
+    '=1': 'one item',
+    other: '# items'
   };
 }

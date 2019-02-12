@@ -4,11 +4,9 @@
 import { Component } from '@angular/core';
 
 @Component({
+  moduleId: __moduleName /* Use __moduleName in SystemJS and module.id in commonjs */,
   selector: 'queue',
-  template: `
-    <h1>Queue</h1>
-    <p>First arrival: {{ firstArrival | async | date: 'HH:mm:ss' }}</p>
-  `
+  templateUrl: './queue.component.html'
 })
 export class QueueComponent {
   firstArrival: Promise<Date> = new Promise(function(resolve /*, reject */) {

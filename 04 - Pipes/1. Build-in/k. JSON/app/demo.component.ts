@@ -4,10 +4,9 @@
 import { Component } from '@angular/core';
 
 @Component({
+  moduleId: __moduleName /* Use __moduleName in SystemJS and module.id in commonjs */,
   selector: 'demo',
-  template: `
-    <p>{{ person | json }}</p>
-  `
+  templateUrl: './demo.component.html'
 })
 export class DemoComponent {
   person: Object = {

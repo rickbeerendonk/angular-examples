@@ -5,11 +5,9 @@ import { Component } from '@angular/core';
 import { Observable, Observer } from 'rxjs';
 
 @Component({
+  moduleId: __moduleName /* Use __moduleName in SystemJS and module.id in commonjs */,
   selector: 'queue',
-  template: `
-    <h1>Queue</h1>
-    <p>Latest arrival: {{ latestArrival | async | date: 'HH:mm:ss' }}</p>
-  `
+  templateUrl: './queue.component.html'
 })
 export class QueueComponent {
   latestArrival = new Observable<Date>((observer: Observer<Date>) => {
