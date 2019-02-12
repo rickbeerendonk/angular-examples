@@ -1,0 +1,25 @@
+<!-- European Union Public License version 1.2 -->
+<!-- Copyright © 2018 Rick Beerendonk -->
+
+<p>{{ 123.456 | currency }} <strong> = Default</strong></p>
+
+<p>
+  {{ 123.456 | currency: 'USD' }} <br />
+  {{ 123.456 | currency: 'EUR' }}
+</p>
+
+<p>
+  {{ 123.456 | currency: 'EUR':'code'}} <strong> = Show the code</strong> <br />
+  {{ 123.456 | currency: 'EUR':'symbol'}} <strong> = Show the symbol</strong> <br />
+  {{ 123.456 | currency: 'EUR':'euro '}} <strong> = Show custom string</strong> <br />
+</p>
+
+<p>
+  {{ 123.456 | currency: 'EUR':'symbol':'1.0-1' }}
+  <strong> = Min. 1 integer digit & max. 1 digit after fraction</strong>
+</p>
+
+<p>
+  {{ 123.456 | currency: 'EUR':'symbol':'':'en' }} <strong> = English</strong> <br />
+  {{ 123.456 | currency: 'EUR':'symbol':'':'fr' }} <strong> = French</strong>
+</p>
