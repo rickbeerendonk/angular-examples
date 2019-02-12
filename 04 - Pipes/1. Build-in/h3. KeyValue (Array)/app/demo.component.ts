@@ -2,6 +2,7 @@
 /*! Copyright © 2018 Rick Beerendonk          !*/
 
 import { Component } from '@angular/core';
+import { KeyValue } from '@angular/common';
 
 @Component({
   moduleId: __moduleName /* Use __moduleName in SystemJS and module.id in commonjs */,
@@ -11,10 +12,7 @@ import { Component } from '@angular/core';
 export class DemoComponent {
   arr = [1, 22, 333, 4444];
 
-  compareDesc = (
-    a: { key: string; value: any },
-    b: { key: string; value: any }
-  ) => {
+  compareDesc = (a: KeyValue<string, any>, b: KeyValue<string, any>) => {
     if (a.value < b.value) {
       return 1;
     }
