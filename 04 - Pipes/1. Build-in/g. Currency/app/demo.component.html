@@ -9,14 +9,16 @@
 </p>
 
 <p>
-  {{ 123.456 | currency: 'EUR':'code'}} <strong> = Show the code</strong> <br />
-  {{ 123.456 | currency: 'EUR':'symbol'}} <strong> = Show the symbol</strong> <br />
-  {{ 123.456 | currency: 'EUR':'euro '}} <strong> = Show custom string</strong> <br />
+  {{ 123.456 | currency: 'CAD':'code'}} <strong> = Show the code</strong> <br />
+  {{ 123.456 | currency: 'CAD':'symbol'}} <strong> = Show the symbol</strong> <br />
+  {{ 123.456 | currency: 'CAD':'symbol-narrow'}} <strong> = Show the narrow symbol</strong> <br />
+  {{ 123.456 | currency: 'CAD':'canadian-dollars '}} <strong> = Show custom string</strong> <br />
 </p>
 
 <p>
-  {{ 123.456 | currency: 'EUR':'symbol':'1.0-1' }}
-  <strong> = Min. 1 integer digit & max. 1 digit after fraction</strong>
+  {{ 123.456 | currency: 'EUR':'symbol':'1.0-1' }} <strong> = Min. 1 integer digit & max. 1 digit after fraction</strong> <br />
+  {{ 123.456 | currency: 'EUR':'symbol':'1.2-2' }} <strong> = Min. 1 integer digit & always 2 digit after fraction</strong> <br />
+  {{ 100 | currency: 'EUR':'symbol':'1.2-2' }} <strong> = Min. 1 integer digit & always 2 digit after fraction</strong> <br />
 </p>
 
 <p>
