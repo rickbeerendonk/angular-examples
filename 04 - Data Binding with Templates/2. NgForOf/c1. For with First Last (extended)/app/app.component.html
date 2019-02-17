@@ -1,0 +1,23 @@
+<!-- European Union Public License version 1.2 -->
+<!-- Copyright © 2019 Rick Beerendonk -->
+
+<ul>
+  <ng-template
+    ngFor
+    let-item
+    [ngForOf]="items"
+    let-i="index"
+    let-firstItem="first"
+    let-lastItem="last"
+  >
+    <li [value]="i">
+      {{ item }}
+      <ng-template [ngIf]="firstItem">
+        <span>(first)</span>
+      </ng-template>
+      <ng-template [ngIf]="lastItem">
+        <span>(last)</span>
+      </ng-template>
+    </li>
+  </ng-template>
+</ul>
