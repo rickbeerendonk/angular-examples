@@ -1,8 +1,8 @@
 <!-- European Union Public License version 1.2 -->
 <!-- Copyright © 2019 Rick Beerendonk -->
 
-<span [ngSwitch]="countrycode">
-  <ng-template [ngSwitchCase]="DK">Denmark</ng-template>
-  <ng-template [ngSwitchCase]="NL">The Netherlands</ng-template>
+<span [ngSwitch]="countryCode">
+  <ng-template [ngSwitchCase]="'DK'">Denmark</ng-template>
+  <ng-template [ngSwitchCase]="'NL'">The Netherlands</ng-template>
   <ng-template ngSwitchDefault>[Other country]</ng-template>
 </span>
