@@ -19,8 +19,8 @@
     }
   },
   "scripts": {
-    "openserver": "node \"./Util 01 - Static File Server/static-file-server.js\" 8070",
-    "openserver_new": "node \"./Util 02 - HTTP and REST servers/server.js\" 8070",
+    "openserver_old": "node \"./Util 01 - Static File Server/static-file-server.js\" 8070",
+    "openserver": "node \"./Util 02 - HTTP and REST servers/server.js\" 8070",
     "prettier": "prettier --list-different '**/*.{json,ts}'",
     "prettier-fix": "prettier --write '**/*.{json,ts}'"
   },
