@@ -19,7 +19,7 @@
     }
   },
   "scripts": {
-    "openserver": "node \"./Util 02 - HTTP and REST servers/server.js\" 8070",
+    "openserver": "node \"./Util 01 - HTTP and REST servers/server.js\" 8070",
     "prettier": "prettier --list-different '**/*.{json,ts}'",
     "prettier-fix": "prettier --write '**/*.{json,ts}'"
   },
