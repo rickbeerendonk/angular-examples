@@ -43,7 +43,7 @@
     "prettier": "^1.16.4",
     "rxjs": "^6.4.0",
     "systemjs": "^0.21.6",
-    "typescript": "^3.3.3",
+    "typescript": "^3.3.3333",
     "zone.js": "0.8.26"
   }
 }
