@@ -24,7 +24,7 @@
     "prettier-fix": "prettier --write '**/*.{json,ts}'"
   },
   "devDependencies": {
-    "@types/node": "^11.13.0",
+    "@types/node": "^11.13.2",
     "@types/systemjs": "^0.20.6"
   },
   "dependencies": {
