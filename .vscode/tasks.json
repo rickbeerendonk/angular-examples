@@ -1,17 +1,17 @@
 {
   // See https://go.microsoft.com/fwlink/?LinkId=733558
   // for the documentation about the tasks.json format
-  "version": "0.1.0",
-  "command": "npm",
-  "isShellCommand": true,
-  "showOutput": "always",
-  "suppressTaskName": true,
+  "version": "2.0.0",
   "tasks": [
     {
-      "taskName": "openserver",
-      "args": ["run", "openserver", "--", "${fileDirname}"],
-      "isBackground": true,
-      "isBuildCommand": true
+      "label": "Start",
+      "type": "shell",
+      "command": "npm start -- \"${fileDirname}\"",
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
     }
   ]
 }

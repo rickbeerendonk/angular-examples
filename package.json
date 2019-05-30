@@ -19,9 +19,10 @@
     }
   },
   "scripts": {
-    "openserver": "node \"./Util 01 - HTTP and REST servers/server.js\" 8070",
     "prettier": "prettier --list-different '**/*.{json,ts}'",
-    "prettier-fix": "prettier --write '**/*.{json,ts}'"
+    "prettier-fix": "prettier --write '**/*.{json,ts}'",
+    "start": "node \"./Util 02 - HTTP and REST servers/server.js\" 8070",
+    "start-new": "node \"./Util - 01 - Custom servers/server.js\" 8070"
   },
   "devDependencies": {
     "@types/node": "^11.13.11",
@@ -42,6 +43,7 @@
     "plugin-typescript": "^8.0.0",
     "prettier": "^1.17.1",
     "rxjs": "^6.5.2",
+    "serve": "^11.0.1",
     "systemjs": "^0.21.6",
     "typescript": "^3.4.5",
     "zone.js": "^0.9.1"

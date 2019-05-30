@@ -10,6 +10,7 @@ To open examples you'll need to install a number of libraries:
 
 1. Open command line in the root folder
 2. Run `npm install`
+3. Run `npm start`
 
 ## Licence
 
