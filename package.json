@@ -25,7 +25,7 @@
     "start-new": "node \"./Util - 01 - Custom servers/server.js\" 8070"
   },
   "devDependencies": {
-    "@types/node": "^11.13.11",
+    "@types/node": "^11.13.13",
     "@types/systemjs": "^0.20.6"
   },
   "dependencies": {
@@ -36,7 +36,7 @@
     "@angular/platform-browser": "^8.0.0",
     "@angular/platform-browser-dynamic": "^8.0.0",
     "@angular/router": "^8.0.0",
-    "core-js": "^2.6.8",
+    "core-js": "^2.6.9",
     "http-server": "^0.11.1",
     "husky": "^2.3.0",
     "mime-types": "^2.1.24",
@@ -45,7 +45,7 @@
     "rxjs": "^6.5.2",
     "serve": "^11.0.1",
     "systemjs": "^0.21.6",
-    "typescript": "^3.4.5",
+    "typescript": "^3.5.1",
     "zone.js": "^0.9.1"
   }
 }
