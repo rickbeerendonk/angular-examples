@@ -2,13 +2,6 @@
 
 Create and run a new app:
 
-* ```npm install -g angular-cli```
-* ```ng new my-app```
-* ```cd my-app```
-* ```ng serve```
-
-Future:
-
 * ```npm install -g @angular/cli```
 * ```ng new my-app```
 * ```cd my-app```
