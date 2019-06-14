@@ -21,7 +21,8 @@
   "scripts": {
     "prettier": "prettier --list-different '**/*.{json,ts}'",
     "prettier-fix": "prettier --write '**/*.{json,ts}'",
-    "start": "node \"./Util - 02 - HTTP and REST servers/server.js\" 8070",
+    "start": "node \"./Util - 03 - HTTP and REST servers/server.js\" 8070",
+    "start-old": "node \"./Util - 02 - HTTP and REST servers/server.js\" 8070",
     "start-new": "node \"./Util - 01 - Custom servers/server.js\" 8070"
   },
   "devDependencies": {
@@ -40,6 +41,7 @@
     "core-js": "^2.6.9",
     "http-server": "^0.11.1",
     "husky": "^2.4.1",
+    "live-server": "^1.2.1",
     "mime-types": "^2.1.24",
     "plugin-typescript": "^8.0.0",
     "prettier": "^1.18.2",
