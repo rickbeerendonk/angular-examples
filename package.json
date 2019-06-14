@@ -21,7 +21,7 @@
   "scripts": {
     "prettier": "prettier --list-different '**/*.{json,ts}'",
     "prettier-fix": "prettier --write '**/*.{json,ts}'",
-    "start": "node \"./Util 02 - HTTP and REST servers/server.js\" 8070",
+    "start": "node \"./Util - 02 - HTTP and REST servers/server.js\" 8070",
     "start-new": "node \"./Util - 01 - Custom servers/server.js\" 8070"
   },
   "devDependencies": {
