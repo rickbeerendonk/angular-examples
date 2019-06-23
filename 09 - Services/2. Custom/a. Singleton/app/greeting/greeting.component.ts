@@ -15,7 +15,6 @@ export class GreetingComponent {
   }
 
   getName(): string {
-    debugger;
     this.loggerService.log('GreetingComponent.getName() called.');
     return 'World';
   }
