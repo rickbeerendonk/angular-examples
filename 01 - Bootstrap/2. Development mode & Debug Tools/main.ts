@@ -15,4 +15,5 @@ platformBrowserDynamic()
 
     // Enabled Angular debug tools that are accessible via your browser's developer console (via "ng.")
     enableDebugTools(appComponent);
-  });
+  })
+  .catch(err => console.error(err));
