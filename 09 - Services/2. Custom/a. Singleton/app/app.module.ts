@@ -5,12 +5,12 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { GreetingComponent } from './greeting/greeting.component';
+import { GreetingModule } from './greeting/greeting.module';
 import { LoggerService } from './logger/logger.service';
 
 @NgModule({
-  imports: [BrowserModule],
-  declarations: [AppComponent, GreetingComponent],
+  imports: [BrowserModule, GreetingModule],
+  declarations: [AppComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule {

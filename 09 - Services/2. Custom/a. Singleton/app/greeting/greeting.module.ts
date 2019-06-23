@@ -5,10 +5,15 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { GreetingComponent } from './greeting.component';
+import { LoggerService } from '../logger/logger.service';
 
 @NgModule({
   imports: [CommonModule],
   declarations: [GreetingComponent],
   exports: [GreetingComponent]
 })
-export class GreetingModule {}
+export class GreetingModule {
+  constructor(private loggerService: LoggerService) {
+    loggerService.log('GreetingModule created.');
+  }
+}
