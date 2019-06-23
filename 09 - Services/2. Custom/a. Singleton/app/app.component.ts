@@ -3,7 +3,7 @@
 
 import { Component } from '@angular/core';
 
-import { LoggerService } from './logger.service';
+import { LoggerService } from './logger/logger.service';
 
 @Component({
   selector: 'app',

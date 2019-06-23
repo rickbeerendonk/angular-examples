@@ -5,8 +5,8 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { GreetingComponent } from './greeting.component';
-import { LoggerService } from './logger.service';
+import { GreetingComponent } from './greeting/greeting.component';
+import { LoggerService } from './logger/logger.service';
 
 @NgModule({
   imports: [BrowserModule],
