@@ -1,4 +1,0 @@
-NgForOf
-NgIf
-NgPlural
-NgSwitch
