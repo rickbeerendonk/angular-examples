@@ -2,6 +2,7 @@
 <!-- Copyright © 2019 Rick Beerendonk -->
 
 <div [ngPlural]="count">
+  <!-- Values: zero, one, two, few, many, other -->
   <ng-template ngPluralCase="=0">There is nothing</ng-template>
   <ng-template ngPluralCase="=1">There is one thing</ng-template>
   <ng-template ngPluralCase="other">There are multiple things</ng-template>
