@@ -5,10 +5,14 @@ import { Component, Input } from '@angular/core';
 
 @Component({
   moduleId: __moduleName /* Use __moduleName in SystemJS and module.id in commonjs */,
-  selector: 'greeting',
-  templateUrl: './greeting.component.html',
-  styleUrls: ['./greeting.component.css']
+  selector: 'greet',
+  templateUrl: './greet.component.html',
+  styleUrls: ['./greet.component.css']
 })
-export class GreetingComponent {
+export class GreetComponent {
+  // Optional
+  @Input() greeting?: string = 'Hello';
+
+  // Required
   @Input() name: string;
 }
