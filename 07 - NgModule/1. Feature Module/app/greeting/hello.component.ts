@@ -4,7 +4,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'greeting',
-  template: '<h1><hello></hello> World</h1>'
+  selector: 'hello',
+  template: 'Hello'
 })
-export class GreetingComponent {}
+export class HelloComponent {}

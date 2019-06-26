@@ -5,10 +5,11 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { GreetingComponent } from './greeting.component';
+import { HelloComponent } from './hello.component';
 
 @NgModule({
   imports: [CommonModule],
-  declarations: [GreetingComponent],
+  declarations: [GreetingComponent, HelloComponent],
   exports: [GreetingComponent]
 })
 export class GreetingModule {}

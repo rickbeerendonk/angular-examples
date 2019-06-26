@@ -1,0 +1,6 @@
+<!-- European Union Public License version 1.2 -->
+<!-- Copyright © 2019 Rick Beerendonk -->
+
+<ul>
+  <li *ngFor="let todo of todos | async">{{ todo.completed }} - {{ todo.title }}</li>
+</ul>
