@@ -12,7 +12,7 @@
       <a routerLink="sub/2">Sub 2</a>
     </li>
     <li>
-      <a routerLink="sub/3">Sub 3</a>
+      <a [routerLink]="['sub/3', {outlets: {subRouterOutlet: }}]">Sub 3</a>
     </li>
   </ul>
 </nav>
