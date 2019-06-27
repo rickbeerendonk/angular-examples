@@ -6,15 +6,6 @@ import { Observable } from 'rxjs/Observable';
 
 import { Todo, TodosService } from './todos.service';
 
-class Todo {
-  constructor(
-    public userId: number,
-    public id: number,
-    public title: string,
-    public completed: boolean
-  ) {}
-}
-
 @Component({
   moduleId: __moduleName /* Use __moduleName in SystemJS and module.id in commonjs */,
   selector: 'app',
