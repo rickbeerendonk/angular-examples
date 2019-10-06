@@ -11,8 +11,14 @@ import { FormControl } from '@angular/forms';
       Name:
       <input type="text" [formControl]="name" />
     </label>
+    <h1>Hello {{ name.value }}</h1>
+    <button (click)="changeNameToWorld()">Change name to "World"</button>
   `
 })
 export class MyFormComponent {
   name = new FormControl('Angular Form');
+
+  changeNameToWorld() {
+    this.name.setValue('World');
+  }
 }
