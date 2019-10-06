@@ -18,7 +18,7 @@ export class MyFormComponent {
 
   submittedData: string;
 
-  submit() {
+  submitted() {
     this.submittedData = this.personForm.value;
   }
 }
