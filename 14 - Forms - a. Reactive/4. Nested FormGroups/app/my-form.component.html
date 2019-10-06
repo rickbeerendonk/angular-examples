@@ -1,0 +1,23 @@
+<!-- European Union Public License version 1.2 -->
+<!-- Copyright © 2019 Rick Beerendonk -->
+
+<form [formGroup]="personForm" (ngSubmit)="submitted()">
+  <div formGroupName="name">
+    <h2>Name</h2>
+    <label>
+      First:
+      <input type="text" formControlName="firstName" />
+    </label>
+    <br />
+    <label>
+        Last:
+        <input type="text" formControlName="lastName" />
+    </label>
+  </div>
+  <h2>Others</h2>
+  <label>
+    Age:
+    <input type="number" formControlName="age" />
+  </label>
+  <br />
+</form>
