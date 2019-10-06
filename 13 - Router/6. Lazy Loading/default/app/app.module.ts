@@ -27,7 +27,11 @@ import { Page2Component } from './page2/page2.component';
       { path: 'page2', component: Page2Component },
 
       // Maps a route path to a loadChildren module name
-      { path: 'extra', loadChildren: 'app/extra/extra.module' },
+      {
+        path: 'extra',
+        loadChildren: () =>
+          import('./extra/extra.module').then(mod => mod.ExtraModule)
+      },
 
       { path: '**', component: NoMatchComponent }
     ])
