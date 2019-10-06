@@ -2,11 +2,12 @@
 
 ## Visual Studio Code
 
-* Install Extension: ext install Angular.ng-template
+* Install Extension: `ext install Angular.ng-template`
 
-## WebStorm
+## Others
 
-...
+* WebStorm: https://angular.io/guide/language-service#webstorm
+* Sublime Text: https://angular.io/guide/language-service#sublime-text 
 
 ## Documentation
 
