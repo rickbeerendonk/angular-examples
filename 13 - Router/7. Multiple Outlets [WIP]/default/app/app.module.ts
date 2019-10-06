@@ -13,20 +13,23 @@ import { SubpageComponent } from './subpage/subpage.component';
 @NgModule({
   imports: [
     BrowserModule,
-    RouterModule.forRoot([
-      { path: '', component: HomeComponent },
-      {
-        path: 'page1',
-        component: Page1Component,
-        children: [
-          {
-            path: 'sub/:id',
-            outlet: 'subRouterOutlet',
-            component: SubpageComponent
-          }
-        ]
-      }
-    ])
+    RouterModule.forRoot(
+      [
+        { path: '', component: HomeComponent },
+        {
+          path: 'page1',
+          component: Page1Component,
+          children: [
+            {
+              path: 'sub/:id',
+              outlet: 'subRouterOutlet',
+              component: SubpageComponent
+            }
+          ]
+        }
+      ],
+      { useHash: true }
+    )
   ],
   declarations: [AppComponent, HomeComponent, Page1Component, SubpageComponent],
   bootstrap: [AppComponent]

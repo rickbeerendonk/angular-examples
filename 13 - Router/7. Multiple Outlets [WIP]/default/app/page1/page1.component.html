@@ -9,12 +9,13 @@
       <a routerLink="sub/1">Sub 1</a>
     </li>
     <li>
-      <a routerLink="sub/2">Sub 2</a>
+      <a routerLink="/page1/(subRouterOutlet:sub/2)">Sub 2</a>
     </li>
     <li>
-      <a [routerLink]="['sub/3', {outlets: {subRouterOutlet: }}]">Sub 3</a>
+      <a [routerLink]="['/page1', {outlets: {subRouterOutlet: ['sub', 3]}}]">Sub 3</a>
     </li>
   </ul>
 </nav>
 
-<router-outlet name="subRouterOutlet"></router-outlet>
+<main>
+</main>
