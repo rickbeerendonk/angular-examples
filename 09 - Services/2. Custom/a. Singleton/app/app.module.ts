@@ -14,7 +14,7 @@ import { LoggerService } from './logger/logger.service';
   bootstrap: [AppComponent]
 })
 export class AppModule {
-  constructor(private loggerService: LoggerService) {
+  constructor(loggerService: LoggerService) {
     loggerService.log('AppModule created.');
   }
 }
