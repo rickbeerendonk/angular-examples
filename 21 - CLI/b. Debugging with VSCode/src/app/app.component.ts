@@ -9,6 +9,7 @@ export class AppComponent {
   title = 'example';
 
   clicked() {
+    this.title += '.';
     alert('Clicked!');
   }
 }
