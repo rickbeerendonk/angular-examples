@@ -5,6 +5,6 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app',
-  template: '<greeting></greeting><br><hello></hello>'
+  template: '<greeting></greeting>'
 })
 export class AppComponent {}
