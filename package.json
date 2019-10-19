@@ -26,21 +26,21 @@
     "start-new": "node \"./Util - 01 - Custom servers/server.js\" 8070"
   },
   "devDependencies": {
-    "@types/node": "^12.7.11",
+    "@types/node": "^12.11.1",
     "@types/systemjs": "^0.20.6"
   },
   "dependencies": {
-    "@angular/animations": "^8.2.9",
-    "@angular/common": "^8.2.9",
-    "@angular/compiler": "^8.2.9",
-    "@angular/core": "^8.2.9",
-    "@angular/forms": "^8.2.9",
-    "@angular/platform-browser": "^8.2.9",
-    "@angular/platform-browser-dynamic": "^8.2.9",
-    "@angular/router": "^8.2.9",
+    "@angular/animations": "^8.2.11",
+    "@angular/common": "^8.2.11",
+    "@angular/compiler": "^8.2.11",
+    "@angular/core": "^8.2.11",
+    "@angular/forms": "^8.2.11",
+    "@angular/platform-browser": "^8.2.11",
+    "@angular/platform-browser-dynamic": "^8.2.11",
+    "@angular/router": "^8.2.11",
     "core-js": "^2.6.9",
     "http-server": "^0.11.1",
-    "husky": "^2.7.0",
+    "husky": "^3.0.9",
     "live-server": "^1.2.1",
     "mime-types": "^2.1.24",
     "plugin-typescript": "^8.0.0",
@@ -48,7 +48,7 @@
     "rxjs": "^6.5.3",
     "serve": "^11.2.0",
     "systemjs": "^0.21.6",
-    "typescript": "^3.6.3",
-    "zone.js": "^0.9.1"
+    "typescript": "^3.6.4",
+    "zone.js": "^0.10.2"
   }
 }
