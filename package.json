@@ -26,18 +26,18 @@
     "start-new": "node \"./Util - 01 - Custom servers/server.js\" 8070"
   },
   "devDependencies": {
-    "@types/node": "^12.11.1",
+    "@types/node": "^12.11.7",
     "@types/systemjs": "^0.20.6"
   },
   "dependencies": {
-    "@angular/animations": "^8.2.11",
-    "@angular/common": "^8.2.11",
-    "@angular/compiler": "^8.2.11",
-    "@angular/core": "^8.2.11",
-    "@angular/forms": "^8.2.11",
-    "@angular/platform-browser": "^8.2.11",
-    "@angular/platform-browser-dynamic": "^8.2.11",
-    "@angular/router": "^8.2.11",
+    "@angular/animations": "^8.2.12",
+    "@angular/common": "^8.2.12",
+    "@angular/compiler": "^8.2.12",
+    "@angular/core": "^8.2.12",
+    "@angular/forms": "^8.2.12",
+    "@angular/platform-browser": "^8.2.12",
+    "@angular/platform-browser-dynamic": "^8.2.12",
+    "@angular/router": "^8.2.12",
     "core-js": "^2.6.9",
     "http-server": "^0.11.1",
     "husky": "^3.0.9",
