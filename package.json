@@ -27,28 +27,28 @@
   },
   "devDependencies": {
     "@types/node": "^12.11.7",
-    "@types/systemjs": "^0.20.6"
+    "@types/systemjs": "^0.20.7"
   },
   "dependencies": {
-    "@angular/animations": "^8.2.12",
-    "@angular/common": "^8.2.12",
-    "@angular/compiler": "^8.2.12",
-    "@angular/core": "^8.2.12",
-    "@angular/forms": "^8.2.12",
-    "@angular/platform-browser": "^8.2.12",
-    "@angular/platform-browser-dynamic": "^8.2.12",
-    "@angular/router": "^8.2.12",
+    "@angular/animations": "^8.2.14",
+    "@angular/common": "^8.2.14",
+    "@angular/compiler": "^8.2.14",
+    "@angular/core": "^8.2.14",
+    "@angular/forms": "^8.2.14",
+    "@angular/platform-browser": "^8.2.14",
+    "@angular/platform-browser-dynamic": "^8.2.14",
+    "@angular/router": "^8.2.14",
     "core-js": "^2.6.9",
     "http-server": "^0.11.1",
-    "husky": "^3.0.9",
+    "husky": "^3.1.0",
     "live-server": "^1.2.1",
-    "mime-types": "^2.1.24",
+    "mime-types": "^2.1.25",
     "plugin-typescript": "^8.0.0",
-    "prettier": "^1.18.2",
+    "prettier": "^1.19.1",
     "rxjs": "^6.5.3",
     "serve": "^11.2.0",
     "systemjs": "^0.21.6",
-    "typescript": "^3.6.4",
+    "typescript": "^3.7.2",
     "zone.js": "^0.10.2"
   }
 }
