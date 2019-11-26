@@ -13,9 +13,11 @@ export class AppComponent implements AfterViewInit {
   @ViewChild(GreetingComponent, { static: true })
   private greetingComponent: GreetingComponent;
 
+  // Lifecycle method:
+  // Called after Angular has fully initialized a component's view.
   ngAfterViewInit() {
-    // Called after Angular has fully initialized a component's view.
-    // However, causes ExpressionChangedAfterItHasBeenCheckedError
+    // Don't immediately manipulate data.
+    // Will throw ExpressionChangedAfterItHasBeenCheckedError.
     setTimeout(() => (this.greetingComponent.name = 'Angular'), 0);
   }
 
