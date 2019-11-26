@@ -3,12 +3,14 @@
 
 import { LOCALE_ID } from '@angular/core';
 import { registerLocaleData } from '@angular/common';
+import localeEl from '@angular/common/locales/el';
 import localeNl from '@angular/common/locales/nl';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { DemoComponent } from './demo.component';
 
+registerLocaleData(localeEl, 'el');
 registerLocaleData(localeNl, 'nl');
 
 @NgModule({
