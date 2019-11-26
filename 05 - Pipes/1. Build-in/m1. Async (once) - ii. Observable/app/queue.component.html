@@ -1,0 +1,13 @@
+<!-- European Union Public License version 1.2 -->
+<!-- Copyright © 2019 Rick Beerendonk -->
+
+<h1>Queue</h1>
+
+<p>First arrival: {{ firstArrival | async | date: 'HH:mm:ss' }}</p>
+
+<hr />
+
+<p *ngIf="firstArrival | async; else beforeArrival">First arrival: {{ firstArrival | async | date: 'HH:mm:ss' }}</p>
+<ng-template #beforeArrival>
+  <p style="color: gray">No arrivals yet</p>
+</ng-template>
