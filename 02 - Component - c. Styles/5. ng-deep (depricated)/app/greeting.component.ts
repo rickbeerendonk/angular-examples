@@ -18,7 +18,6 @@ import { Component } from '@angular/core';
   ],
   template: `
     <div>Hello div</div>
-    <p>Hello p</p>
     <child></child>
   `
 })

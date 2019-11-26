@@ -8,7 +8,6 @@ import { Component } from '@angular/core';
   styles: ['.deprecated { color: gray }'],
   template: `
     <div>App component: div</div>
-    <p>App component: p</p>
     <greeting></greeting>
     <br />
     <p class="deprecated">
