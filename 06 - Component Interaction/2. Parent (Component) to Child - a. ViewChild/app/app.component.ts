@@ -10,6 +10,7 @@ import { GreetingComponent } from './greeting/greeting.component';
   templateUrl: './app.component.html'
 })
 export class AppComponent implements AfterViewInit {
+  // Query first GreetingComponent in the template
   @ViewChild(GreetingComponent, { static: true })
   private greetingComponent: GreetingComponent;
 
