@@ -4,16 +4,13 @@
 import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
 
 @Component({
-  selector: 'middle',
+  selector: 'bottom',
   changeDetection: ChangeDetectionStrategy.OnPush, // OnPush change detection
   template: `
-    <h1>Middle</h1>
-
-    <hr />
-
-    <bottom [obj]="obj"></bottom>
+    <h1>Bottom</h1>
+    <p>Text received: {{obj.text}}</p>
   `
 })
-export class MiddleComponent {
+export class BottomComponent {
   @Input() obj: object;
 }

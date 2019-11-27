@@ -5,14 +5,19 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: 'app',
-  changeDetection: ChangeDetectionStrategy.OnPush, // OnPush change detection
   template: `
-    <input autofocus #text (keyup)="(0)" />
-    <h1>App: Hello {{ text.value }}</h1>
+    <input autofocus [value]="myObj.text" (keyup)="handleKeyUp($event.target.value)" />
+    <h1>App: Hello {{ myObj.text }}</h1>
 
     <hr />
 
-    <middle></middle>
+    <middle [obj]="myObj"></middle>
   ` // onKeyUp not handled, but Angular will update bindings after event.
 })
-export class AppComponent {}
+export class AppComponent {
+  myObj = { text: 'World' };
+
+  handleKeyUp(value: string) {
+    this.myObj.text = value;
+  }
+}
