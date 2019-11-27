@@ -22,6 +22,8 @@ export class AppComponent {
   myObj = { text: 'World' };
 
   handleKeyUp(value: string) {
-    this.myObj.text = value;
+    // Immutable:
+    // Create a copy of the old object and replace the text property.
+    this.myObj = { ...this.myObj, text: value };
   }
 }
