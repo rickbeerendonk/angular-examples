@@ -5,7 +5,7 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: 'greeting',
-  changeDetection: ChangeDetectionStrategy.OnPush, // OnPush change detection
+  //changeDetection: ChangeDetectionStrategy.OnPush, // OnPush change detection
   template: `
     <input autofocus #text />
     <h1>Greeting: Hello {{ text.value }}</h1>

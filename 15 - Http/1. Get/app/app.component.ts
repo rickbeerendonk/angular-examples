@@ -3,7 +3,7 @@
 
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 
 class Todo {
   constructor(
@@ -23,7 +23,7 @@ export class AppComponent {
   private baseUrl: string = 'https://jsonplaceholder.typicode.com/todos'; // Free online service
 
   todos: Observable<Array<Todo>> = this.http.get(this.baseUrl) as Observable<
-    Array<Todo>
+    Todo[]
   >;
 
   constructor(private http: HttpClient) {}
