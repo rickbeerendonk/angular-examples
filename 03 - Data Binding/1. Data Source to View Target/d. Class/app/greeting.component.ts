@@ -6,10 +6,16 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'greeting',
   template: `
-    <h1 [class.isImportant]="important">Hello World!</h1>
+    <h1 [class.highlight]="true" [class.isImportant]="important">
+      Hello World!
+    </h1>
   `,
-  styles: ['.isImportant { text-decoration: underline; }']
+  styles: [
+    '.highlight { color: red }',
+    '.isImportant { text-decoration: underline; }'
+  ]
 })
 export class GreetingComponent {
-  important: boolean = true;
+  current = true;
+  important = true;
 }
