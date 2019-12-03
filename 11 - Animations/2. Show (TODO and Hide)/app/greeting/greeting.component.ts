@@ -15,26 +15,17 @@ import {
 @Component({
   selector: 'greeting',
   template: `
-    <h1 [@fadeAnimation]="'in'">Hello World!</h1>
+    <h1 [@fadeInOut]="'in'">Hello World!</h1>
   `,
   animations: [
-    trigger('fadeAnimation' /* same as in template */, [
-      // Visible state
-      state('in', style({ opacity: 1 })),
-
-      // transition(:enter) or transition('void => *')
-      transition(':enter', [
-        // Start style
-        style({ opacity: 0 }),
-        animate(600)
-      ]),
-
-      // transition(:leave) or transition('void => *')
-      transition(
-        ':leave',
-        // End style within animate()
-        animate(600, style({ opacity: 0 }))
-      )
+    trigger('fadeInOut', [
+      state(
+        'void',
+        style({
+          opacity: 0
+        })
+      ),
+      transition('void <=> *', animate(1000))
     ])
   ]
 })
