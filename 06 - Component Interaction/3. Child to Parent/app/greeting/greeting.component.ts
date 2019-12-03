@@ -11,7 +11,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
 })
 export class GreetingComponent {
   value: string = 'Hello World!';
-  @Output() change: EventEmitter<string> = new EventEmitter();
+  @Output() change = new EventEmitter<string>();
 
   valueChanged(newValue: string) {
     this.value = newValue;
