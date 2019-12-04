@@ -1,7 +1,7 @@
 import { storiesOf } from '@storybook/angular';
 import { text } from '@storybook/addon-knobs';
 
-import { GreetingComponent } from '../app/greeting/greeting.component';
+import { GreetingComponent } from '../src/app/greeting/greeting.component';
 
 storiesOf('GreetingComponent', module)
   .add('without name', () => ({

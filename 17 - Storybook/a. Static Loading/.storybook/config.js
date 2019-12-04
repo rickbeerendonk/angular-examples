@@ -7,10 +7,9 @@ import { withKnobs } from '@storybook/addon-knobs';
 
 addDecorator(withKnobs);
 
-// automatically import all files ending in *.stories.ts
-const req = require.context('../src/stories', true, /\.stories\.ts$/);
 function loadStories() {
-  req.keys().forEach(filename => req(filename));
+  require('../stories/index.ts');
+  // You can require as many stories as you need.
 }
 
 configure(loadStories, module);
