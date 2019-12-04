@@ -1,9 +1,10 @@
 import { storiesOf } from '@storybook/angular';
-import { text } from '@storybook/addon-knobs';
+import { withKnobs, text } from '@storybook/addon-knobs';
 
 import { GreetingComponent } from '../app/greeting/greeting.component';
 
 storiesOf('GreetingComponent', module)
+  .addDecorator(withKnobs)
   .add('without name', () => ({
     component: GreetingComponent,
     props: {
