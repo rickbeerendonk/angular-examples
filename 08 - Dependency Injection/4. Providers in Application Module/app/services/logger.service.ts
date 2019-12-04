@@ -1,3 +1,6 @@
+/*! European Union Public License version 1.2 !*/
+/*! Copyright © 2018 Rick Beerendonk          !*/
+
 export class LoggerService {
   private static uniqueId: number = 0;
 
