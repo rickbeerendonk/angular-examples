@@ -1,5 +1,9 @@
 import { addDecorator, configure } from '@storybook/angular';
+import { withInfo } from '@storybook/addon-info';
 import { withKnobs } from '@storybook/addon-knobs';
+ 
+// TODO: Throws runtime error
+//addDecorator(withInfo);
 
 addDecorator(withKnobs);
 
