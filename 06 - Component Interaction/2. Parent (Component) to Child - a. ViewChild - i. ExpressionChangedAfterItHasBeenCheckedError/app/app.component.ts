@@ -17,6 +17,7 @@ export class AppComponent implements AfterViewInit {
   // Lifecycle method:
   // Called after Angular has fully initialized a component's view.
   ngAfterViewInit() {
+    debugger;
     // Don't immediately manipulate data.
     // Will throw ExpressionChangedAfterItHasBeenCheckedError.
     this.greetingComponent.name = 'Angular';
