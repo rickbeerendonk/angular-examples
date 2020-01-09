@@ -1,7 +1,7 @@
 <!-- European Union Public License version 1.2 -->
 <!-- Copyright © 2019 Rick Beerendonk -->
 
-<span *ngIf="show; then default else alternative"></span>
+<span *ngIf="show; then default; else alternative"></span>
 <ng-template #default>
   Visible
 </ng-template>

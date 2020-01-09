@@ -19,8 +19,8 @@
     }
   },
   "scripts": {
-    "prettier": "prettier --list-different '**/*.{json,ts}'",
-    "prettier-fix": "prettier --write '**/*.{json,ts}'",
+    "prettier": "prettier --list-different '**/*.{html,js,json,md,ts}'",
+    "prettier-fix": "prettier --write '**/*.{html,js,json,md,ts}'",
     "start": "node \"./Util - 03 - HTTP and REST servers/server.js\" 8070",
     "start-old": "node \"./Util - 02 - HTTP and REST servers/server.js\" 8070",
     "start-new": "node \"./Util - 01 - Custom servers/server.js\" 8070"

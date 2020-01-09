@@ -7,7 +7,9 @@
 
 <hr />
 
-<p *ngIf="firstArrival | async; else beforeArrival">First arrival: {{ firstArrival | async | date: 'HH:mm:ss' }}</p>
+<p *ngIf="firstArrival | async; else beforeArrival">
+  First arrival: {{ firstArrival | async | date: 'HH:mm:ss' }}
+</p>
 <ng-template #beforeArrival>
   <p style="color: gray">No arrivals yet</p>
 </ng-template>

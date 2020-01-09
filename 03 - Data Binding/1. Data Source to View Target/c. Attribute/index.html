@@ -2,20 +2,19 @@
 <!-- European Union Public License version 1.2 -->
 <!-- Copyright © 2018 Rick Beerendonk -->
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="utf-8" />
-    <meta name="author" content="Rick Beerendonk">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Rick Beerendonk" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
     <title>Data Binding - Data Source to View Target - Attribute</title>
-    <link rel="stylesheet" href="../../../resources/oblicum.css">
-</head>
+    <link rel="stylesheet" href="../../../resources/oblicum.css" />
+  </head>
 
-<body>
+  <body>
     <greeting>
-        <span class="loading">Loading...</span>
+      <span class="loading">Loading...</span>
     </greeting>
 
     <script src="../../../node_modules/core-js-bundle/index.js"></script>
@@ -25,13 +24,12 @@
 
     <script src="systemjs.config.js"></script>
     <script>
-        System.import('main.ts').catch(function (err) {
-            console.error(err); 
-            document.body.style.backgroundColor = 'red'; 
-            document.body.style.color = 'white';
-            document.body.innerText = err;
-        });
+      System.import('main.ts').catch(function(err) {
+        console.error(err);
+        document.body.style.backgroundColor = 'red';
+        document.body.style.color = 'white';
+        document.body.innerText = err;
+      });
     </script>
-</body>
-
+  </body>
 </html>

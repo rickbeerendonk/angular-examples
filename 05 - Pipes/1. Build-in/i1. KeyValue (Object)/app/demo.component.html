@@ -5,9 +5,7 @@
 
 <h2>Default order</h2>
 <ul>
-  <li *ngFor="let prop of (obj | keyvalue)">
-    {{ prop.key }}: {{ prop.value }}
-  </li>
+  <li *ngFor="let prop of obj | keyvalue">{{ prop.key }}: {{ prop.value }}</li>
 </ul>
 <!-- 
 prop1: true
@@ -17,7 +15,7 @@ prop3: 333
 
 <h2>Compare function order</h2>
 <ul>
-  <li *ngFor="let prop of (obj | keyvalue: compareDesc)">
+  <li *ngFor="let prop of obj | keyvalue: compareDesc">
     {{ prop.key }}: {{ prop.value }}
   </li>
 </ul>

@@ -33,7 +33,10 @@ const totalUri = `${serverUri}${extraUri}`;
 
 // Start server
 // See: https://github.com/tapio/live-server#readme
-const httpChild = childProcess.spawn('live-server', ['.', `--port=${portHttp}`, `--open="${extraUri}"`], {shell: true, stdio: 'inherit'});
-
+const httpChild = childProcess.spawn(
+  'live-server',
+  ['.', `--port=${portHttp}`, `--open="${extraUri}"`],
+  { shell: true, stdio: 'inherit' }
+);
 
 //childProcess.exec(command, () => { console.log('exit'); process.exit(); });

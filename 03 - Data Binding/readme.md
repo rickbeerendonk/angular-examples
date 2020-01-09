@@ -2,8 +2,8 @@
 
 ## Documentation
 
-* https://angular.io/guide/displaying-data
-* https://angular.io/guide/user-input
+- https://angular.io/guide/displaying-data
+- https://angular.io/guide/user-input
 
 ## License
 

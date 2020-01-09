@@ -2,7 +2,7 @@
 
 ## Background
 
-* http://cldr.unicode.org/index/cldr-spec/plural-rules
+- http://cldr.unicode.org/index/cldr-spec/plural-rules
 
 ## Licence
 
