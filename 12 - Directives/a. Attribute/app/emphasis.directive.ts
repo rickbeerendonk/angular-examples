@@ -1,10 +1,10 @@
-import { Directive, ElementRef, Renderer, HostListener } from '@angular/core';
+import { Directive, ElementRef, Renderer2, HostListener } from '@angular/core';
 
 @Directive({
   selector: '[emphasis]'
 })
 export class EmphasisDirective {
-  constructor(private el: ElementRef, private renderer: Renderer) {}
+  constructor(private el: ElementRef, private renderer: Renderer2) {}
 
   @HostListener('mouseenter')
   onMouseEnter(): void {
@@ -19,10 +19,10 @@ export class EmphasisDirective {
   }
 
   private setColor(color: string): void {
-    this.renderer.setElementStyle(this.el.nativeElement, 'color', color);
+    this.renderer.setStyle(this.el.nativeElement, 'color', color);
   }
 
   private setWeight(weight: string): void {
-    this.renderer.setElementStyle(this.el.nativeElement, 'font-weight', weight);
+    this.renderer.setStyle(this.el.nativeElement, 'font-weight', weight);
   }
 }
