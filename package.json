@@ -14,8 +14,7 @@
   "homepage": "https://github.com/rickbeerendonk/angular-examples#readme",
   "husky": {
     "hooks": {
-      "pre-commit": "npm run prettier",
-      "pre-push": "npm run prettier"
+      "pre-commit": "npm run prettier"
     }
   },
   "scripts": {
