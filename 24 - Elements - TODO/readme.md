@@ -12,4 +12,4 @@ European Union Public Licence version 1.2
 
 ## Copyright
 
-Copyright © 2019 Rick Beerendonk
+Copyright © 2019-2020 Rick Beerendonk
