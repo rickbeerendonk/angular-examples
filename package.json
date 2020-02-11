@@ -25,7 +25,7 @@
     "start-new": "node \"./Util - 01 - Custom servers/server.js\" 8070"
   },
   "devDependencies": {
-    "@types/node": "13.7.0",
+    "@types/node": "13.7.1",
     "@types/systemjs-0.20.7": "npm:@types/systemjs@0.20.7"
   },
   "dependencies": {

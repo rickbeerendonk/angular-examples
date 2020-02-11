@@ -37,7 +37,7 @@
     "@storybook/addon-notes": "5.3.12",
     "@storybook/addons": "5.3.12",
     "@storybook/angular": "5.3.12",
-    "@types/node": "13.7.0",
+    "@types/node": "13.7.1",
     "babel-loader": "8.0.6",
     "ts-node": "8.6.2",
     "tslint": "6.0.0",
