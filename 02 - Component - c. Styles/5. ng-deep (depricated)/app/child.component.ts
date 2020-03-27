@@ -5,8 +5,6 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'child',
-  template: `
-    <div>Child component: div</div>
-  `
+  template: '<div>Child component: div</div>'
 })
 export class ChildComponent {}

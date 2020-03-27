@@ -44,7 +44,7 @@
     "mime-types": "2.1.26",
     "ngx-quicklink": "0.2.1",
     "plugin-typescript": "8.0.0",
-    "prettier": "1.19.1",
+    "prettier": "2.0.2",
     "rxjs": "6.5.4",
     "serve": "11.3.0",
     "systemjs-0.21.6": "npm:systemjs@0.21.6",

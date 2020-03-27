@@ -9,8 +9,8 @@ import { Component } from '@angular/core';
   templateUrl: './queue.component.html'
 })
 export class QueueComponent {
-  firstArrival: Promise<Date> = new Promise(function(resolve /*, reject */) {
-    setTimeout(function() {
+  firstArrival: Promise<Date> = new Promise(function (resolve /*, reject */) {
+    setTimeout(function () {
       resolve(new Date());
     }, 3000);
   });

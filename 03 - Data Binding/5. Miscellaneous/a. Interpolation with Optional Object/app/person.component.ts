@@ -9,9 +9,7 @@ class Person {
 
 @Component({
   selector: 'greeting',
-  template: `
-    <h1>Hello {{ person?.name }}!</h1>
-  `
+  template: '<h1>Hello {{ person?.name }}!</h1>'
 })
 export class GreetingComponent {
   person: Person = new Person('John Johnson');

@@ -11,8 +11,8 @@ import { from, Observable } from 'rxjs';
 })
 export class QueueComponent {
   firstArrival: Observable<Date> = from<Promise<Date>>(
-    new Promise(function(resolve /*, reject */) {
-      setTimeout(function() {
+    new Promise(function (resolve /*, reject */) {
+      setTimeout(function () {
         resolve(new Date());
       }, 3000);
     })

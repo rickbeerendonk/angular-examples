@@ -5,9 +5,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'clickme',
-  template: `
-    <div on-click="clicked($event)">Click me!</div>
-  `
+  template: '<div on-click="clicked($event)">Click me!</div>'
 })
 export class ClickMeComponent {
   clicked(event: MouseEvent) {
