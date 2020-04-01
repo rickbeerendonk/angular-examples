@@ -11,8 +11,8 @@ import { Component } from '@angular/core';
         Name:
         <input type="text" [(ngModel)]="name" name="name" />
       </label>
+      <button (click)="myForm.reset()">Reset</button>
     </form>
-    <button (click)="myForm.reset()">Reset</button>
   `
 })
 export class MyFormComponent {
