@@ -1,0 +1,36 @@
+<!-- European Union Public License version 1.2 -->
+<!-- Copyright © 2020 Rick Beerendonk -->
+
+<form #myForm="ngForm" (ngSubmit)="submitted()">
+  <label>
+    Name:
+    <input
+      type="text"
+      [(ngModel)]="model.name"
+      name="name"
+      required
+      minlength="4"
+      #name="ngModel"
+    />
+  </label>
+  <span [hidden]="!name.errors" class="error">
+    {{ name.errors | json }}
+  </span>
+  <br />
+  <label>
+    Age:
+    <input
+      type="number"
+      [(ngModel)]="model.age"
+      name="age"
+      min="0"
+      #age="ngModel"
+    />
+    <span [hidden]="!age.errors" class="error">{{ age.errors | json }}</span>
+  </label>
+  <br />
+  <button (click)="myForm.reset()">Reset</button>
+  <button type="submit" [disabled]="!myForm.valid">Submit</button>
+</form>
+
+<h3 *ngIf="submittedData">Submitted: {{ submittedData | json }}</h3>
