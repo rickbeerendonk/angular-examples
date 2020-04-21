@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'greeting',
   template: `
-    <h1 [class.highlight]="true" [class.isImportant]="important">
+    <h1 [class.highlight]="current" [class.isImportant]="important">
       Hello World!
     </h1>
   `,
