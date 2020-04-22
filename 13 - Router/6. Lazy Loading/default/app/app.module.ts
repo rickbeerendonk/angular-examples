@@ -11,7 +11,7 @@ import { NoMatchComponent } from './nomatch/nomatch.component';
 import { Page1Component } from './page1/page1.component';
 import { Page2Component } from './page2/page2.component';
 
-// We don't import MediaModule anymore.
+// We don't import ExtraModule anymore.
 // import { ExtraModule } from './extra/extra.module';
 
 @NgModule({
