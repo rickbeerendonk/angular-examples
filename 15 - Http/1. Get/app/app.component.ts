@@ -15,7 +15,8 @@ class Todo {
 }
 
 @Component({
-  moduleId: __moduleName /* Use __moduleName in SystemJS and module.id in commonjs */,
+  moduleId:
+    __moduleName /* Use __moduleName in SystemJS and module.id in commonjs */,
   selector: 'app',
   templateUrl: './app.component.html'
 })

@@ -4,7 +4,8 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  moduleId: __moduleName /* Use __moduleName in SystemJS and module.id in commonjs */,
+  moduleId:
+    __moduleName /* Use __moduleName in SystemJS and module.id in commonjs */,
   selector: 'greeting',
   templateUrl: './greeting.component.html',
   styleUrls: ['./greeting.component.css']

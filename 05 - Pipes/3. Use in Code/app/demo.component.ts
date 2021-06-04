@@ -5,7 +5,8 @@ import { Component } from '@angular/core';
 import { UpperCasePipe, DatePipe } from '@angular/common';
 
 @Component({
-  moduleId: __moduleName /* Use __moduleName in SystemJS and module.id in commonjs */,
+  moduleId:
+    __moduleName /* Use __moduleName in SystemJS and module.id in commonjs */,
   selector: 'demo',
   templateUrl: './demo.component.html',
   providers: [UpperCasePipe, DatePipe]

@@ -13,13 +13,15 @@ import {
 import { LoggerService } from '../logger/logger.service';
 
 @Component({
-  moduleId: __moduleName /* Use __moduleName in SystemJS and module.id in commonjs */,
+  moduleId:
+    __moduleName /* Use __moduleName in SystemJS and module.id in commonjs */,
   selector: 'greet',
   templateUrl: './greeting.component.html',
   styleUrls: ['./greeting.component.css']
 })
 export class GreetingComponent
-  implements DoCheck, OnChanges, OnDestroy, OnInit {
+  implements DoCheck, OnChanges, OnDestroy, OnInit
+{
   @Input() name: string;
   count = 0;
 

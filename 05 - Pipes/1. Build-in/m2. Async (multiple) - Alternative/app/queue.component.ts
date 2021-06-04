@@ -6,7 +6,8 @@ import { Observable, interval } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 @Component({
-  moduleId: __moduleName /* Use __moduleName in SystemJS and module.id in commonjs */,
+  moduleId:
+    __moduleName /* Use __moduleName in SystemJS and module.id in commonjs */,
   selector: 'queue',
   templateUrl: './queue.component.html'
 })
