@@ -4,7 +4,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { GreetingComponent } from './person.component';
+import { GreetingComponent } from './greeting.component';
 
 @NgModule({
   imports: [BrowserModule],
