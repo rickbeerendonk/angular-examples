@@ -7,7 +7,8 @@ import {
   OnChanges,
   OnDestroy,
   DoCheck,
-  OnInit
+  OnInit,
+  SimpleChanges
 } from '@angular/core';
 
 import { LoggerService } from '../logger/logger.service';
@@ -55,5 +56,21 @@ export class GreetingComponent
 
   ngDoCheck() {
     this.loggerService.logEvent('ngDoCheck', this.name, this.count);
+  }
+
+  ngAfterContentInit() {
+    this.loggerService.logEvent('ngAfterContentInit', this.name, this.count);
+  }
+
+  ngAfterContentChecked() {
+    this.loggerService.logEvent('ngAfterContentChecked', this.name, this.count);
+  }
+
+  ngAfterViewInit() {
+    this.loggerService.logEvent('ngAfterViewInit', this.name, this.count);
+  }
+
+  ngAfterViewChecked() {
+    this.loggerService.logEvent('ngAfterViewChecked', this.name, this.count);
   }
 }

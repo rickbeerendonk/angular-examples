@@ -20,7 +20,7 @@ export class LoggerService {
 
   private eventNo = 1;
 
-  public logEvent(hook: string, props: any, state: string) {
+  public logEvent(hook: string, props: any, state: any) {
     const tbody = document.querySelector('#result tbody');
     tbody.innerHTML += `
     <tr>
