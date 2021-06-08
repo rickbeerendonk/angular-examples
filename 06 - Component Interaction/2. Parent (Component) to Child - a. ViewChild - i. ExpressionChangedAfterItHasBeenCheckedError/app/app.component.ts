@@ -13,7 +13,7 @@ import { GreetingComponent } from './greeting/greeting.component';
 export class AppComponent implements AfterViewInit {
   // Query first GreetingComponent in the template
   @ViewChild(GreetingComponent, { static: true })
-  private greetingComponent: GreetingComponent;
+  private greetingComponent!: GreetingComponent;
 
   // Lifecycle method:
   // Called after Angular has fully initialized a component's view.
