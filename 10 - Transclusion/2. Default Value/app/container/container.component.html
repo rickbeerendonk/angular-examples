@@ -1,0 +1,10 @@
+<!-- European Union Public License version 1.2 -->
+<!-- Copyright © 2021 Rick Beerendonk -->
+
+<div class="container">
+  The only item:
+  <div class="content">
+    <div #ref><ng-content></ng-content></div>
+    <ng-container *ngIf="!ref.hasChildNodes()"> Default Value </ng-container>
+  </div>
+</div>
