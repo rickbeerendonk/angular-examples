@@ -14,9 +14,9 @@ export class GreetingComponent {
   private _name: string;
 
   @Input()
-  set name(name: string) {
-    console.log('GreetingComponent.name = ' + name);
-    this._name = name;
+  set name(value: string) {
+    console.log('GreetingComponent.name = ' + value);
+    this._name = value;
   }
 
   get name(): string {
