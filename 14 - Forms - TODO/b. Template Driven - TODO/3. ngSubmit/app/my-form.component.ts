@@ -13,7 +13,7 @@ import { Component } from '@angular/core';
 export class MyFormComponent {
   name = 'Angular Form';
 
-  submittedData: string;
+  submittedData?: string;
 
   submitted() {
     this.submittedData = this.name;

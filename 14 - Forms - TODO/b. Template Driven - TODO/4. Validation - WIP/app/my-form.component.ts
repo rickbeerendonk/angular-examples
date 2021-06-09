@@ -17,7 +17,7 @@ export class MyFormComponent {
     name: ''
   };
 
-  submittedData: object;
+  submittedData?: object;
 
   submitted() {
     this.submittedData = this.model;

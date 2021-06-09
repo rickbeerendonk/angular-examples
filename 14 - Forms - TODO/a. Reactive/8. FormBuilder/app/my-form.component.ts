@@ -16,7 +16,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   providers: [FormBuilder]
 })
 export class MyFormComponent implements OnInit {
-  personForm: FormGroup;
+  personForm!: FormGroup;
 
   // Inject FormBuilder
   constructor(private formBuilder: FormBuilder) {}
@@ -29,7 +29,7 @@ export class MyFormComponent implements OnInit {
     });
   }
 
-  submittedData: string;
+  submittedData?: string;
 
   submitted() {
     this.submittedData = this.personForm.value;

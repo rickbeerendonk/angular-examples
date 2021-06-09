@@ -4,6 +4,7 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "noImplicitAny": true,
-    "target": "esnext"
+    "target": "esnext",
+    "strict": true
   }
 }

@@ -15,7 +15,7 @@ import { prefixValidator } from './prefix.directive';
   templateUrl: './my-form.component.html'
 })
 export class MyFormComponent implements OnInit {
-  personForm: FormGroup;
+  personForm!: FormGroup;
 
   ngOnInit(): void {
     this.personForm = new FormGroup({
@@ -24,7 +24,7 @@ export class MyFormComponent implements OnInit {
     });
   }
 
-  submittedData: string;
+  submittedData?: string;
 
   submitted() {
     this.submittedData = this.personForm.value;

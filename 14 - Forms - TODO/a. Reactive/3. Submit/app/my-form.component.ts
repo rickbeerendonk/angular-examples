@@ -17,7 +17,7 @@ export class MyFormComponent {
     age: new FormControl(42)
   });
 
-  submittedData: object;
+  submittedData?: object;
 
   submitted() {
     this.submittedData = this.personForm.value;
