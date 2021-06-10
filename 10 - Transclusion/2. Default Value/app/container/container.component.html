@@ -6,5 +6,11 @@
   <div class="content">
     <div #ref><ng-content></ng-content></div>
     <ng-container *ngIf="!ref.hasChildNodes()"> Default Value </ng-container>
+    <!--
+      The ng-container element is a logical construct
+      that you can use to group other DOM elements
+      or acts as the host to structural directives;
+      however, the ng-container itself is not rendered in the DOM tree.
+    -->
   </div>
 </div>
