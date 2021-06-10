@@ -13,7 +13,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   templateUrl: './my-form.component.html'
 })
 export class MyFormComponent implements OnInit {
-  personForm!: FormGroup;
+  personForm: FormGroup;
 
   ngOnInit(): void {
     this.personForm = new FormGroup({
