@@ -14,7 +14,7 @@ import {
 
 @Component({
   selector: 'greeting',
-  template: `<h1 [@fadeInOut]="'in'">Hello World!</h1>`,
+  template: ` <h1 [@fadeInOut]="'in'">Hello World!</h1> `,
   animations: [
     trigger('fadeInOut', [
       state(
