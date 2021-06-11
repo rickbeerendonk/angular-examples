@@ -12,15 +12,11 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styles: ['span { color: gray }'],
   templateUrl: './my-form.component.html'
 })
-export class MyFormComponent implements OnInit {
-  personForm: FormGroup;
-
-  ngOnInit(): void {
-    this.personForm = new FormGroup({
-      name: new FormControl('', [Validators.required, Validators.minLength(4)]),
-      age: new FormControl(0, [Validators.min(0)])
-    });
-  }
+export class MyFormComponent {
+  personForm = new FormGroup({
+    name: new FormControl('', [Validators.required, Validators.minLength(4)]),
+    age: new FormControl(-1, [Validators.min(0)])
+  });
 
   submittedData?: string;
 
