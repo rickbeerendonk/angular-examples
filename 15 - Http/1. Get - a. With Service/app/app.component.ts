@@ -13,7 +13,9 @@ import { Todo, TodosService } from './todos.service';
   templateUrl: './app.component.html'
 })
 export class AppComponent {
-  constructor(private todosService: TodosService) {}
+  todos: Observable<Todo[]>;
 
-  todos: Observable<Array<Todo>> = this.todosService.getTodos();
+  constructor(todosService: TodosService) {
+    this.todos = todosService.getTodos();
+  }
 }

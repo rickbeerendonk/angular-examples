@@ -13,14 +13,12 @@ import { Todo, TodosService } from './todos.service';
 })
 export class AppComponent implements OnDestroy {
   private subscriber: any;
-  public todos: Array<Todo> = [];
+  public todos: Todo[] = [];
 
   constructor(todosService: TodosService) {
-    this.subscriber = todosService
-      .getTodos()
-      .subscribe((todos: Array<Todo>) => {
-        this.todos = todos;
-      });
+    this.subscriber = todosService.getTodos().subscribe((todos: Todo[]) => {
+      this.todos = todos;
+    });
   }
 
   ngOnDestroy() {

@@ -21,11 +21,10 @@ class Todo {
   templateUrl: './app.component.html'
 })
 export class AppComponent {
-  private baseUrl: string = 'https://jsonplaceholder.typicode.com/todos'; // Free online service
+  private baseUrl = 'https://jsonplaceholder.typicode.com/todos'; // Free online service
+  todos: Observable<Todo[]>;
 
-  todos: Observable<Array<Todo>> = this.http.get(this.baseUrl) as Observable<
-    Todo[]
-  >;
-
-  constructor(private http: HttpClient) {}
+  constructor(http: HttpClient) {
+    this.todos = http.get<Todo[]>(this.baseUrl);
+  }
 }
