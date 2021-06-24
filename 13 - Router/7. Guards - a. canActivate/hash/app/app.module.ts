@@ -23,6 +23,7 @@ import { Page2Component } from './page2/page2.component';
       { useHash: true }
     )
   ],
+  //providers: [AuthGuard],
   declarations: [AppComponent, HomeComponent, Page1Component, Page2Component],
   bootstrap: [AppComponent]
 })
