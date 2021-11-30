@@ -24,7 +24,7 @@
     "start": "npm run openserver -- \".\""
   },
   "devDependencies": {
-    "@types/node": "15.12.4",
+    "@types/node": "16.11.10",
     "@types/systemjs-0.20.7": "npm:@types/systemjs@0.20.7"
   },
   "dependencies": {
