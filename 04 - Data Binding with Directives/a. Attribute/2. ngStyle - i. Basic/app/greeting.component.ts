@@ -7,12 +7,12 @@ import { Component } from '@angular/core';
   selector: 'greeting',
   template: `
     <ul>
-      <li [ngStyle]="{ color: color1 }">First</li>
-      <li [ngStyle]="{ color: color2 }">Second</li>
+      <li [ngStyle]="style1">First</li>
+      <li [ngStyle]="style2">Second</li>
     </ul>
   `
 })
 export class GreetingComponent {
-  color1 = 'red';
-  color2 = 'green';
+  style1 = { color: 'red' };
+  style2 = { color: 'green' };
 }
