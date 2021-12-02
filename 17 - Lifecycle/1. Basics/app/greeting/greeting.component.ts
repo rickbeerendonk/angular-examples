@@ -4,6 +4,10 @@
 import {
   Component,
   Input,
+  AfterContentChecked,
+  AfterContentInit,
+  AfterViewChecked,
+  AfterViewInit,
   OnChanges,
   OnDestroy,
   DoCheck,
@@ -21,7 +25,15 @@ import { LoggerService } from '../logger/logger.service';
   styleUrls: ['./greeting.component.css']
 })
 export class GreetingComponent
-  implements DoCheck, OnChanges, OnDestroy, OnInit
+  implements
+    AfterContentChecked,
+    AfterContentInit,
+    AfterViewChecked,
+    AfterViewInit,
+    DoCheck,
+    OnChanges,
+    OnDestroy,
+    OnInit
 {
   @Input() name: string;
   count = 0;
