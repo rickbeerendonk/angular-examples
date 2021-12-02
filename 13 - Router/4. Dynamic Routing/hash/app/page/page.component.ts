@@ -18,6 +18,8 @@ export class PageComponent implements OnInit, OnDestroy {
   constructor(private route: ActivatedRoute) {}
 
   ngOnInit() {
+    // Is called after the @Input() properties are set.
+    // We can do this in the constructor, if we don't use @Input() properties:
     this.subscriberParams = this.route.paramMap.subscribe(paramMap => {
       this.id = +paramMap.get('id'); // (+) converts string 'id' to a number
     });
