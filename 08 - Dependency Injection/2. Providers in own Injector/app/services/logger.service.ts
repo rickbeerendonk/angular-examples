@@ -4,7 +4,7 @@
 export class LoggerService {
   private static uniqueId: number = 0;
 
-  private id: number;
+  private readonly id: number;
 
   constructor() {
     this.id = ++LoggerService.uniqueId;
