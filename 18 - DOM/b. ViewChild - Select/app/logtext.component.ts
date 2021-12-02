@@ -21,6 +21,7 @@ export class LogTextComponent implements AfterViewInit {
   text: string = 'initial';
 
   ngAfterViewInit() {
+    // View is ready, so inputRef contains the native DOM element
     this.inputRef.nativeElement.select();
   }
 
