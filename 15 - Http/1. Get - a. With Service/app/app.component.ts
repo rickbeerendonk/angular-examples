@@ -2,7 +2,7 @@
 /*! Copyright © 2019 Rick Beerendonk          !*/
 
 import { Component } from '@angular/core';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
 
 import { Todo, TodosService } from './todos.service';
 
