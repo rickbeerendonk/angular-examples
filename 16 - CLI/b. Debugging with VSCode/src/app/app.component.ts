@@ -1,15 +1,21 @@
+/*! European Union Public License version 1.2 !*/
+/*! Copyright © 2019 Rick Beerendonk          !*/
+
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  template: `
+    <edit [value]="name" (change)="changed($event)"></edit>
+    <br />
+    <greeting [name]="name"></greeting>
+  `,
+  styles: []
 })
 export class AppComponent {
-  title = 'example';
+  name: string = 'World';
 
-  clicked() {
-    this.title += '.';
-    alert('Clicked!');
+  changed(value: string) {
+    this.name = value;
   }
 }
