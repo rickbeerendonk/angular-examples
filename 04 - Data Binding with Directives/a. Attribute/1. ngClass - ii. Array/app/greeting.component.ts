@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
   selector: 'greeting',
   template: `
     <ul>
-      <li [ngClass]="classesNone">Single</li>
+      <li [ngClass]="classesNone">None</li>
       <li [ngClass]="classesSingle">Single</li>
       <li [ngClass]="classesMultiple">Multiple</li>
     </ul>
