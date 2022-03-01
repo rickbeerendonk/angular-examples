@@ -1,0 +1,7 @@
+<!-- European Union Public License version 1.2 -->
+<!-- Copyright © 2019 Rick Beerendonk -->
+
+<span *ngIf="feature1; else alternative">Feature is available</span>
+<ng-template #alternative>
+  <span>Feature is <u>not</u> available</span>
+</ng-template>
