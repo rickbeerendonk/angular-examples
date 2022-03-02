@@ -6,8 +6,7 @@ import { Component } from '@angular/core';
 import { Post, PostsService } from './services/posts.service';
 
 @Component({
-  moduleId:
-    __moduleName /* Use __moduleName in SystemJS and module.id in commonjs */,
+  moduleId: __moduleName /* NOT needed in Angular CLI */,
   selector: 'app',
   templateUrl: './app.component.html'
 })

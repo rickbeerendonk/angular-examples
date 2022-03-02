@@ -6,8 +6,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   // moduleId is NOT needed in Angular CLI.
-  moduleId:
-    __moduleName /* Use __moduleName in SystemJS and module.id in commonjs */,
+  moduleId: __moduleName /* NOT needed in Angular CLI */,
   selector: 'my-form',
   styles: ['span { color: gray }'],
   templateUrl: './my-form.component.html'
