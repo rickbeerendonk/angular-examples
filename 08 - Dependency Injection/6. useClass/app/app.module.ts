@@ -7,7 +7,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { GreetingModule } from './greeting/greeting.module';
 
-import { Logger } from './services/logger';
+import Logger from './services/logger';
 import { LoggerService } from './services/logger.service';
 import { LoggerAltService } from './services/logger-alt.service';
 

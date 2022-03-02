@@ -1,14 +1,15 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2019 Rick Beerendonk          !*/
 
-import { Logger } from './logger';
+import Logger from './logger';
 
-export class LoggerAltService implements Logger {
+export class LoggerAltService extends Logger {
   private static uniqueId: number = 0;
 
   private id: number;
 
   constructor() {
+    super();
     this.id = ++LoggerAltService.uniqueId;
   }
 
