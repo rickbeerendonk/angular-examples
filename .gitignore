@@ -5,6 +5,8 @@
 .angular/
 lib/
 temp/
+documentation.json
+
 
 #################
 ## npm

@@ -2,8 +2,10 @@
 ## Angular Examples
 #################
 
+.angular/
 dist/
 temp/
+documentation.json
 
 #################
 ## npm
