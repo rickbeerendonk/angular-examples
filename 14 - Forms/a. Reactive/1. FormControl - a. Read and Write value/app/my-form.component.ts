@@ -19,6 +19,6 @@ export class MyFormComponent {
   name = new FormControl('Angular Form');
 
   changeNameToWorld() {
-    this.name.setValue('World');
+    this.name.setValue(this.name.value + '.');
   }
 }
