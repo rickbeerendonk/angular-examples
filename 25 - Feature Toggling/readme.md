@@ -78,4 +78,32 @@ Disadvantages:
 
 ## HTTP Call
 
-TODO
+Advantages
+
+- Can be changed after compilation
+- Can be changed by changing a database value
+
+Disadvantages:
+
+- Separate HTTP call
+
+### Steps
+
+1. Create a REST webservice. In the example we've added JSON file (`features.json`) to assets folder:
+
+   ```json
+   {
+     "feature1": true
+   }
+   ```
+
+2. Add a service to access the REST webservice.
+3. Use the service to read the features.
+
+## Licence
+
+European Union Public Licence version 1.2
+
+## Copyright
+
+Copyright © 2022 Rick Beerendonk
