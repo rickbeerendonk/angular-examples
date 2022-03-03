@@ -36,7 +36,6 @@ Disadvantages:
 
 Advantages
 
-- Can be changed after compilation
 - No separate HTTP call
 
 Disadvantages:
