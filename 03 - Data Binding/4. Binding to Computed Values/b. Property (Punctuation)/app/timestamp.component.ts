@@ -5,7 +5,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'timestamp',
-  template: '<h1>Generated on <span [innerText]="getDateTime()"></span>!</h1>'
+  template: '<h1 [title]="getDateTime()">Hover to see the generated time</h1>'
 })
 export class TimeStampComponent {
   getDateTime() {
