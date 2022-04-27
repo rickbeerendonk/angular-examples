@@ -10,9 +10,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./greeting.component.css']
 })
 export class GreetingComponent {
-  private points: string = '.';
-
-  public name: string = 'World';
+  name: string = 'World';
+  points: string = '.';
 
   addPoint() {
     this.points += '.';
