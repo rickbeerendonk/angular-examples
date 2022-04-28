@@ -13,7 +13,7 @@ export class BottomComponent {
   color: string;
   constructor(stateService: StateService) {
     this.color = stateService.color;
-    stateService.switch.subscribe(() => {
+    stateService.onChange.subscribe(() => {
       this.color = stateService.color;
     });
   }

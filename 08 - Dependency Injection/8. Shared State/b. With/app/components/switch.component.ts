@@ -7,12 +7,12 @@ import { StateService } from '../services/state.service';
 
 @Component({
   selector: 'switch',
-  template: '<button (click)="handleClick()">Switch</button>'
+  template: '<button (click)="handleClick()">Switch color</button>'
 })
 export class SwitchComponent {
   constructor(private stateService: StateService) {}
 
   handleClick() {
-    this.stateService.switch.emit();
+    this.stateService.switchColor();
   }
 }

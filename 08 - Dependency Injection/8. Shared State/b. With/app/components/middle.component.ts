@@ -5,6 +5,9 @@ import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'middle',
-  template: '<bottom></bottom>'
+  template: `
+    <bottom></bottom>
+    <switch></switch>
+  `
 })
 export class MiddleComponent {}

@@ -4,6 +4,10 @@
 import { EventEmitter } from '@angular/core';
 
 export class StateService {
-  color: string;
-  switch = new EventEmitter();
+  color: string = 'red';
+  switchColor() {
+    this.color = this.color === 'red' ? 'green' : 'red';
+    this.onChange.emit();
+  }
+  onChange = new EventEmitter();
 }
