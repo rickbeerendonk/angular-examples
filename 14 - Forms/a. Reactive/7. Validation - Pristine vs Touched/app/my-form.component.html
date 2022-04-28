@@ -39,6 +39,6 @@
     </ul>
   </label>
   <br />
-  <button type="submit" [disabled]="!personForm.valid">Submit</button>
+  <button type="submit" [disabled]="personForm.invalid">Submit</button>
 </form>
 <h3 *ngIf="submittedData">Submitted: {{ submittedData | json }}</h3>
