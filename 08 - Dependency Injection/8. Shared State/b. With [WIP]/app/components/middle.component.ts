@@ -5,8 +5,6 @@ import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'middle',
-  template: '<bottom [color]="color"></bottom>'
+  template: '<bottom></bottom>'
 })
-export class MiddleComponent {
-  @Input() color: string;
-}
+export class MiddleComponent {}

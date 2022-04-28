@@ -1,16 +1,18 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2022 Rick Beerendonk          !*/
 
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component } from '@angular/core';
+
+import { StateService } from '../services/state.service';
 
 @Component({
   selector: 'switch',
   template: '<button (click)="handleClick()">Switch</button>'
 })
 export class SwitchComponent {
-  @Output() switch = new EventEmitter();
+  constructor(private stateService: StateService) {}
 
   handleClick() {
-    this.switch.emit();
+    this.stateService.switch.emit();
   }
 }

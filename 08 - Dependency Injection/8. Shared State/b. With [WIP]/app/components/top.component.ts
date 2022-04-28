@@ -8,20 +8,18 @@ import { StateService } from '../services/state.service';
 @Component({
   selector: 'top',
   template: `
-    <middle [color]="color"></middle>
-    <switch (switch)="handleSwitch()"></switch>
+    <middle></middle>
+    <switch></switch>
   `,
   providers: [StateService]
 })
 export class TopComponent {
   color = 'red';
-  constructor(private stateService: StateService) {
+  constructor(stateService: StateService) {
     stateService.color = this.color;
-    stateService.switch = () =>
-      (his.color = this.color === 'red' ? 'green' : 'red');
-  }
-  color = 'red';
-  handleSwitch() {
-    this.color = this.color === 'red' ? 'green' : 'red';
+    stateService.switch.subscribe(() => {
+      this.color = this.color === 'red' ? 'green' : 'red';
+      stateService.color = this.color;
+    });
   }
 }
