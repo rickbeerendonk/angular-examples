@@ -41,6 +41,7 @@ Advantages
 Disadvantages:
 
 - Downloaded with website
+- Not flexible, recompile needed
 
 ### Steps
 
