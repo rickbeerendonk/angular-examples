@@ -1,7 +1,8 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2022 Rick Beerendonk          !*/
 
-import { Component } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
+import { Subscription } from 'rxjs';
 
 import { StateService } from '../services/state.service';
 
@@ -9,12 +10,18 @@ import { StateService } from '../services/state.service';
   selector: 'bottom',
   template: `<h1 [style.color]="color">Bottom</h1>`
 })
-export class BottomComponent {
+export class BottomComponent implements OnDestroy {
   color: string;
+  stateServiceSubscription: Subscription;
+
   constructor(stateService: StateService) {
     this.color = stateService.color;
     stateService.onChange.subscribe(() => {
       this.color = stateService.color;
     });
+  }
+
+  ngOnDestroy() {
+    this.stateServiceSubscription.unsubscribe();
   }
 }
