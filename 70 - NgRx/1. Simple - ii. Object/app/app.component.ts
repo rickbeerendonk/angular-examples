@@ -5,12 +5,13 @@ import { Component } from '@angular/core';
 
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import { increment, decrement } from './counter.actions';
+import { CounterState, selectCounterFeature } from './state/counter.selectors';
+import { increment, decrement } from './state/counter.actions';
 
 @Component({
   selector: 'app',
   template: `
-    <h1>{{ count | async }}</h1>
+    <h1>{{ (counter | async).count }}</h1>
     <div>
       <button (click)="increment()">+</button>
       <button (click)="increment(5)">+5</button>
@@ -19,10 +20,10 @@ import { increment, decrement } from './counter.actions';
   `
 })
 export class AppComponent {
-  count: Observable<number>;
+  counter: Observable<CounterState>;
 
-  constructor(private store: Store<{ count: number }>) {
-    this.count = store.select('count');
+  constructor(private store: Store) {
+    this.counter = this.store.select(selectCounterFeature);
   }
 
   increment(value: number = 1) {

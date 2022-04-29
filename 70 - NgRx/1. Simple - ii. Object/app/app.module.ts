@@ -8,12 +8,12 @@ import { AppComponent } from './app.component';
 
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import { counterReducer } from './counter.reducer';
+import { counterReducer } from './state/counter.reducer';
 
 @NgModule({
   imports: [
     BrowserModule,
-    StoreModule.forRoot({ count: counterReducer }),
+    StoreModule.forRoot({ counter: counterReducer }),
     // Must be imported after importing StoreModule
     StoreDevtoolsModule.instrument()
   ],
