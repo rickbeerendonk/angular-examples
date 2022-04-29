@@ -11,7 +11,7 @@ import { increment, decrement } from './state/counter.actions';
 @Component({
   selector: 'counter',
   template: `
-    <h1>{{ (counter | async).count }}</h1>
+    <h1>{{ (counter | async)?.count }}</h1>
     <div>
       <button (click)="increment()">+</button>
       <button (click)="increment(5)">+5</button>
