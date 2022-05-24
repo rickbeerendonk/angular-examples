@@ -12,7 +12,7 @@ import { FormControl } from '@angular/forms';
       <input type="text" [formControl]="name" />
     </label>
     <h1>Hello {{ name.value }}</h1>
-    <button (click)="changeNameToWorld()">Change name to "World"</button>
+    <button (click)="changeNameToWorld()">Change name...</button>
   `
 })
 export class MyFormComponent {
