@@ -1,7 +1,7 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2018 Rick Beerendonk          !*/
 
-import { Component, Input, OnChanges, SimpleChange } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 
 @Component({
   moduleId: __moduleName /* NOT needed in Angular CLI */,
@@ -13,7 +13,7 @@ export class GreetingComponent implements OnChanges {
   @Input()
   name: string;
 
-  ngOnChanges(changes: { [propKey: string]: SimpleChange }) {
+  ngOnChanges(changes: SimpleChanges) {
     for (const propName in changes) {
       console.log(
         `GreetingComponent.${propName} = ${changes[propName].currentValue} (was: ${changes[propName].previousValue})`
