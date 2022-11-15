@@ -9,5 +9,5 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html'
 })
 export class AppComponent {
-  items: Array<string> = ['one', 'two', 'three', 'four'];
+  items: string[] = ['one', 'two', 'three', 'four'];
 }
