@@ -16,7 +16,7 @@ export class BottomComponent implements OnDestroy {
 
   constructor(stateService: StateService) {
     this.color = stateService.color;
-    stateService.onChange.subscribe(() => {
+    this.stateServiceSubscription = stateService.onChange.subscribe(() => {
       this.color = stateService.color;
     });
   }
