@@ -5,7 +5,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({ name: 'csv' })
 export class CsvPipe implements PipeTransform {
-  transform(value: string, ...args: any[]): string {
+  transform(value: string, ...args: string[]): string {
     if (!value) {
       return value;
     }
