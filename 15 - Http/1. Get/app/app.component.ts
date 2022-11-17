@@ -5,13 +5,11 @@ import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-class Todo {
-  constructor(
-    public userId: number,
-    public id: number,
-    public title: string,
-    public completed: boolean
-  ) {}
+interface Todo {
+  userId: number;
+  id: number;
+  title: string;
+  completed: boolean;
 }
 
 @Component({

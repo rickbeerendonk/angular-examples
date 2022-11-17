@@ -5,13 +5,11 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-export class Todo {
-  constructor(
-    public userId: number,
-    public id: number,
-    public title: string,
-    public completed: boolean
-  ) {}
+export interface Todo {
+  userId: number;
+  id: number;
+  title: string;
+  completed: boolean;
 }
 
 // Must be added (comment this code and run to see why):
@@ -22,6 +20,6 @@ export class TodosService {
   constructor(private http: HttpClient) {}
 
   getTodos(): Observable<Array<Todo>> {
-    return this.http.get(this.baseUrl) as Observable<Array<Todo>>;
+    return this.http.get<Todo[]>(this.baseUrl);
   }
 }
