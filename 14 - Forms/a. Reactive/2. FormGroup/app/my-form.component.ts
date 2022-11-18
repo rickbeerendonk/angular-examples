@@ -7,7 +7,7 @@ import { FormControl, FormGroup } from '@angular/forms';
 @Component({
   selector: 'my-form',
   template: `
-    <form [formGroup]="personForm">
+    <form [formGroup]="personGroup">
       <label>
         Name:
         <input type="text" formControlName="name" />
@@ -21,7 +21,7 @@ import { FormControl, FormGroup } from '@angular/forms';
   `
 })
 export class MyFormComponent {
-  personForm = new FormGroup({
+  personGroup = new FormGroup({
     name: new FormControl('Alexandra'),
     age: new FormControl(42)
   });

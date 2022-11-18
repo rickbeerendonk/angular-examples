@@ -12,26 +12,26 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   templateUrl: './my-form.component.html'
 })
 export class MyFormComponent implements OnInit {
-  personForm!: FormGroup;
+  personGroup!: FormGroup;
 
   ngOnInit(): void {
-    this.personForm = new FormGroup({
+    this.personGroup = new FormGroup({
       // Showing errors combined with pristine (name) or touched (country)
       name: new FormControl('', [Validators.minLength(4)]),
       country: new FormControl('', [Validators.minLength(4)])
     });
 
     /* 
-    this.personForm.controls.name.pristine;  // Value isn't changed by the user yet.
-    this.personForm.controls.name.dirty;     // Value is changed by the user.
-    this.personForm.controls.name.touched;   // User has entered and left the control.
-    this.personForm.controls.name.untouched; // User never visited or only entered the control.
+    this.personGroup.controls.name.pristine;  // Value isn't changed by the user yet.
+    this.personGroup.controls.name.dirty;     // Value is changed by the user.
+    this.personGroup.controls.name.touched;   // User has entered and left the control.
+    this.personGroup.controls.name.untouched; // User never visited or only entered the control.
     */
   }
 
   submittedData?: string;
 
   submitted() {
-    this.submittedData = this.personForm.value;
+    this.submittedData = this.personGroup.value;
   }
 }

@@ -11,7 +11,7 @@ import { FormControl, FormGroup } from '@angular/forms';
   templateUrl: './my-form.component.html'
 })
 export class MyFormComponent {
-  personForm = new FormGroup({
+  personGroup = new FormGroup({
     name: new FormControl('Alexandra'),
     age: new FormControl(42)
   });
@@ -19,6 +19,6 @@ export class MyFormComponent {
   submittedData?: object;
 
   submitted() {
-    this.submittedData = this.personForm.value;
+    this.submittedData = this.personGroup.value;
   }
 }

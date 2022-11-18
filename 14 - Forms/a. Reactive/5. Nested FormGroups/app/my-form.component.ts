@@ -11,7 +11,7 @@ import { FormControl, FormGroup } from '@angular/forms';
   templateUrl: './my-form.component.html'
 })
 export class MyFormComponent {
-  personForm = new FormGroup({
+  personGroup = new FormGroup({
     name: new FormGroup({
       firstName: new FormControl('Alexandra'),
       lastName: new FormControl('Alba')

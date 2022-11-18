@@ -15,14 +15,14 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   providers: [FormBuilder]
 })
 export class MyFormComponent implements OnInit {
-  personForm!: FormGroup;
+  personGroup!: FormGroup;
 
   // Inject FormBuilder
   constructor(private formBuilder: FormBuilder) {}
 
   ngOnInit(): void {
     // Use FormBuilder
-    this.personForm = this.formBuilder.group({
+    this.personGroup = this.formBuilder.group({
       name: ['', [Validators.required, Validators.minLength(4)]],
       age: [0, [Validators.min(0)]]
     });
@@ -31,6 +31,6 @@ export class MyFormComponent implements OnInit {
   submittedData?: string;
 
   submitted() {
-    this.submittedData = this.personForm.value;
+    this.submittedData = this.personGroup.value;
   }
 }

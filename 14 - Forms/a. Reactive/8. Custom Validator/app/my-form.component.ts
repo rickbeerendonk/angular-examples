@@ -14,10 +14,10 @@ import { prefixValidator } from './prefix.directive';
   templateUrl: './my-form.component.html'
 })
 export class MyFormComponent implements OnInit {
-  personForm!: FormGroup;
+  personGroup!: FormGroup;
 
   ngOnInit(): void {
-    this.personForm = new FormGroup({
+    this.personGroup = new FormGroup({
       name: new FormControl('', [prefixValidator('Ang')]),
       age: new FormControl(0)
     });
@@ -26,6 +26,6 @@ export class MyFormComponent implements OnInit {
   submittedData?: string;
 
   submitted() {
-    this.submittedData = this.personForm.value;
+    this.submittedData = this.personGroup.value;
   }
 }
