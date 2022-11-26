@@ -2,8 +2,11 @@
 ## Angular Examples
 ###################
 
+.angular/
 lib/
 temp/
+documentation.json
+
 
 #################
 ## npm

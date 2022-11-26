@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'logtext',
   template: `
-    <input autofocus (keyup)="onKeyUp($event)" />
+    <input (keyup)="onKeyUp($event)" />
     <h1>{{ text }}</h1>
   `
 })

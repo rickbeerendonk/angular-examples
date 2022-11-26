@@ -5,8 +5,7 @@ import { Component } from '@angular/core';
 import { from, Observable } from 'rxjs';
 
 @Component({
-  moduleId:
-    __moduleName /* Use __moduleName in SystemJS and module.id in commonjs */,
+  moduleId: __moduleName /* NOT needed in Angular CLI */,
   selector: 'queue',
   templateUrl: './queue.component.html'
 })

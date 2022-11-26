@@ -16,7 +16,7 @@ import { Component, ElementRef, AfterViewInit, ViewChild } from '@angular/core';
   `
 })
 export class LogTextComponent implements AfterViewInit {
-  @ViewChild('inputRef') inputRef: ElementRef;
+  @ViewChild('inputRef') inputRef: ElementRef<HTMLInputElement>;
 
   text: string = 'initial';
 

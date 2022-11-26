@@ -19,6 +19,7 @@ import { NoMatchComponent } from './nomatch/nomatch.component';
         { path: '', component: HomeComponent },
         { path: 'page1', component: Page1Component },
         { path: 'page2', component: Page2Component },
+        // '**' should be last:
         { path: '**', component: NoMatchComponent }
       ],
       { useHash: true }

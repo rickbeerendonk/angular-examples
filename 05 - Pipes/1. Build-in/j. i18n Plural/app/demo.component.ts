@@ -11,8 +11,7 @@ Documentation: https://angular.io/guide/i18n#setting-up-locale
 */
 
 @Component({
-  moduleId:
-    __moduleName /* Use __moduleName in SystemJS and module.id in commonjs */,
+  moduleId: __moduleName /* NOT needed in Angular CLI */,
   selector: 'demo',
   templateUrl: './demo.component.html'
 })

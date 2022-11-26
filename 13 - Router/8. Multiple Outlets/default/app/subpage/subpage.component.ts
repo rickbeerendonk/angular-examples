@@ -5,8 +5,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  moduleId:
-    __moduleName /* Use __moduleName in SystemJS and module.id in commonjs */,
+  moduleId: __moduleName /* NOT needed in Angular CLI */,
   selector: 'subpage',
   templateUrl: './subpage.component.html'
 })

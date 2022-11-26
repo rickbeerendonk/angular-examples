@@ -6,8 +6,7 @@ import { Component, Input } from '@angular/core';
 import { Post } from '../types/types';
 
 @Component({
-  moduleId:
-    __moduleName /* Use __moduleName in SystemJS and module.id in commonjs */,
+  moduleId: __moduleName /* NOT needed in Angular CLI */,
   selector: 'post-list',
   templateUrl: './post-list.component.html'
 })
