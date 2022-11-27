@@ -3,6 +3,7 @@
 ###################
 
 .angular/
+dist/
 lib/
 temp/
 documentation.json
