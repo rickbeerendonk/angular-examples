@@ -42,28 +42,24 @@ function openBrowser(uri) {
 
 /*** Main functions ***/
 
-/// Is Webpack project? ///
+/// Is Angular project? ///
 
 if (filePath && fs.statSync(filePath).isDirectory()) {
-  const webpackConfigNames = ['webpack.config.js', 'webpack.dev.js'];
-  const webpackConfigPath = webpackConfigNames.reduce(
+  const angularConfigNames = ['angular.json'];
+  const angularConfigPath = angularConfigNames.reduce(
     (path, name) => path || findFileInPath(filePath, name),
     null
   );
-  if (webpackConfigPath) {
-    // Webpack config exists, so execute webpack
-    console.log('webpack');
-    console.log('webpack config: ' + webpackConfigPath);
-    childProcess.spawnSync(
-      'webpack-dev-server',
-      ['--config', `"${webpackConfigPath}"`, '--open'],
-      {
-        cwd: path.dirname(webpackConfigPath),
-        shell: true,
-        stdio: 'inherit'
-      }
-    );
-    console.log('webpack done');
+  if (angularConfigPath) {
+    // Angular config exists, so execute webpack
+    console.log('angular');
+    console.log('angular config: ' + angularConfigPath);
+    childProcess.spawnSync('npm', ['start'], {
+      cwd: path.dirname(angularConfigPath),
+      shell: true,
+      stdio: 'inherit'
+    });
+    console.log('angular done');
     process.exit();
   }
 }
