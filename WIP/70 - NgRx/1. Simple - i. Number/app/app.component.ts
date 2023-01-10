@@ -10,7 +10,7 @@ import { increment, decrement } from './state/counter.actions';
 @Component({
   selector: 'app',
   template: `
-    <h1>{{ count | async }}</h1>
+    <h1>{{ count$ | async }}</h1>
     <div>
       <button (click)="increment()">+</button>
       <button (click)="increment(5)">+5</button>
@@ -19,10 +19,10 @@ import { increment, decrement } from './state/counter.actions';
   `
 })
 export class AppComponent {
-  count: Observable<number>;
+  count$: Observable<number>;
 
   constructor(private store: Store<{ count: number }>) {
-    this.count = store.select('count');
+    this.count$ = store.select('count');
   }
 
   increment(value: number = 1) {

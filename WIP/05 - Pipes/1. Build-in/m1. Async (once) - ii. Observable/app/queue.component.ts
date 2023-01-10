@@ -10,7 +10,7 @@ import { from, Observable } from 'rxjs';
   templateUrl: './queue.component.html'
 })
 export class QueueComponent {
-  firstArrival: Observable<Date> = from<Promise<Date>>(
+  firstArrival$: Observable<Date> = from<Promise<Date>>(
     new Promise(function (resolve /*, reject */) {
       setTimeout(function () {
         resolve(new Date());

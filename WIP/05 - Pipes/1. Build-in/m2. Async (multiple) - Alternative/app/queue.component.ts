@@ -11,7 +11,7 @@ import { map } from 'rxjs/operators';
   templateUrl: './queue.component.html'
 })
 export class QueueComponent {
-  latestArrival: Observable<Date> = interval(3000).pipe<Date>(
+  latestArrival$: Observable<Date> = interval(3000).pipe<Date>(
     map(() => {
       return new Date();
     })

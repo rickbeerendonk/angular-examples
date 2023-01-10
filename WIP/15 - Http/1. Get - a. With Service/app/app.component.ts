@@ -12,9 +12,9 @@ import { Todo, TodosService } from './todos.service';
   templateUrl: './app.component.html'
 })
 export class AppComponent {
-  todos: Observable<Todo[]>;
+  todos$: Observable<Todo[]>;
 
   constructor(todosService: TodosService) {
-    this.todos = todosService.getTodos();
+    this.todos$ = todosService.getTodos();
   }
 }

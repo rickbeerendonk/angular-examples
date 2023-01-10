@@ -19,9 +19,9 @@ interface Todo {
 })
 export class AppComponent {
   private baseUrl = 'https://jsonplaceholder.typicode.com/todos'; // Free online service
-  todos: Observable<Todo[]>;
+  todos$: Observable<Todo[]>;
 
   constructor(http: HttpClient) {
-    this.todos = http.get<Todo[]>(this.baseUrl);
+    this.todos$ = http.get<Todo[]>(this.baseUrl);
   }
 }
