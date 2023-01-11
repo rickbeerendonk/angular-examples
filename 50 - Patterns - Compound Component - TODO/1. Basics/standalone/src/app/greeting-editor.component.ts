@@ -2,7 +2,12 @@
 /*! Copyright © 2023 Rick Beerendonk          !*/
 
 import { Subject } from 'rxjs';
-import { AfterContentInit, Component, ContentChildren } from '@angular/core';
+import {
+  AfterContentInit,
+  Component,
+  ContentChildren,
+  QueryList
+} from '@angular/core';
 import { GreetingEditorInputComponent } from './greeting-editor-input.component';
 import { GreetingEditorTextComponent } from './greeting-editor-text.component';
 
@@ -14,11 +19,11 @@ import { GreetingEditorTextComponent } from './greeting-editor-text.component';
 export class GreetingEditorComponent implements AfterContentInit {
   name = new Subject<string>();
 
-  @ContentChildren(GreetingEditorInputComponent) inputComponents =
-    new Array<GreetingEditorInputComponent>();
+  @ContentChildren(GreetingEditorInputComponent)
+  inputComponents!: QueryList<GreetingEditorInputComponent>;
 
-  @ContentChildren(GreetingEditorTextComponent) textComponents =
-    new Array<GreetingEditorTextComponent>();
+  @ContentChildren(GreetingEditorTextComponent)
+  textComponents!: QueryList<GreetingEditorTextComponent>;
 
   ngAfterContentInit() {
     // Subscribe to name changes
