@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
   selector: 'app',
   templateUrl: './app.component.html'
 })
-export class AppComponent {}
+export class AppComponent {
+  count = 1;
+
+  constructor() {
+    setInterval(() => this.count++, 5000);
+  }
+}
