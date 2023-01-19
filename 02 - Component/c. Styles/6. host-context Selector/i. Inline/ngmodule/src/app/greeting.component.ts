@@ -21,7 +21,7 @@ import { Component } from '@angular/core';
   ],
   template: `
     <div>Hello World</div>
-    <child />
+    <child></child>
   `
 })
 export class GreetingComponent {}

@@ -12,7 +12,7 @@ import { ChildComponent } from './child.component';
   styleUrls: ['./greeting.component.css'],
   template: `
     <div>Hello World</div>
-    <child />
+    <child></child>
   `
 })
 export class GreetingComponent {}

@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
   selector: 'greeting',
   template: `
     <h1>Hello World</h1>
-    <greeting />
+    <greeting></greeting>
   `
 })
 export class GreetingComponent {}
