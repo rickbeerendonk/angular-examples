@@ -45,6 +45,8 @@ function walk(dir) {
 
 console.log('Current directory:', process.cwd());
 
+const pathUpdate = path.join(process.cwd(), 'update');
+
 const paths = walk(process.cwd()).sort();
 
 function deleteIfExists(path) {
@@ -57,17 +59,19 @@ for (const pathBase of paths) {
   // Adjust folder
   console.log(pathBase);
 
+  // Target path:
+  const pathNewBase = path.join(pathBase.replace('WIP', 'NEW'), 'ngmodule');
+  const pathNewBaseSrc = path.join(pathNewBase, 'src');
+  // Create target
+  fs.mkdirSync(pathNewBase, { recursive: true });
+
   // Delete unneeded files
   deleteIfExists(path.join(pathBase, 'systemjs.config.js'));
   deleteIfExists(path.join(pathBase, 'tsconfig.json'));
 
-  // Create new target folder
-  const pathProject = path.join(pathBase, 'ngmodule');
-  const pathSrc = path.join(pathProject, 'src');
-  //fs.mkdirSync(pathSrc);
-
   // Copy all files recursively
-  fs.cpSync(pathBase, pathSrc, { recursive: true });
+  fs.cpSync(pathUpdate, pathNewBase, { recursive: true });
+  fs.cpSync(pathBase, pathNewBaseSrc, { recursive: true });
   //copyFolderRecursiveSync(pathBase, 'ngmodule/src');
 }
 
