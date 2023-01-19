@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
   template: '<button on-click="clicked($event)">Click me!</button>'
 })
 export class ClickMeComponent {
-  clicked(event: PointerEvent) {
+  clicked(event: MouseEvent) {
     alert(`Clicked ${event.target}.`);
   }
 }
