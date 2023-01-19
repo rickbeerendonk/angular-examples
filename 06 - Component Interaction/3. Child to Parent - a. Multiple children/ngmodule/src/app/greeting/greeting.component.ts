@@ -5,7 +5,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 export interface IChangeEvent {
   source: object;
-  sourceName: string;
+  sourceName?: string;
   value: string;
 }
 
@@ -15,7 +15,7 @@ export interface IChangeEvent {
   styleUrls: ['./greeting.component.css']
 })
 export class GreetingComponent {
-  @Input() name: string;
+  @Input() name?: string;
 
   value: string = 'Hello World!';
   @Output() change = new EventEmitter<IChangeEvent>();

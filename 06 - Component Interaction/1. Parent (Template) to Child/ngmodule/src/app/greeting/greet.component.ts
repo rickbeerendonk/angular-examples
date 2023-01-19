@@ -14,5 +14,5 @@ export class GreetComponent {
   @Input() greeting?: string = 'Hello';
 
   // Required
-  @Input() name: string;
+  @Input() name?: string;
 }

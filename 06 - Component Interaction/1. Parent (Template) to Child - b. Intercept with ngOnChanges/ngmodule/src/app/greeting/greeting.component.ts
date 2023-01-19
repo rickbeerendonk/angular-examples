@@ -10,7 +10,7 @@ import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 })
 export class GreetingComponent implements OnChanges {
   @Input()
-  name: string;
+  name?: string;
 
   ngOnChanges(changes: SimpleChanges) {
     for (const propName in changes) {

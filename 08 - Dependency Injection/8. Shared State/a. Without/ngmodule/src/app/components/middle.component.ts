@@ -5,8 +5,8 @@ import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'middle',
-  template: '<bottom [color]="color"></bottom>'
+  template: '<bottom [color]="color" />'
 })
 export class MiddleComponent {
-  @Input() color: string;
+  @Input() color?: string;
 }

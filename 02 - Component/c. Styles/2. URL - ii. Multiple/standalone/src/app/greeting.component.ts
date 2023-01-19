@@ -16,7 +16,7 @@ import { ChildComponent } from './child.component';
   template: `
     <div>Hello World</div>
     <span>I am green</span>
-    <child></child>
+    <child />
   `
 })
 export class GreetingComponent {}

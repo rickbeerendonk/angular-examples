@@ -12,7 +12,7 @@ import { Title } from '@angular/platform-browser';
   `
 })
 export class AppComponent {
-  oldTitle: string;
+  oldTitle?: string;
 
   constructor(title: Title) {
     this.oldTitle = title.getTitle();

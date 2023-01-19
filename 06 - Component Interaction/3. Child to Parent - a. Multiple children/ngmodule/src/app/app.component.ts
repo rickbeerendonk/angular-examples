@@ -10,8 +10,8 @@ import { IChangeEvent } from './greeting/greeting.component';
   templateUrl: './app.component.html'
 })
 export class AppComponent {
-  greetingText: string;
-  greetingSource: string;
+  greetingText?: string;
+  greetingSource?: string;
 
   greetingChanged(eventData: IChangeEvent) {
     this.greetingText = eventData.value;

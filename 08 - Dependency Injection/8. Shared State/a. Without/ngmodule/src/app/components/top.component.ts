@@ -7,7 +7,7 @@ import { reduceEachLeadingCommentRange } from 'typescript';
 @Component({
   selector: 'top',
   template: `
-    <middle [color]="color"></middle>
+    <middle [color]="color" />
     <switch (switch)="handleSwitch()"></switch>
   `
 })

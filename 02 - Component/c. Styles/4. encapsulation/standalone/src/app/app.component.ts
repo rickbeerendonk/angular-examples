@@ -11,7 +11,7 @@ import { GreetingComponent } from './greeting.component';
   imports: [GreetingComponent],
   template: `
     <div>App component</div>
-    <greeting></greeting>
+    <greeting />
   `
 })
 export class AppComponent {}

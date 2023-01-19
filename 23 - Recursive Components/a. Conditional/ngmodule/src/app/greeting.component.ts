@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
     <button (click)="setRecursive()" [disabled]="recursive">
       Hello World!
     </button>
-    <greeting *ngIf="recursive"></greeting>
+    <greeting *ngIf="recursive" />
   `
 })
 export class GreetingComponent {

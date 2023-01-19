@@ -12,5 +12,5 @@ export class GreetComponent {
   @Input() greeting?: string = 'Hello';
 
   // Alternative DOM property name
-  @Input('my-name') name: string;
+  @Input('my-name') name?: string;
 }

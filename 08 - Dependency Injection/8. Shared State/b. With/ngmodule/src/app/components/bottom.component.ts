@@ -11,7 +11,7 @@ import { StateService } from '../services/state.service';
   template: `<h1 [style.color]="color">Bottom</h1>`
 })
 export class BottomComponent implements OnDestroy {
-  color: string;
+  color?: string;
   stateServiceSubscription: Subscription;
 
   constructor(stateService: StateService) {

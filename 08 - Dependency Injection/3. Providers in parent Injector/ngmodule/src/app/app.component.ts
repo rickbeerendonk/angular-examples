@@ -7,7 +7,7 @@ import { LoggerService } from './services/logger.service';
 
 @Component({
   selector: 'app',
-  template: '<greeting></greeting>',
+  template: '<greeting />',
   providers: [LoggerService]
 })
 export class AppComponent {

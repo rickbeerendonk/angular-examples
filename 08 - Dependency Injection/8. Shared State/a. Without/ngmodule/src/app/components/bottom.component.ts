@@ -8,5 +8,5 @@ import { Component, Input } from '@angular/core';
   template: `<h1 [style.color]="color">Bottom</h1>`
 })
 export class BottomComponent {
-  @Input() color: string;
+  @Input() color?: string;
 }

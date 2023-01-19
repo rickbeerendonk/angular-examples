@@ -15,7 +15,7 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
 
     <hr />
 
-    <middle [obj]="myObj"></middle>
+    <middle [obj]="myObj" />
   ` // onKeyUp not handled, but Angular will update bindings after event.
 })
 export class AppComponent {

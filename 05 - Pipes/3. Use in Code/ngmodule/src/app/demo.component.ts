@@ -18,8 +18,8 @@ export class DemoComponent {
   };
 
   // Transformed
-  nameUpperCase: string;
-  dobString: string;
+  nameUpperCase?: string;
+  dobString?: string;
 
   constructor(upperCasePipe: UpperCasePipe, datePipe: DatePipe) {
     this.nameUpperCase = upperCasePipe.transform(this.person.name);

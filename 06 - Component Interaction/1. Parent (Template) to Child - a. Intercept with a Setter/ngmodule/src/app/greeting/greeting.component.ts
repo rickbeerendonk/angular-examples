@@ -9,7 +9,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./greeting.component.css']
 })
 export class GreetingComponent {
-  private _name: string;
+  private _name?: string;
 
   @Input()
   set name(value: string) {

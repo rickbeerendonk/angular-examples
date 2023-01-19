@@ -33,7 +33,7 @@ export class GreetingComponent
     OnDestroy,
     OnInit
 {
-  @Input() name: string;
+  @Input() name?: string;
   count = 0;
 
   constructor(private loggerService: LoggerService) {

@@ -33,7 +33,7 @@ import {
   ]
 })
 export class GreetingComponent {
-  state: string;
+  state?: string;
 
   constructor() {
     this.state = 'normal';
