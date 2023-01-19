@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
   template: '<h1>Hello {{ names?.[0] }}!</h1>' // Angular 12.1
 })
 export class GreetingComponent {
-  names: string[] | null;
+  names: string[] | undefined;
 
   constructor() {
     // Add a name after 3 seconds and observe the UI change
