@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
 export class ClickMeComponent {
   event = { target: 'my target' };
 
-  clicked(event: PointerEvent) {
+  clicked(event: MouseEvent) {
     debugger;
     alert(`Clicked ${event.target}.`);
   }
