@@ -8,9 +8,9 @@ import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush, // OnPush change detection
   template: `
     <h1>Bottom</h1>
-    <p>Text received: {{ obj.text }}</p>
+    <p>Text received: {{ obj?.text }}</p>
   `
 })
 export class BottomComponent {
-  @Input() obj: object;
+  @Input() obj?: { text: string };
 }

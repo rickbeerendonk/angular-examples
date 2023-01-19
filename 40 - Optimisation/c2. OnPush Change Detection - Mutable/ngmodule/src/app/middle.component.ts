@@ -15,5 +15,5 @@ import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
   `
 })
 export class MiddleComponent {
-  @Input() obj: object;
+  @Input() obj = { text: '' };
 }

@@ -9,7 +9,7 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
     <input
       autofocus
       [value]="myObj.text"
-      (keyup)="handleKeyUp($event.target.value)"
+      (keyup)="handleKeyUp($event.target)"
     />
     <h1>App: Hello {{ myObj.text }}</h1>
 
@@ -21,7 +21,9 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
 export class AppComponent {
   myObj = { text: 'World' };
 
-  handleKeyUp(value: string) {
+  handleKeyUp(target: EventTarget | null) {
+    const value = (target as HTMLInputElement).value;
+
     // Immutable:
     // Create a copy of the old object and replace the text property.
     this.myObj = { ...this.myObj, text: value };
