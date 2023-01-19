@@ -5,7 +5,6 @@ import { Component, ViewChild, AfterViewInit } from '@angular/core';
 import { GreetingComponent } from './greeting/greeting.component';
 
 @Component({
-  moduleId: __moduleName /* NOT needed in Angular CLI */,
   selector: 'app',
   templateUrl: './app.component.html'
 })

@@ -6,7 +6,6 @@ import { Component, OnDestroy } from '@angular/core';
 import { Todo, TodosService } from './todos.service';
 
 @Component({
-  moduleId: __moduleName /* NOT needed in Angular CLI */,
   selector: 'app',
   templateUrl: './app.component.html'
 })

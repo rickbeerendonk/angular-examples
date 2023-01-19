@@ -13,7 +13,6 @@ interface Todo {
 }
 
 @Component({
-  moduleId: __moduleName /* NOT needed in Angular CLI */,
   selector: 'app',
   templateUrl: './app.component.html'
 })

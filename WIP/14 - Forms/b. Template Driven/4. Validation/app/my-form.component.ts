@@ -10,7 +10,6 @@ interface Person {
 
 @Component({
   // moduleId is NOT needed in Angular CLI.
-  moduleId: __moduleName /* NOT needed in Angular CLI */,
   selector: 'my-form',
   styleUrls: ['./my-form.component.css'],
   templateUrl: './my-form.component.html'

@@ -7,7 +7,6 @@ import { Post } from '../types/types';
 import { PostsService } from '../services/posts.service';
 
 @Component({
-  moduleId: __moduleName /* NOT needed in Angular CLI */,
   selector: 'post-list-container',
   templateUrl: './post-list-container.component.html'
 })

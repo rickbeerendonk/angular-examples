@@ -6,7 +6,6 @@ import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
 
 @Component({
-  moduleId: __moduleName /* NOT needed in Angular CLI */,
   selector: 'page',
   templateUrl: './page.component.html'
 })

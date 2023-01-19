@@ -4,8 +4,6 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  moduleId: __moduleName /* NOT needed in Angular CLI */,
-
   // Add required property as an attribute to the selector
   selector: 'greet[name]',
   templateUrl: './greet.component.html',

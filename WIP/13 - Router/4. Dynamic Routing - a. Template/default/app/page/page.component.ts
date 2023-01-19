@@ -5,7 +5,6 @@ import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  moduleId: __moduleName /* NOT needed in Angular CLI */,
   templateUrl: './page.component.html'
 })
 export class PageComponent {

@@ -18,7 +18,6 @@ import {
 import { LoggerService } from '../logger/logger.service';
 
 @Component({
-  moduleId: __moduleName /* NOT needed in Angular CLI */,
   selector: 'greet',
   templateUrl: './greeting.component.html',
   styleUrls: ['./greeting.component.css']

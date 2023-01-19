@@ -6,7 +6,6 @@ import { Observable, interval } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 @Component({
-  moduleId: __moduleName /* NOT needed in Angular CLI */,
   selector: 'queue',
   templateUrl: './queue.component.html'
 })

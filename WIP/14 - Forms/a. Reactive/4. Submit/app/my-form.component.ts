@@ -6,7 +6,6 @@ import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   // moduleId is NOT needed in Angular CLI.
-  moduleId: __moduleName /* NOT needed in Angular CLI */,
   selector: 'my-form',
   templateUrl: './my-form.component.html'
 })

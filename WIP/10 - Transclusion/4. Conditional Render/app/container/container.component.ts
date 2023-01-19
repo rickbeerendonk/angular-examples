@@ -4,7 +4,6 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  moduleId: __moduleName /* NOT needed in Angular CLI */,
   selector: 'container',
   templateUrl: './container.component.html',
   styleUrls: ['./container.component.css']

@@ -5,7 +5,6 @@ import { Component } from '@angular/core';
 import { Observable, Observer } from 'rxjs';
 
 @Component({
-  moduleId: __moduleName /* NOT needed in Angular CLI */,
   selector: 'queue',
   templateUrl: './queue.component.html'
 })

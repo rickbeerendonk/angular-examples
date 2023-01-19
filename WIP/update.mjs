@@ -72,7 +72,6 @@ for (const pathBase of paths) {
   // Copy all files recursively
   fs.cpSync(pathUpdate, pathNewBase, { recursive: true });
   fs.cpSync(pathBase, pathNewBaseSrc, { recursive: true });
-  //copyFolderRecursiveSync(pathBase, 'ngmodule/src');
 }
 
 console.log('Number of folders: ', paths.length);

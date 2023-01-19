@@ -4,7 +4,6 @@
 import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 
 @Component({
-  moduleId: __moduleName /* NOT needed in Angular CLI */,
   selector: 'greeting',
   templateUrl: './greeting.component.html',
   styleUrls: ['./greeting.component.css']
