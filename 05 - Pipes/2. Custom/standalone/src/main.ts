@@ -6,6 +6,6 @@ import 'zone.js';
 
 import { bootstrapApplication } from '@angular/platform-browser';
 
-import { GreetingComponent } from './app/greeting.component';
+import { DemoComponent } from './app/demo.component';
 
-bootstrapApplication(GreetingComponent);
+bootstrapApplication(DemoComponent);
