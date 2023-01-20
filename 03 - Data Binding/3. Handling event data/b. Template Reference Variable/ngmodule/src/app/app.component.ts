@@ -4,10 +4,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'logtext',
+  selector: 'app',
   template: `
     <input #text (keyup)="(0)" />
     <h1>{{ text.value }}</h1>
   ` // onKeyUp not handled, but Angular will update bindings after event.
 })
-export class LogTextComponent {}
+export class AppComponent {}

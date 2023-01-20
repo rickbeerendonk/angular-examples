@@ -4,11 +4,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { LogTextComponent } from './logtext.component';
+import { AppComponent } from './app.component';
 
 @NgModule({
   imports: [BrowserModule],
-  declarations: [LogTextComponent],
-  bootstrap: [LogTextComponent]
+  declarations: [AppComponent],
+  bootstrap: [AppComponent]
 })
 export class AppModule {}
