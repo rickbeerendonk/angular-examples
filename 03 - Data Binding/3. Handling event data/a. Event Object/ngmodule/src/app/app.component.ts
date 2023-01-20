@@ -4,13 +4,13 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'logtext',
+  selector: 'app',
   template: `
     <input (keyup)="onKeyUp($event)" />
     <h1>{{ text }}</h1>
   `
 })
-export class LogTextComponent {
+export class AppComponent {
   // Component has too much awareness of the template details
 
   text: string = '';
