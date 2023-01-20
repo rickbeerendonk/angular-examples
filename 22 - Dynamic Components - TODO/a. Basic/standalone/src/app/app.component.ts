@@ -68,15 +68,6 @@ export class AppComponent implements OnInit {
   }
 
   getGreetingLanguageComponent() {
-    /*
-    // Preserve reactivity
-    // Don't use 'this.language' directly in the template literal
-    const lang = this.language;
-
-    return import(`./greeting-${lang}.component`).then(
-      module => module[`Greeting${'English'}Component`]
-    );
-    */
     switch (this.language) {
       case 'dutch':
         return GreetingDutchComponent;
