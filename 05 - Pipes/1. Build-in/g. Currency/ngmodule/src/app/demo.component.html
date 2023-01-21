@@ -5,20 +5,21 @@
 <!-- $123.46 -->
 
 <p>
-  {{ 123.456 | currency: 'USD' }} <br />
-  {{ 123.456 | currency: 'EUR' }}
+  {{ 123.456 | currency : 'USD' }} <br />
+  {{ 123.456 | currency : 'EUR' }}
 </p>
 <!-- $123.46 -->
 <!-- €123.46 -->
 
 <p>
-  {{ 123.456 | currency: 'CAD':'code' }} <strong> = Show the code</strong>
+  {{ 123.456 | currency : 'CAD' : 'code' }} <strong> = Show the code</strong>
   <br />
-  {{ 123.456 | currency: 'CAD':'symbol' }} <strong> = Show the symbol</strong>
+  {{ 123.456 | currency : 'CAD' : 'symbol' }}
+  <strong> = Show the symbol</strong>
   <br />
-  {{ 123.456 | currency: 'CAD':'symbol-narrow' }}
+  {{ 123.456 | currency : 'CAD' : 'symbol-narrow' }}
   <strong> = Show the narrow symbol</strong> <br />
-  {{ 123.456 | currency: 'CAD':'canadian-dollars ' }}
+  {{ 123.456 | currency : 'CAD' : 'canadian-dollars ' }}
   <strong> = Show custom string</strong> <br />
 </p>
 <!-- CAD123.46 -->
@@ -27,12 +28,12 @@
 <!-- canadian-dollars 123.46 -->
 
 <p>
-  {{ 123.456 | currency: 'EUR':'symbol':'1.0-1' }}
+  {{ 123.456 | currency : 'EUR' : 'symbol' : '1.0-1' }}
   <strong> = Min. 1 integer digit & max. 1 digit after fraction</strong> <br />
-  {{ 123.456 | currency: 'EUR':'symbol':'1.2-2' }}
+  {{ 123.456 | currency : 'EUR' : 'symbol' : '1.2-2' }}
   <strong> = Min. 1 integer digit & always 2 digit after fraction</strong>
   <br />
-  {{ 100 | currency: 'EUR':'symbol':'1.2-2' }}
+  {{ 100 | currency : 'EUR' : 'symbol' : '1.2-2' }}
   <strong> = Min. 1 integer digit & always 2 digit after fraction</strong>
   <br />
 </p>
@@ -41,9 +42,11 @@
 <!-- €100.00 -->
 
 <p>
-  {{ 123.456 | currency: 'EUR':'symbol':'':'en' }} <strong> = English</strong>
+  {{ 123.456 | currency : 'EUR' : 'symbol' : '' : 'en' }}
+  <strong> = English</strong>
   <br />
-  {{ 123.456 | currency: 'EUR':'symbol':'':'el' }} <strong> = Greek</strong>
+  {{ 123.456 | currency : 'EUR' : 'symbol' : '' : 'el' }}
+  <strong> = Greek</strong>
 </p>
 <!-- €123.46 -->
 <!-- 123,46 € -->

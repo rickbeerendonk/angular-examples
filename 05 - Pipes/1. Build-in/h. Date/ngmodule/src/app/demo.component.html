@@ -4,22 +4,22 @@
 <p>{{ date | date }} <strong> = Default</strong></p>
 <!-- 8 okt. 2019 -->
 
-<p>{{ date | date: 'full' }} <strong> = Format: 'full'</strong></p>
+<p>{{ date | date : 'full' }} <strong> = Format: 'full'</strong></p>
 <!-- dinsdag 8 oktober 2019 om 18:57:12 GMT+02:00 -->
 
-<p>{{ date | date: 'mm ss' }} <strong> = Format: 'mm ss'</strong></p>
+<p>{{ date | date : 'mm ss' }} <strong> = Format: 'mm ss'</strong></p>
 <!-- 57 12 -->
 
 <p>
-  {{ date | date: 'short':'+0430' }}
+  {{ date | date : 'short' : '+0430' }}
   <strong> = Timezone +0430 (short format)</strong>
 </p>
 <!-- 08-10-19 21:27 -->
 
-<p>{{ date | date: 'full':'':'en-US' }} <strong> = English</strong></p>
+<p>{{ date | date : 'full' : '' : 'en-US' }} <strong> = English</strong></p>
 <!-- Tuesday, October 8, 2019 at 6:57:12 PM GMT+02:00 -->
 
-<p>{{ date | date: 'full':'':'nl' }} <strong> = Dutch</strong></p>
+<p>{{ date | date : 'full' : '' : 'nl' }} <strong> = Dutch</strong></p>
 <!-- dinsdag 8 oktober 2019 om 18:57:12 GMT+02:00 -->
 
-<p>{{ date | date: 'full':'':'el' }} <strong> = Greek</strong></p>
+<p>{{ date | date : 'full' : '' : 'el' }} <strong> = Greek</strong></p>

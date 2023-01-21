@@ -11,8 +11,8 @@ import { CsvPipe } from './csv.pipe';
   imports: [CsvPipe],
   template: `
     <p>{{ 'one,two,three' | csv }}</p>
-    <p>{{ 'one-two-three' | csv: '-' }}</p>
-    <p>{{ 'one,two,three' | csv: '':'..' }}</p>
+    <p>{{ 'one-two-three' | csv : '-' }}</p>
+    <p>{{ 'one,two,three' | csv : '' : '..' }}</p>
   `
 })
 export class DemoComponent {}
