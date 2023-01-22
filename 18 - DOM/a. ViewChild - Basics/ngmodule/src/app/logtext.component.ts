@@ -6,14 +6,14 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 @Component({
   selector: 'logtext',
   template: `
-    <input autofocus (keyup)="onKeyUp($event.target.value)" />
+    <input (input)="onInput($event.target)" />
     <h1 #h1ref></h1>
   `
 })
 export class LogTextComponent {
-  @ViewChild('h1ref') h1Ref: ElementRef;
+  @ViewChild('h1ref') h1Ref?: ElementRef;
 
-  onKeyUp(value: string) {
-    this.h1Ref.nativeElement.innerText = value;
+  onInput(target: EventTarget | null) {
+    this.h1Ref!.nativeElement.innerText = (target as HTMLInputElement).value;
   }
 }

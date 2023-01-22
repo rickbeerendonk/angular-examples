@@ -9,23 +9,23 @@ import { Component, ElementRef, AfterViewInit, ViewChild } from '@angular/core';
     <input
       autofocus
       #inputRef
-      (keyup)="onKeyUp($event.target.value)"
+      (input)="onInput($event.target)"
       [value]="text"
     />
     <h1>{{ text }}</h1>
   `
 })
 export class LogTextComponent implements AfterViewInit {
-  @ViewChild('inputRef') inputRef: ElementRef<HTMLInputElement>;
+  @ViewChild('inputRef') inputRef?: ElementRef<HTMLInputElement>;
 
   text: string = 'initial';
 
   ngAfterViewInit() {
     // View is ready, so inputRef contains the native DOM element
-    this.inputRef.nativeElement.select();
+    this.inputRef!.nativeElement.select();
   }
 
-  onKeyUp(value: string) {
-    this.text = value;
+  onInput(target: EventTarget | null) {
+    this.text = (target as HTMLInputElement).value;
   }
 }
