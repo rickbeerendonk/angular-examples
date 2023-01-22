@@ -12,8 +12,8 @@ export class GreetingComponent {
   value: string = 'Hello World!';
   @Output() change = new EventEmitter<string>();
 
-  valueChanged(newValue: string) {
-    this.value = newValue;
-    this.change.emit(newValue);
+  valueChanged(target: EventTarget | null) {
+    this.value = (target as HTMLInputElement).value;
+    this.change.emit(this.value);
   }
 }
