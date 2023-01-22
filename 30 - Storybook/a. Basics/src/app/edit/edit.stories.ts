@@ -1,8 +1,8 @@
-import { Story, Meta } from '@storybook/angular/types-6-0';
+import { Story, Meta } from '@storybook/angular';
 import { EditComponent } from './edit.component';
 
 export default {
-  title: 'Group2/Edit',
+  title: 'Components/Edit',
   component: EditComponent,
   argTypes: {
     value: { control: 'input' }

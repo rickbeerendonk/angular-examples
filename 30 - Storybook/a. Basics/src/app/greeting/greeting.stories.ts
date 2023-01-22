@@ -1,8 +1,8 @@
-import { Story, Meta } from '@storybook/angular/types-6-0';
+import { Story, Meta } from '@storybook/angular';
 import { GreetingComponent } from './greeting.component';
 
 export default {
-  title: 'Group1/Greeting',
+  title: 'Components/Greeting',
   component: GreetingComponent,
   argTypes: {
     name: { control: 'input' }
