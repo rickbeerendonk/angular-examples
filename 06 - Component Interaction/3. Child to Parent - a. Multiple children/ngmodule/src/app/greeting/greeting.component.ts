@@ -20,8 +20,12 @@ export class GreetingComponent {
   value: string = 'Hello World!';
   @Output() change = new EventEmitter<IChangeEvent>();
 
-  valueChanged(newValue: string) {
-    this.value = newValue;
-    this.change.emit({ source: this, sourceName: this.name, value: newValue });
+  valueChanged(target: EventTarget | null) {
+    this.value = (target as HTMLInputElement).value;
+    this.change.emit({
+      source: this,
+      sourceName: this.name,
+      value: this.value
+    });
   }
 }
