@@ -14,6 +14,6 @@ export class GreetingComponent {
     // Add a name after 3 seconds and observe the UI change
     // Set the name to null after 6 seconds and observe the UI change
     setTimeout(() => (this.name = 'Angular'), 3000);
-    setTimeout(() => (this.name = null), 6000);
+    setTimeout(() => (this.name = undefined), 6000);
   }
 }
