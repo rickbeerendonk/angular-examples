@@ -3,9 +3,9 @@
 
 import { Component } from '@angular/core';
 
-import { GreetingEditorComponent } from './greeting-editor.component';
-import { GreetingEditorInputComponent } from './greeting-editor-input.component';
-import { GreetingEditorTextComponent } from './greeting-editor-text.component';
+import { GreetingEditorComponent } from './greeting-editor/greeting-editor.component';
+import { GreetingEditorInputComponent } from './greeting-editor/greeting-editor-input.component';
+import { GreetingEditorTextComponent } from './greeting-editor/greeting-editor-text.component';
 
 @Component({
   selector: 'app',

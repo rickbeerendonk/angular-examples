@@ -5,9 +5,9 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { GreetingEditorComponent } from './greeting-editor.component';
-import { GreetingEditorInputComponent } from './greeting-editor-input.component';
-import { GreetingEditorTextComponent } from './greeting-editor-text.component';
+import { GreetingEditorComponent } from './greeting-editor/greeting-editor.component';
+import { GreetingEditorInputComponent } from './greeting-editor/greeting-editor-input.component';
+import { GreetingEditorTextComponent } from './greeting-editor/greeting-editor-text.component';
 
 @NgModule({
   imports: [BrowserModule],
