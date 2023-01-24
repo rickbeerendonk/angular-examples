@@ -7,4 +7,5 @@ export const increment = createAction(
   '[App Component] Increment',
   props<{ value: number }>()
 );
+
 export const decrement = createAction('[App Component] Decrement');
