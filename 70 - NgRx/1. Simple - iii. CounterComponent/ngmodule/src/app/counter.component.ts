@@ -5,7 +5,10 @@ import { Component } from '@angular/core';
 
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import { CounterState, selectCounterFeature } from './state/counter.selectors';
+import {
+  CounterFeatureState,
+  selectCounterFeature
+} from './state/counter.selectors';
 import { increment, decrement } from './state/counter.actions';
 
 @Component({
@@ -20,7 +23,7 @@ import { increment, decrement } from './state/counter.actions';
   `
 })
 export class CounterComponent {
-  counter$: Observable<CounterState>;
+  counter$: Observable<CounterFeatureState>;
 
   constructor(private store: Store) {
     this.counter$ = this.store.select(selectCounterFeature);
