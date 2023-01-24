@@ -3,9 +3,9 @@
 
 import { /* createSelector, */ createFeatureSelector } from '@ngrx/store';
 
-export interface CounterState {
+export interface CounterFeatureState {
   count: Number;
 }
 
 export const selectCounterFeature =
-  createFeatureSelector<CounterState>('counter');
+  createFeatureSelector<CounterFeatureState>('counter');
