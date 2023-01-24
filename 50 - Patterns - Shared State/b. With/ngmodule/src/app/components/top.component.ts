@@ -17,6 +17,7 @@ export class TopComponent {
   constructor(private stateService: StateService) {}
 
   handleClick() {
-    this.stateService.switchColor();
+    this.stateService.color = 'gray';
+    //this.stateService.switchColor();
   }
 }
