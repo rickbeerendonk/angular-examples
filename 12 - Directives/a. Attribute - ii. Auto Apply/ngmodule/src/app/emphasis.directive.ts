@@ -21,7 +21,7 @@ export class EmphasisDirective {
     this.setWeight('normal');
   }
 
-  private setColor(color: string): void {
+  private setColor(color: string | null): void {
     this.renderer.setStyle(this.el.nativeElement, 'color', color);
   }
 
