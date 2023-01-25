@@ -7,6 +7,7 @@ import { GreetingEditorComponent } from '../greeting-editor/greeting-editor.comp
 
 @Component({
   selector: 'edit-box',
+  standalone: true,
   templateUrl: './edit-box.component.html',
   styleUrls: ['./edit-box.component.css']
 })

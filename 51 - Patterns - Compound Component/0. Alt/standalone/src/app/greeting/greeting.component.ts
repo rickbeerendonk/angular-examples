@@ -6,14 +6,11 @@ import { Component } from '@angular/core';
 import { GreetingEditorComponent } from '../greeting-editor/greeting-editor.component';
 
 @Component({
-  selector: 'edit-box',
-  templateUrl: './edit-box.component.html',
-  styleUrls: ['./edit-box.component.css']
+  selector: 'greeting',
+  standalone: true,
+  templateUrl: './greeting.component.html',
+  styleUrls: ['./greeting.component.css']
 })
-export class EditBoxComponent {
+export class GreetingComponent {
   constructor(protected greetingEditor: GreetingEditorComponent) {}
-
-  valueChanged(target: EventTarget | null) {
-    this.greetingEditor.setValue((target as HTMLInputElement).value);
-  }
 }
