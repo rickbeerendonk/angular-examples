@@ -9,15 +9,10 @@ import { StateService } from '../services/state.service';
   selector: 'top',
   template: `
     <middle></middle>
-    <button (click)="handleClick()">Top: Switch color</button>
+    <button (click)="stateService.switchColor()">Top: Switch color</button>
   `,
   providers: [StateService]
 })
 export class TopComponent {
-  constructor(private stateService: StateService) {}
-
-  handleClick() {
-    this.stateService.color = 'gray';
-    //this.stateService.switchColor();
-  }
+  constructor(protected stateService: StateService) {}
 }
