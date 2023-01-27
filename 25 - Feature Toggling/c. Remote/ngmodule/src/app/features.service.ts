@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 export class Features {
-  feature1: boolean;
+  feature1: boolean = false;
 }
 
 @Injectable({
