@@ -8,5 +8,5 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './page.component.html'
 })
 export class PageComponent {
-  constructor(private route: ActivatedRoute) {}
+  constructor(protected route: ActivatedRoute) {}
 }

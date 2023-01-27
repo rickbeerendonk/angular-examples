@@ -10,7 +10,7 @@ import { LoggerService } from './logger/logger.service';
   template: '<greeting>Should be replaced.</greeting>'
 })
 export class AppComponent {
-  constructor(private loggerService: LoggerService) {
+  constructor(loggerService: LoggerService) {
     loggerService.log('AppComponent created.');
   }
 }

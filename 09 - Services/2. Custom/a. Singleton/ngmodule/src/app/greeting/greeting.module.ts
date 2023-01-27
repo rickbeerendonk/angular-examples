@@ -13,7 +13,7 @@ import { LoggerService } from '../logger/logger.service';
   exports: [GreetingComponent]
 })
 export class GreetingModule {
-  constructor(private loggerService: LoggerService) {
+  constructor(loggerService: LoggerService) {
     loggerService.log('GreetingModule created.');
   }
 }
