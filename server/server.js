@@ -51,7 +51,7 @@ if (filePath && fs.statSync(filePath).isDirectory()) {
     null
   );
   if (angularConfigPath) {
-    // Angular config exists, so execute webpack
+    // Angular config exists, so execute npm start
     console.log('angular');
     console.log('angular config: ' + angularConfigPath);
     childProcess.spawnSync('npm', ['start'], {
