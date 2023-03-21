@@ -22,14 +22,16 @@ export class LoggerService {
 
   public logEvent(hook: string, props: any, state: any) {
     const tbody = document.querySelector('#result tbody');
-    tbody.innerHTML += `
-    <tr>
-      <td>${this.eventNo++}</td>
-      <td>${hook}</td>
-      <td>${JSON.stringify(props)}</td>
-      <td>${JSON.stringify(state)}</td>
-      <td>${this.getDOM()}</td>
-    </tr>
-  `;
+    if (tbody) {
+      tbody.innerHTML += `
+        <tr>
+          <td>${this.eventNo++}</td>
+          <td>${hook}</td>
+          <td>${JSON.stringify(props)}</td>
+          <td>${JSON.stringify(state)}</td>
+          <td>${this.getDOM()}</td>
+        </tr>
+      `;
+    }
   }
 }
