@@ -4,6 +4,7 @@
   "newProjectRoot": "projects",
   "projects": {
     "demo": {
+      "i18n": { "sourceLocale": { "code": "cy", "baseHref": "" } },
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
