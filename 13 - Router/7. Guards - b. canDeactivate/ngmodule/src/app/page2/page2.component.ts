@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
   selector: 'page2',
   templateUrl: './page2.component.html'
 })
-export class Page2Component {}
+export class Page2Component {
+  hasUnsavedChanges = true;
+}
