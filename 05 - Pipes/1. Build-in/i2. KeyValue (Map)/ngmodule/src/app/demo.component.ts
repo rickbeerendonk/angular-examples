@@ -10,7 +10,7 @@ import { KeyValue } from '@angular/common';
 })
 export class DemoComponent {
   // Reverse order to show output is by default in alphanumerical ascending order.
-  map = new Map<String, String | Number | Boolean>([
+  map = new Map<String | null | undefined, String | Number | Boolean>([
     ['second', 444],
     ['first', 'Three'],
     [null, 222],
