@@ -18,6 +18,7 @@ export class MyFormComponent {
   submittedData?: Partial<{ name: string | null; age: number | null }>;
 
   submitted() {
+    //this.personGroup.valid
     this.submittedData = this.personGroup.value;
   }
 }
