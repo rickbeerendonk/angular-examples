@@ -5,10 +5,15 @@ import { inject } from '@angular/core';
 import { Router } from '@angular/router';
 
 export function authGuard() {
+  // Router through Dependency Injection
   const router = inject(Router);
+
   const hasRights = false; // hardcoded
+
   if (!hasRights) {
+    // Redirecto to other page
     router.navigate(['/no-rights']);
   }
+
   return hasRights;
 }
