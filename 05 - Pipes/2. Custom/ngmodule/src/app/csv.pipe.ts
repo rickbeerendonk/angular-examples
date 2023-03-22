@@ -10,6 +10,7 @@ export class CsvPipe implements PipeTransform {
     oldSeparator: string = ',',
     newSeparator: string = ' '
   ): string {
+    // Check if value = null or undefined
     if (!value) {
       return value;
     }
