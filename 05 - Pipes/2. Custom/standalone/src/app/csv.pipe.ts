@@ -5,13 +5,18 @@ import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({ name: 'csv', standalone: true })
 export class CsvPipe implements PipeTransform {
-  transform(value: string, ...args: string[]): string {
+  transform(
+    value: string,
+    oldSeparator: string = ',',
+    newSeparator: string = ' '
+  ): string {
     if (!value) {
       return value;
     }
 
-    const searchValue = args[0] || ',';
-    const replaceValue = args[1] || ' ';
-    return value.split(searchValue).join(replaceValue);
+    // if oldSeparator is '', it should become a ','
+    oldSeparator = oldSeparator || ',';
+
+    return value.split(oldSeparator).join(newSeparator);
   }
 }
