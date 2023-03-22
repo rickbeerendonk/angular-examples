@@ -28,6 +28,6 @@ export class MyFormComponent {
 
   constructor() {
     // Initialize the form with data (f.e. through a HTTP request)
-    this.personGroup.setValue({ name: 'Rick', age: 49 });
+    this.personGroup.setValue({ name: 'Rick', age: 50 });
   }
 }
