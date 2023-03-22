@@ -15,9 +15,10 @@ export class DemoComponent {
   // Reverse order to show output is by default in alphanumerical ascending order.
   map = new Map<KeyType, ValueType>([
     ['second', 444],
+    ['three', 3030],
     ['first', 'Three'],
-    [null, 222],
-    [undefined, true]
+    [undefined, true],
+    [null, 222]
   ]);
 
   compareDesc = (
