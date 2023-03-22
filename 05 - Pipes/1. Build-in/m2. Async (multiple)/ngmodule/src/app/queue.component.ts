@@ -9,7 +9,7 @@ import { Observable, Observer } from 'rxjs';
   templateUrl: './queue.component.html'
 })
 export class QueueComponent {
-  latestArrival = new Observable<Date>((observer: Observer<Date>) => {
+  latestArrival$ = new Observable<Date>((observer: Observer<Date>) => {
     setInterval(() => observer.next(new Date()), 3000);
   });
 }
