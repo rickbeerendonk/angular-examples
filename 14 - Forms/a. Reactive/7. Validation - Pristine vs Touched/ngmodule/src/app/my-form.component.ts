@@ -11,7 +11,10 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   templateUrl: './my-form.component.html'
 })
 export class MyFormComponent implements OnInit {
-  personGroup!: FormGroup;
+  personGroup!: FormGroup<{
+    name: FormControl<string | null>;
+    country: FormControl<string | null>;
+  }>;
 
   ngOnInit(): void {
     this.personGroup = new FormGroup({
@@ -28,7 +31,7 @@ export class MyFormComponent implements OnInit {
     */
   }
 
-  submittedData?: string;
+  submittedData?: Partial<{ name: string | null; country: string | null }>;
 
   submitted() {
     this.submittedData = this.personGroup.value;
