@@ -1,6 +1,6 @@
 <!-- European Union Public License version 1.2 -->
 <!-- Copyright © 2019 Rick Beerendonk -->
 
-<label><input type="checkbox" #show (click)="(0)" />Show</label>
+<button (click)="toggleState()">Toggle State</button>
 <br />
-<greeting *ngIf="show.checked"></greeting>
+<h1 [@fadeInOut]="state">Hello World!</h1>
