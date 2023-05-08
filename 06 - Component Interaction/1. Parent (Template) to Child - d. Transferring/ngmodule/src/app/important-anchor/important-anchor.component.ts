@@ -1,16 +1,22 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2023 Rick Beerendonk          !*/
 
-import { Component } from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
 
 @Component({
   selector: 'important-anchor',
-  templateUrl: './important-anchor.component.html',
-  inputs: ['href', 'rel', 'target', 'title']
+  templateUrl: './important-anchor.component.html'
 })
-export class ImportantAnchorComponent {
-  href = '';
-  rel = '';
-  target = '';
-  title = '';
+export class ImportantAnchorComponent
+  extends HTMLAnchorElement
+  implements AfterViewInit
+{
+  constructor() {
+    super();
+  }
+
+  ngAfterViewInit(): void {
+    console.log(this);
+    //throw new Error('Method not implemented.');
+  }
 }

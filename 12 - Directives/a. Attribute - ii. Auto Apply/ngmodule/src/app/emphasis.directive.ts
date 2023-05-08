@@ -7,7 +7,10 @@ import { Directive, ElementRef, Renderer2, HostListener } from '@angular/core';
   selector: 'p' // Automatically apply to all paragraphs.
 })
 export class EmphasisDirective {
-  constructor(private el: ElementRef, private renderer: Renderer2) {}
+  constructor(
+    private el: ElementRef,
+    private renderer: Renderer2
+  ) {}
 
   @HostListener('mouseenter')
   onMouseEnter(): void {

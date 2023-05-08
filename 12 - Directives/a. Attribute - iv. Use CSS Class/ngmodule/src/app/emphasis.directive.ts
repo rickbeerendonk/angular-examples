@@ -7,7 +7,10 @@ import { Directive, ElementRef, Renderer2, HostListener } from '@angular/core';
   selector: '[emphasis]'
 })
 export class EmphasisDirective {
-  constructor(private el: ElementRef, private renderer: Renderer2) {}
+  constructor(
+    private el: ElementRef,
+    private renderer: Renderer2
+  ) {}
 
   @HostListener('mouseenter')
   onOnline(): void {
