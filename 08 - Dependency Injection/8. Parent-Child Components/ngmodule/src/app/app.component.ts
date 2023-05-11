@@ -8,8 +8,12 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html'
 })
 export class AppComponent {
+  // Be aware: Can be accessed by child components
   value = '';
 
+  // Be aware: Can be accessed by child components
+  // Can't be accessed by children if marked as
+  //   "protected", or "private" (if not used in template)
   setValue(value: string) {
     this.value = value;
   }
