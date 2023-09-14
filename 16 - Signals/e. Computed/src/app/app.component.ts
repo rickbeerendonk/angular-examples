@@ -14,7 +14,7 @@ import { Component, computed, signal } from '@angular/core';
 })
 export class AppComponent {
   text = signal('World');
-  uppercaseText = computed(() => this.text().toUpperCase);
+  uppercaseText = computed(() => this.text().toUpperCase());
 
   onInput(target: EventTarget | null) {
     // Set replaces the previous value
