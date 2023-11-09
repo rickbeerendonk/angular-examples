@@ -12,17 +12,17 @@ import { Subscription } from 'rxjs';
 export class PageComponent implements OnInit, OnDestroy {
   id!: number;
 
-  subscriberParams!: Subscription;
+  paramsSubscription!: Subscription;
 
   constructor(private route: ActivatedRoute) {}
 
   ngOnInit() {
-    this.subscriberParams = this.route.paramMap.subscribe(paramMap => {
+    this.paramsSubscription = this.route.paramMap.subscribe(paramMap => {
       this.id = +paramMap.get('id')!; // (+) converts string 'id' to a number
     });
   }
 
   ngOnDestroy() {
-    this.subscriberParams.unsubscribe();
+    this.paramsSubscription.unsubscribe();
   }
 }
