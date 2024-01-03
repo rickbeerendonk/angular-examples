@@ -5,9 +5,8 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'greeting',
-  styles: [
-    'div { color: #d676ff; }'
-  ] /* Style only apply to this component, not the parent nor the child components */,
+  styles:
+    'div { color: #d676ff; }' /* Style only apply to this component, not the parent nor the child components */,
   template: `
     <div>Hello World</div>
     <child />

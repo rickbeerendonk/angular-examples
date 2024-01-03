@@ -5,9 +5,8 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'greeting',
-  styleUrls: [
-    './greeting.component.css'
-  ] /* Style only apply to this component, not the parent nor the child components */,
+  styleUrl:
+    './greeting.component.css' /* Style only apply to this component, not the parent nor the child components */,
   template: `
     <div>Hello World</div>
     <child />
