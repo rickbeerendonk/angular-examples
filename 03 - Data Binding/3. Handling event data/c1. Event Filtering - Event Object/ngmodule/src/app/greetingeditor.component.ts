@@ -8,8 +8,8 @@ import { Component } from '@angular/core';
   template: `
     <input
       autofocus
-      (keyup.control.enter)="onNewName($event.target)"
-      (keyup.arrowup)="onNewName($event.target)"
+      (keyup.control.enter)="handleNewName($event.target)"
+      (keyup.arrowup)="handleNewName($event.target)"
     />
     <h1>Hello {{ name }}!</h1>
   `
@@ -17,7 +17,7 @@ import { Component } from '@angular/core';
 export class GreetingEditorComponent {
   name: string = '';
 
-  onNewName(target: EventTarget | null) {
+  handleNewName(target: EventTarget | null) {
     this.name = (target as HTMLInputElement).value;
   }
 }
