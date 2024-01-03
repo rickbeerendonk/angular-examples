@@ -8,12 +8,12 @@ import { Component } from '@angular/core';
   template: `
     <div class="highlight">
       <div>App component</div>
-      <greeting></greeting>
+      <greeting />
     </div>
     <hr />
     <div>
       <div>App component</div>
-      <greeting></greeting>
+      <greeting />
     </div>
   `
 })

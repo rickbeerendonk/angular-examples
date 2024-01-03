@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./greeting.component.css'],
   template: `
     <div>Hello World</div>
-    <child></child>
+    <child />
   `
 })
 export class GreetingComponent {}

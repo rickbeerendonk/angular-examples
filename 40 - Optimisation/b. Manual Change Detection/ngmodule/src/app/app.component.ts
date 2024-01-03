@@ -11,7 +11,7 @@ import { Component, ChangeDetectorRef } from '@angular/core';
 
     <hr />
 
-    <greeting></greeting>
+    <greeting />
   ` // onKeyUp not handled, but Angular will update bindings after event.
 })
 export class AppComponent {

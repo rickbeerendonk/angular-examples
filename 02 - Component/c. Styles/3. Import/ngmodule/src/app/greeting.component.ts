@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
   ] /* Style only apply to this component, not the parent nor the child components */,
   template: `
     <div>Hello World</div>
-    <child></child>
+    <child />
   `
 })
 export class GreetingComponent {}

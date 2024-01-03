@@ -10,7 +10,7 @@ import { LoggerService } from './services/logger.service';
   selector: 'app',
   standalone: true,
   imports: [GreetingComponent],
-  template: '<greeting></greeting>'
+  template: '<greeting />'
 })
 export class AppComponent {
   constructor(logger: LoggerService) {

@@ -12,7 +12,7 @@ import { Component } from '@angular/core';
   template: `
     <div>Hello World</div>
     <span>I am green</span>
-    <child></child>
+    <child />
   `
 })
 export class GreetingComponent {}

@@ -9,6 +9,6 @@ import { HelloComponent } from './hello.component';
   selector: 'greeting',
   standalone: true,
   imports: [HelloComponent],
-  template: '<h1><hello></hello> World</h1>'
+  template: '<h1><hello /> World</h1>'
 })
 export class GreetingComponent {}
