@@ -1,9 +1,6 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2018 Rick Beerendonk          !*/
 
-// Manually import (with npm workspaces, zone.js isn't imported automatically)
-import 'zone.js';
-
 import { ApplicationRef } from '@angular/core';
 import { enableDebugTools } from '@angular/platform-browser';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
