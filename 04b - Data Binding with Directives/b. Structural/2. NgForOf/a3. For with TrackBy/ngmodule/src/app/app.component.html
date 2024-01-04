@@ -2,7 +2,5 @@
 <!-- Copyright © 2024 Rick Beerendonk -->
 
 <ul>
-  @for (item of items; track item.id) {
-    <li>{{ item.name }}</li>
-  }
+  <li *ngFor="let item of items; trackBy: trackByItemId">{{ item.name }}</li>
 </ul>
