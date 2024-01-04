@@ -11,6 +11,6 @@ import { Component, Input } from '@angular/core';
 export class GreetComponent {
   @Input() greeting?: string = 'Hello';
 
-  // Required
+  // Required (Angular 16+)
   @Input({ required: true }) name?: string;
 }
