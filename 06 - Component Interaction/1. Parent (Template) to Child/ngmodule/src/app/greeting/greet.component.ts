@@ -10,9 +10,5 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./greet.component.css']
 })
 export class GreetComponent {
-  // Optional
-  @Input() greeting?: string = 'Hello';
-
-  // Required
-  @Input() name?: string;
+  @Input() name = 'Angular';
 }
