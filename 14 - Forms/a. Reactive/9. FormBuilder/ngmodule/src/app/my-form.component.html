@@ -5,16 +5,16 @@
   <label>
     Name:
     <input type="text" formControlName="name" />
-    <span [hidden]="!personGroup.controls.name.errors">{{
-      personGroup.controls.name.errors | json
+    <span [hidden]="!personGroup.controls['name'].errors">{{
+      personGroup.controls['name'].errors | json
     }}</span>
   </label>
   <br />
   <label>
     Age:
     <input type="number" formControlName="age" />
-    <span [hidden]="!personGroup.controls.age.errors">{{
-      personGroup.controls.age.errors | json
+    <span [hidden]="!personGroup.controls['age'].errors">{{
+      personGroup.controls['age'].errors | json
     }}</span>
   </label>
   <br />
