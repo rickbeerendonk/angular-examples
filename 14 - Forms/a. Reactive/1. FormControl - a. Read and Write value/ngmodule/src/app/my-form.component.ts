@@ -20,5 +20,6 @@ export class MyFormComponent {
 
   changeNameToWorld() {
     this.name.setValue(this.name.value + '.');
+    console.log(`New name: ${this.name.getRawValue()}`);
   }
 }
