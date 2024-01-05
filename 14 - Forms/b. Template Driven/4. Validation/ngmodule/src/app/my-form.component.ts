@@ -19,9 +19,9 @@ export class MyFormComponent {
     return { age: -1, name: '' };
   }
 
-  model = MyFormComponent.newModel();
+  model: Person = MyFormComponent.newModel();
 
-  submittedData?: object;
+  submittedData?: Person;
 
   submitted() {
     this.submittedData = this.model;
