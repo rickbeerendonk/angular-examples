@@ -8,9 +8,5 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html'
 })
 export class AppComponent {
-  value = '';
-
-  valueChanged(value: string) {
-    this.value = value;
-  }
+  value = 'Initial value';
 }

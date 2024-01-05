@@ -6,11 +6,10 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { EditBoxComponent } from './edit-box/edit-box.component';
-import { GreetingComponent } from './greeting/greeting.component';
 
 @NgModule({
   imports: [BrowserModule],
-  declarations: [AppComponent, EditBoxComponent, GreetingComponent],
+  declarations: [AppComponent, EditBoxComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
