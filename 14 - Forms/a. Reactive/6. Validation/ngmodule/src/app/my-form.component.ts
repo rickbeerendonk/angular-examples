@@ -15,7 +15,7 @@ export class MyFormComponent {
     age: new FormControl(-1, [Validators.min(0)])
   });
 
-  submittedData?: Partial<{ name: string | null; age: number | null }>;
+  submittedData?: { name?: string | null; age?: number | null };
 
   submitted() {
     //this.personGroup.valid
