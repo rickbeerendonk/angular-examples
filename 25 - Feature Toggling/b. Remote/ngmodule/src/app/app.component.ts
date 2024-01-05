@@ -2,6 +2,7 @@
 /*! Copyright © 2022 Rick Beerendonk          !*/
 
 import { Component } from '@angular/core';
+import { Subscription } from 'rxjs';
 
 import { Features, FeaturesService } from './features.service';
 
@@ -10,7 +11,7 @@ import { Features, FeaturesService } from './features.service';
   templateUrl: './app.component.html'
 })
 export class AppComponent {
-  private subscriber: any;
+  private subscriber: Subscription;
   public feature1 = false;
 
   constructor(featuresService: FeaturesService) {
