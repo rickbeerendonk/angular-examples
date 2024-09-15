@@ -1,0 +1,14 @@
+<!-- European Union Public License version 1.2 -->
+<!-- Copyright © 2024 Rick Beerendonk -->
+
+<p style="color: gray">
+  Add some text in an input and observe what happens if you click the button.
+</p>
+
+<button (click)="insertTop()">Insert at Top</button>
+
+<ul>
+  @for (item of items; track item) {
+    <li><input [placeholder]="item" /></li>
+  }
+</ul>
