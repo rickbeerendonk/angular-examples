@@ -18,8 +18,4 @@ export class AppComponent {
     { name: 'two', id: 1 },
     { name: 'three', id: 2 }
   ];
-
-  trackByItemId(index: number, item: any): any {
-    return item.id; // Unique identifier of the item.
-  }
 }
