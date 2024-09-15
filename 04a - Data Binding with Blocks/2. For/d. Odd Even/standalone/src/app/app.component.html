@@ -1,0 +1,18 @@
+<!-- European Union Public License version 1.2 -->
+<!-- Copyright © 2024 Rick Beerendonk -->
+
+<ol>
+  <!-- $odd	= Current row is odd -->
+  <!-- $even	= Current row is even -->
+  @for (item of items; track item) {
+    <li>
+      {{ item }}
+      @if ($odd) {
+        <span>(odd, index = {{ $index }})</span>
+      }
+      @if ($even) {
+        <span>(even, index = {{ $index }})</span>
+      }
+    </li>
+  }
+</ol>
