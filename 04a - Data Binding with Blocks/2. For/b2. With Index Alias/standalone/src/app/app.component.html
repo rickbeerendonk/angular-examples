@@ -1,0 +1,9 @@
+<!-- European Union Public License version 1.2 -->
+<!-- Copyright © 2024 Rick Beerendonk -->
+
+<ol>
+  <!-- $index	= Index of the current row -->
+  @for (item of items; track item; let idx = $index) {
+    <li [value]="idx">{{ item }}</li>
+  }
+</ol>
