@@ -1,0 +1,18 @@
+<!-- European Union Public License version 1.2 -->
+<!-- Copyright © 2024 Rick Beerendonk -->
+
+<ol>
+  <!-- $first	= Current row is first -->
+  <!-- $last	= Current row is last -->
+  @for (item of items; track item) {
+    <li>
+      {{ item }}
+      @if ($first) {
+        <span>(first)</span>
+      }
+      @if ($last) {
+        <span>(last)</span>
+      }
+    </li>
+  }
+</ol>
