@@ -6,6 +6,7 @@ import { Component, ElementRef, AfterViewInit, ViewChild } from '@angular/core';
 @Component({
   selector: 'logtext',
   template: `
+    <p style="color: gray">Change the value before seeing the unsafe effect.</p>
     <input
       autofocus
       #inputRef
