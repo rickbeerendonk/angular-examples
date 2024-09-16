@@ -14,10 +14,7 @@ export class AppComponent {
   items = signal([1, 2, 3]);
 
   addItem() {
-    // Mutates value in place
-    this.items.update(items => {
-      items.push(Math.random());
-      return items;
-    });
+    // Don't mutates value in place
+    this.items.update(items => [...items, Math.random()]);
   }
 }
