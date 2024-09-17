@@ -29,5 +29,12 @@ export class MyFormComponent {
   constructor() {
     // Initialize the form with data (f.e. through a HTTP request)
     this.personGroup.setValue({ name: 'Rick', age: 50 });
+
+    // Patch the form with data (f.e. through a HTTP request)
+    setInterval(() => {
+      this.personGroup.patchValue({
+        age: (this.personGroup.controls.age.value ?? 0) + 1
+      });
+    }, 2000);
   }
 }
