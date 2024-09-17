@@ -6,7 +6,7 @@ import { Component, ChangeDetectorRef } from '@angular/core';
 @Component({
   selector: 'app',
   template: `
-    <input autofocus #text (keyup)="(0)" />
+    <input autofocus #text />
     <h1>App: Hello {{ text.value }}</h1>
 
     <hr />
