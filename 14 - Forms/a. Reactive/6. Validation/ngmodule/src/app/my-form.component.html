@@ -18,6 +18,8 @@
     }}</span>
   </label>
   <br />
+  <span>Status: {{ personGroup.status }}</span>
+  <br />
   <button type="submit" [disabled]="!personGroup.valid">Submit</button>
 </form>
 <h3 *ngIf="submittedData">Submitted: {{ submittedData | json }}</h3>
