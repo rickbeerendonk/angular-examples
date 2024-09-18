@@ -10,6 +10,9 @@ import { Component, input } from '@angular/core';
   styleUrls: ['./greet.component.css']
 })
 export class GreetComponent {
+  // input() signals are better than @Input() properties:
+  // See: https://angular.dev/guide/signals/inputs#why-should-we-use-signal-inputs-and-not-input
+
   // Optional property
   name = input<string>('Default'); // InputSignal<string|undefined>
 }
