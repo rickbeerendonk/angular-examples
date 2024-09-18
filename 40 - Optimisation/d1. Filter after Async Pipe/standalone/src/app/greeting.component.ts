@@ -2,7 +2,6 @@
 /*! Copyright © 2024 Rick Beerendonk          !*/
 
 import {
-  AfterContentChecked,
   AfterViewChecked,
   ChangeDetectionStrategy,
   Component
@@ -26,14 +25,8 @@ function getData(): Observable<{ value1: number; value2: number }> {
   imports: [AsyncPipe],
   template: `<h1>Hello {{ (value$ | async)?.value1 ?? 0 }}</h1>`
 })
-export class GreetingComponent
-  implements AfterContentChecked, AfterViewChecked
-{
+export class GreetingComponent implements AfterViewChecked {
   value$ = getData();
-
-  ngAfterContentChecked(): void {
-    console.count('GreetingComponent.AfterContentChecked');
-  }
 
   ngAfterViewChecked(): void {
     console.count('GreetingComponent.AfterViewChecked');
