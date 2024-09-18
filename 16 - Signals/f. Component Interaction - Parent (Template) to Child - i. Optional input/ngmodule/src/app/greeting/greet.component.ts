@@ -14,5 +14,6 @@ export class GreetComponent {
   // See: https://angular.dev/guide/signals/inputs#why-should-we-use-signal-inputs-and-not-input
 
   // Optional property
-  name = input<string>('Default'); // InputSignal<string|undefined>
+  //name = input<string>();        // InputSignal<string|undefined>
+  name = input<string>('Default'); // InputSignal<string>
 }
