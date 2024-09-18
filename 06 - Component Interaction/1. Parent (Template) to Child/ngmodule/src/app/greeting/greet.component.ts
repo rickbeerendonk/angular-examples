@@ -5,10 +5,10 @@ import { Component, Input } from '@angular/core';
 
 @Component({
   // Add required property as an attribute to the selector
-  selector: 'greet[name]',
+  selector: 'greet',
   templateUrl: './greet.component.html',
   styleUrls: ['./greet.component.css']
 })
 export class GreetComponent {
-  @Input() name = 'Angular';
+  @Input() name = 'Default';
 }
