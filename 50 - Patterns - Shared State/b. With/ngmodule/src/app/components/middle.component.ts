@@ -6,8 +6,8 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'middle',
   template: `
-    <bottom></bottom>
-    <switch></switch>
+    <bottom />
+    <switch />
   `
 })
 export class MiddleComponent {}
