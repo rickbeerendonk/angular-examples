@@ -7,6 +7,6 @@ export class StateService {
 
   // State Updaters
   switchColor() {
-    this.color = this.color === 'red' ? 'green' : 'red';
+    this.color = this.color === 'red' ? 'blue' : 'red';
   }
 }

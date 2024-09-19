@@ -2,7 +2,6 @@
 /*! Copyright © 2022 Rick Beerendonk          !*/
 
 import { Component } from '@angular/core';
-import { reduceEachLeadingCommentRange } from 'typescript';
 
 @Component({
   selector: 'top',
@@ -14,6 +13,6 @@ import { reduceEachLeadingCommentRange } from 'typescript';
 export class TopComponent {
   color = 'red';
   handleSwitch() {
-    this.color = this.color === 'red' ? 'green' : 'red';
+    this.color = this.color === 'red' ? 'blue' : 'red';
   }
 }
