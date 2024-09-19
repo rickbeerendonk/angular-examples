@@ -7,4 +7,5 @@ export const increment = createAction(
   '[Counter Component] Increment',
   props<{ value: number }>()
 );
+
 export const decrement = createAction('[Counter Component] Decrement');
