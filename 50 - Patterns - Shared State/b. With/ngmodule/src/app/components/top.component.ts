@@ -8,7 +8,7 @@ import { StateService } from '../services/state.service';
 @Component({
   selector: 'top',
   template: `
-    <middle></middle>
+    <middle />
     <button (click)="stateService.switchColor()">Top: Switch color</button>
   `,
   providers: [StateService]
