@@ -17,6 +17,9 @@
       "type": "shell",
       "command": "npm",
       "args": ["run", "openserver", "--", "\"${fileDirname}\""],
+      "windows": {
+        "args": ["run", "openserver", "--", "'${fileDirname}'"]
+      },
       "problemMatcher": [],
       "group": {
         "kind": "build",
