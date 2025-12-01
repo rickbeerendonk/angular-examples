@@ -2,7 +2,7 @@
 
 ## Selector (directive)
 
-Documentation: <https://angular.io/api/core/Directive#selector>
+Documentation: https://angular.dev/guide/components/selectors
 
 ## License
 
@@ -10,4 +10,4 @@ European Union Public Licence version 1.2
 
 ## Copyright
 
-Copyright © 2018 Rick Beerendonk
+Copyright © 2018-2025 Rick Beerendonk
