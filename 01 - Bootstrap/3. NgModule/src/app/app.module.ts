@@ -9,6 +9,6 @@ import { GreetingComponent } from './greeting.component';
 @NgModule({
   imports: [BrowserModule],
   declarations: [GreetingComponent],
-  bootstrap: [GreetingComponent]
+  bootstrap: [GreetingComponent],
 })
 export class AppModule {}
