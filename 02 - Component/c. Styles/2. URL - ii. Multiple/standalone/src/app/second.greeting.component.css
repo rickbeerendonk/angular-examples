@@ -1,8 +1,0 @@
-/*! European Union Public License version 1.2 !*/
-/*! Copyright © 2019 Rick Beerendonk          !*/
-
-/* Style only apply to this component, not the parent nor the child components */
-
-span {
-  color: green;
-}
