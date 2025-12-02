@@ -1,5 +1,15 @@
 // Place your settings in this file to overwrite default and user settings.
 {
+  // Controls the rendering size of tabs in characters. Accepted values: "auto", 2, 4, 6, etc. If set to "auto", the value will be guessed when a file is opened.
   "editor.tabSize": 2,
-  "typescript.tsdk": "node_modules/typescript/lib"
+
+  // Enable ESLint
+  "eslint.enable": true,
+  "eslint.workingDirectories": [{ "mode": "auto" }],
+  "javascript.validate.enable": false,
+
+  // Prevent PowerShell or other terminals from being the default terminal
+  "terminal.integrated.defaultProfile.windows": "Command Prompt",
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "terminal.integrated.defaultProfile.linux": "bash"
 }
