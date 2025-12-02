@@ -5,6 +5,6 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'greeting',
-  templateUrl: './greeting.component.svg',
+  templateUrl: './greeting.component.svg'
 })
 export class GreetingComponent {}
