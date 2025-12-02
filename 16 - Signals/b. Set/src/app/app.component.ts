@@ -5,7 +5,6 @@ import { Component, signal } from '@angular/core';
 
 @Component({
   selector: 'app',
-  standalone: true,
   template: `
     <input (input)="onInput($event.target)" [value]="text()" />
     <h1>Hello {{ text() }}</h1>

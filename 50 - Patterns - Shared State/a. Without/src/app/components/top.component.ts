@@ -1,0 +1,19 @@
+/*! European Union Public License version 1.2 !*/
+/*! Copyright © 2025 Rick Beerendonk          !*/
+
+import { Component } from '@angular/core';
+
+@Component({
+  standalone: true,
+  selector: 'top',
+  template: `
+    <middle [color]="color" />
+    <switch (switch)="handleSwitch()"></switch>
+  `
+})
+export class TopComponent {
+  color = 'red';
+  handleSwitch() {
+    this.color = this.color === 'red' ? 'blue' : 'red';
+  }
+}

@@ -5,11 +5,10 @@ import { Component, signal, WritableSignal } from '@angular/core';
 
 @Component({
   selector: 'app',
-  standalone: true,
   template: `
     <input (input)="onInput($event.target)" [value]="text()" />
     <h1>Hello {{ text() }}</h1>
-  `
+  `,
 })
 export class AppComponent {
   // Component has too much awareness of the template details

@@ -6,7 +6,6 @@ import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app',
-  standalone: true,
   template: `
     <input (input)="onInput($event.target)" [value]="name()" />
     <h1>Hello {{ name() }}</h1>

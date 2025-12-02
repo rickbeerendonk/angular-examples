@@ -1,0 +1,25 @@
+<!-- European Union Public License version 1.2 -->
+<!-- Copyright © 2025 Rick Beerendonk -->
+
+<form [formGroup]="personGroup" (ngSubmit)="submitted()">
+  <label>
+    Name:
+    <input type="text" formControlName="name" />
+    <span [hidden]="!personGroup.controls.name.errors">{{
+      personGroup.controls.name.errors | json
+    }}</span>
+  </label>
+  <br />
+  <label>
+    Age:
+    <input type="number" formControlName="age" />
+    <span [hidden]="!personGroup.controls.age.errors">{{
+      personGroup.controls.age.errors | json
+    }}</span>
+  </label>
+  <br />
+  <span>Status: {{ personGroup.status }}</span>
+  <br />
+  <button type="submit" [disabled]="!personGroup.valid">Submit</button>
+</form>
+<h3 *ngIf="submittedData">Submitted: {{ submittedData | json }}</h3>

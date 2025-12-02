@@ -1,0 +1,35 @@
+<!-- European Union Public License version 1.2 -->
+<!-- Copyright © 2025 Rick Beerendonk -->
+
+<form [formGroup]="accountGroup" (ngSubmit)="submitted()">
+  <label>
+    Username:
+    <input type="text" formControlName="user" />
+    <span [hidden]="!accountGroup.controls.user.errors">{{
+      accountGroup.controls.user.errors | json
+    }}</span>
+  </label>
+  <br />
+  <label>
+    Password:
+    <input type="password" formControlName="password1" />
+    <span [hidden]="!accountGroup.controls.password1.errors">{{
+      accountGroup.controls.password1.errors | json
+    }}</span>
+  </label>
+  <br />
+  <label>
+    Confirm password:
+    <input type="password" formControlName="password2" />
+    <span [hidden]="!accountGroup.controls.password2.errors">{{
+      accountGroup.controls.password2.errors | json
+    }}</span>
+  </label>
+  <br />
+  <span [hidden]="!accountGroup.errors">
+    {{ accountGroup.errors | json }}
+  </span>
+  <br />
+  <button type="submit" [disabled]="!accountGroup.valid">Submit</button>
+</form>
+<h3 *ngIf="submittedData">Submitted: {{ submittedData | json }}</h3>

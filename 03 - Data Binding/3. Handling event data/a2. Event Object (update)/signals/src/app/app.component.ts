@@ -5,11 +5,10 @@ import { Component, signal, WritableSignal } from '@angular/core';
 
 @Component({
   selector: 'app',
-  standalone: true,
   template: `
     <input (keyup)="onKeyUp($event)" />
     <h1>{{ text() }}</h1>
-  `
+  `,
 })
 export class AppComponent {
   // Component has too much awareness of the template details
@@ -17,6 +16,6 @@ export class AppComponent {
   text: WritableSignal<string> = signal('');
 
   onKeyUp(event: KeyboardEvent) {
-    this.text.update(value => value + event.key);
+    this.text.update((value) => value + event.key);
   }
 }

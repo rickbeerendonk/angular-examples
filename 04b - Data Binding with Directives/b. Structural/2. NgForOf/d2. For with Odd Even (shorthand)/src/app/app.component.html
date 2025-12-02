@@ -1,0 +1,10 @@
+<!-- European Union Public License version 1.2 -->
+<!-- Copyright © 2025 Rick Beerendonk -->
+
+<ul>
+  <li *ngFor="let item of items; index as i; odd as oddItem; even as evenItem">
+    {{ item }}
+    <span *ngIf="oddItem">(odd, index = {{ i }})</span>
+    <span *ngIf="evenItem">(even, index = {{ i }})</span>
+  </li>
+</ul>

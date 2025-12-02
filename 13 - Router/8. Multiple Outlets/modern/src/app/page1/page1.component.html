@@ -1,0 +1,28 @@
+<!-- European Union Public License version 1.2 -->
+<!-- Copyright © 2025 Rick Beerendonk -->
+
+<h1>Page 1</h1>
+
+<nav>
+  <ul>
+    <li>
+      <a [routerLink]="['/page1', { outlets: { subRouterOutlet: ['sub', 1] } }]"
+        >Sub 1</a
+      >
+    </li>
+    <li>
+      <a [routerLink]="['/page1', { outlets: { subRouterOutlet: ['sub', 2] } }]"
+        >Sub 2</a
+      >
+    </li>
+    <li>
+      <a [routerLink]="['/page1', { outlets: { subRouterOutlet: ['sub', 3] } }]"
+        >Sub 3</a
+      >
+    </li>
+  </ul>
+</nav>
+
+<main>
+  <router-outlet name="subRouterOutlet"></router-outlet>
+</main>

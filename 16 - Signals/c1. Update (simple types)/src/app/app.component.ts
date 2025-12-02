@@ -5,7 +5,6 @@ import { Component, signal } from '@angular/core';
 
 @Component({
   selector: 'app',
-  standalone: true,
   template: `
     <input (keyup)="onKeyUp($event)" />
     <h1>{{ text() }}</h1>

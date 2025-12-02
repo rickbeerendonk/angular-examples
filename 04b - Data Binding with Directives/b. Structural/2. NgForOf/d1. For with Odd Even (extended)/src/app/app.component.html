@@ -1,0 +1,23 @@
+<!-- European Union Public License version 1.2 -->
+<!-- Copyright © 2025 Rick Beerendonk -->
+
+<ul>
+  <ng-template
+    ngFor
+    let-item
+    [ngForOf]="items"
+    let-i="index"
+    let-oddItem="odd"
+    let-evenItem="even"
+  >
+    <li [value]="i">
+      {{ item }}
+      <ng-template [ngIf]="oddItem">
+        <span>(odd, index = {{ i }})</span>
+      </ng-template>
+      <ng-template [ngIf]="evenItem">
+        <span>(even, index = {{ i }})</span>
+      </ng-template>
+    </li>
+  </ng-template>
+</ul>

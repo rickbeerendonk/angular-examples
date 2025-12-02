@@ -1,0 +1,14 @@
+<!-- European Union Public License version 1.2 -->
+<!-- Copyright © 2025 Rick Beerendonk -->
+
+<form #myForm="ngForm" (ngSubmit)="submitted()">
+  <label>
+    Name:
+    <input type="text" [(ngModel)]="name" name="name" />
+  </label>
+
+  <button (click)="myForm.reset()">Reset</button>
+  <button type="submit">Submit</button>
+</form>
+
+<h3 *ngIf="submittedData">Submitted: {{ submittedData | json }}</h3>

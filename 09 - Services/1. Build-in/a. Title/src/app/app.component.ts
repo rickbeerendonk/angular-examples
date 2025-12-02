@@ -1,0 +1,22 @@
+/*! European Union Public License version 1.2 !*/
+/*! Copyright © 2025 Rick Beerendonk          !*/
+
+import { Component } from '@angular/core';
+import { Title } from '@angular/platform-browser';
+
+@Component({
+  standalone: true,
+  selector: 'app',
+  template: `
+    <h1>Title Demo</h1>
+    <div>Old title: {{ oldTitle }}</div>
+  `
+})
+export class AppComponent {
+  oldTitle?: string;
+
+  constructor(title: Title) {
+    this.oldTitle = title.getTitle();
+    title.setTitle('Title Demo');
+  }
+}

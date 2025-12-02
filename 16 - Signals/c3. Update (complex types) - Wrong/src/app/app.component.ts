@@ -6,7 +6,6 @@ import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app',
-  standalone: true,
   imports: [CommonModule],
   templateUrl: './app.component.html'
 })
