@@ -4,7 +4,6 @@
 import { Component, signal } from '@angular/core';
 
 @Component({
-  standalone: true,
   selector: 'app',
   templateUrl: './app.component.html'
 })

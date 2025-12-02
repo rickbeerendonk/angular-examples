@@ -2,7 +2,6 @@ import { Component, forwardRef } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 @Component({
-  standalone: true,
   selector: 'toggle-switch',
   templateUrl: './toggle-switch.component.html',
   styleUrl: './toggle-switch.component.css',

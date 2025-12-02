@@ -2,9 +2,11 @@
 /*! Copyright © 2025 Rick Beerendonk          !*/
 
 import { Component, signal } from '@angular/core';
+import { NgForOf } from '@angular/common';
 
 @Component({
-  standalone: true,
+  imports: [NgForOf],
+
   selector: 'my-form',
   template: `
     <form #myForm="ngForm">

@@ -8,7 +8,7 @@ import { GreetComponent } from './greeting/greet.component';
 @Component({
   selector: 'app',
   template: '<greet [name]="\'world\'" />',
-  standalone: true,
+
   imports: [GreetComponent]
 })
 export class AppComponent {}

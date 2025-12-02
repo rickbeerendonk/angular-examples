@@ -17,7 +17,6 @@ export interface IChangeEvent {
 }
 
 @Component({
-  standalone: true,
   selector: 'greeting',
   templateUrl: './greeting.component.html',
   styleUrls: ['./greeting.component.css']

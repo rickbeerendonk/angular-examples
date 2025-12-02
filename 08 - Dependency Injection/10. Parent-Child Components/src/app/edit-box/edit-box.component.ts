@@ -5,7 +5,6 @@ import { Component } from '@angular/core';
 import { AppComponent } from '../app.component';
 
 @Component({
-  standalone: true,
   selector: 'edit-box',
   templateUrl: './edit-box.component.html',
   styleUrls: ['./edit-box.component.css']

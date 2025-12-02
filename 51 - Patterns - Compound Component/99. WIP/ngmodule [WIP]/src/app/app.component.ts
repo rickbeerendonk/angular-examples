@@ -2,8 +2,10 @@
 /*! Copyright © 2023 Rick Beerendonk          !*/
 
 import { Component } from '@angular/core';
+import { NgForOf } from '@angular/common';
 
 @Component({
+  imports: [NgForOf],
   selector: 'app',
   templateUrl: './app.component.html'
 })

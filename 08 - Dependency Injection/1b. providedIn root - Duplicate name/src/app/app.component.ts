@@ -6,7 +6,6 @@ import { Component } from '@angular/core';
 import { LoggerService } from './services/logger1.service';
 
 @Component({
-  standalone: true,
   selector: 'app',
   template: '<greeting />'
 })

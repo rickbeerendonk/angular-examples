@@ -4,7 +4,6 @@
 import { Component } from '@angular/core';
 
 @Component({
-  standalone: true,
   selector: 'greeting',
   template: '<h1>Hello {{ names?.[0] }}!</h1>' // Angular 12.1
 })

@@ -6,7 +6,6 @@ import { FormControl, NG_VALUE_ACCESSOR } from '@angular/forms';
 import { ToggleSwitchComponent } from './toggle-switch.component';
 
 @Component({
-  standalone: true,
   selector: 'my-form',
   providers: [
     {

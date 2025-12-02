@@ -5,7 +5,6 @@ import { Component } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 
 @Component({
-  standalone: true,
   selector: 'app',
   template: `
     <h1>Title Demo</h1>

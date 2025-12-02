@@ -8,7 +8,7 @@ import { GreetComponent } from './greeting/greet.component';
 @Component({
   selector: 'app',
   templateUrl: './app.component.html',
-  standalone: true,
+
   imports: [GreetComponent]
 })
 export class AppComponent {

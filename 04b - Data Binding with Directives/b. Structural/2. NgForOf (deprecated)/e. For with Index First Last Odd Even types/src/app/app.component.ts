@@ -2,9 +2,11 @@
 /*! Copyright © 2025 Rick Beerendonk          !*/
 
 import { Component } from '@angular/core';
+import { NgForOf } from '@angular/common';
 
 @Component({
-  standalone: true,
+  imports: [NgForOf],
+
   selector: 'app',
   templateUrl: './app.component.html'
 })

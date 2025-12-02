@@ -2,9 +2,10 @@
 /*! Copyright © 2025 Rick Beerendonk          !*/
 
 import { Component, input, Input } from '@angular/core';
+import { NgIf, NgTemplateOutlet } from '@angular/common';
 
 @Component({
-  standalone: true,
+  imports: [NgIf, NgTemplateOutlet],
   selector: 'container',
   templateUrl: './container.component.html',
   styleUrls: ['./container.component.css']

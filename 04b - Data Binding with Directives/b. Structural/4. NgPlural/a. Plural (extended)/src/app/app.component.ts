@@ -2,9 +2,11 @@
 /*! Copyright © 2025 Rick Beerendonk          !*/
 
 import { Component } from '@angular/core';
+import { NgPlural, NgPluralCase } from '@angular/common';
 
 @Component({
-  standalone: true,
+  imports: [NgPlural, NgPluralCase],
+
   selector: 'app',
   templateUrl: './app.component.html'
 })

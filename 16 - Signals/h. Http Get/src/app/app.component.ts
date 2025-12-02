@@ -2,6 +2,7 @@
 /*! Copyright © 2025 Rick Beerendonk          !*/
 
 import { Component, Signal } from '@angular/core';
+import { NgForOf } from '@angular/common';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { HttpClient } from '@angular/common/http';
 
@@ -13,7 +14,8 @@ interface Todo {
 }
 
 @Component({
-  standalone: true,
+  imports: [NgForOf],
+
   selector: 'app',
   templateUrl: './app.component.html'
 })

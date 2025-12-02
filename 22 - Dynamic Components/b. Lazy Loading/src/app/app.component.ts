@@ -1,13 +1,13 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2023 Rick Beerendonk          !*/
 
-import { CommonModule } from '@angular/common';
+import { AsyncPipe, CommonModule } from '@angular/common';
 import { Component, OnInit, Type } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app',
-  imports: [CommonModule, FormsModule],
+  imports: [CommonModule, FormsModule, AsyncPipe],
   template: `
     <label>
       <input

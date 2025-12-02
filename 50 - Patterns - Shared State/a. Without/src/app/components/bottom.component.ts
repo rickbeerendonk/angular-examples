@@ -4,7 +4,6 @@
 import { Component, input, Input } from '@angular/core';
 
 @Component({
-  standalone: true,
   selector: 'bottom',
   template: `<h1 [style.color]="color">Bottom</h1>`
 })

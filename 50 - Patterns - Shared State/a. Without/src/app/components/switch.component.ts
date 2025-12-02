@@ -4,7 +4,6 @@
 import { Component, output, EventEmitter, Output } from '@angular/core';
 
 @Component({
-  standalone: true,
   selector: 'switch',
   template: '<button (click)="handleClick()">Switch</button>'
 })

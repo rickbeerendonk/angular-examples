@@ -4,7 +4,6 @@
 import { Component } from '@angular/core';
 
 @Component({
-  standalone: true,
   selector: 'app-root',
   template: `
     <h1>Attribute Directives</h1>

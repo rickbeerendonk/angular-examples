@@ -3,10 +3,11 @@
 
 import { Component } from '@angular/core';
 
+import { GreetingComponent } from './greeting/greeting.component';
 import { LoggerService } from './services/logger.service';
 
 @Component({
-  standalone: true,
+  imports: [GreetingComponent],
   selector: 'app',
   template: '<greeting />'
 })

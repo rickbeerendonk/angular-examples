@@ -2,9 +2,10 @@
 /*! Copyright © 2023 Rick Beerendonk          !*/
 
 import { Component } from '@angular/core';
-import { NgFor } from '@angular/common';
+import { NgFor, NgForOf } from '@angular/common';
 
 @Component({
+  imports: [NgForOf],
   selector: 'app',
   template: `
     <button *ngFor="let nr of [1, 2, 3]" (mousedown)="handleMouseDown($event)">
@@ -15,17 +16,16 @@ import { NgFor } from '@angular/common';
       <div>
         Observe:
         <ul>
-          <li>Buttons don't have event handlers.</li>
-          <li>All event handlers are on the Angular root.</li>
+          <li>Buttons do have event handlers.</li>
+          <li>Not all event handlers are on the Angular root.</li>
         </ul>
       </div>
       <p>
-        Remove the MouseDown event listeners on the Angular root and observe the
-        clicks no longer work.
+        Remove the MouseDown event listeners and observe the clicks no longer
+        work.
       </p>
     </div>
-  `,
-  imports: [NgFor]
+  `
 })
 export class AppComponent {
   handleMouseDown(ev: MouseEvent) {

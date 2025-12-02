@@ -2,10 +2,12 @@
 /*! Copyright © 2025 Rick Beerendonk          !*/
 
 import { Component } from '@angular/core';
+import { NgForOf } from '@angular/common';
 import { FormArray, FormControl, FormGroup } from '@angular/forms';
 
 @Component({
-  standalone: true,
+  imports: [NgForOf],
+
   selector: 'my-form',
   template: `
     <form [formGroup]="personGroup">

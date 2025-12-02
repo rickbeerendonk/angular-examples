@@ -2,11 +2,13 @@
 /*! Copyright © 2025 Rick Beerendonk          !*/
 
 import { Component } from '@angular/core';
+import { NgIf } from '@angular/common';
 
 import { environment } from '../environments/environment';
 
 @Component({
-  standalone: true,
+  imports: [NgIf],
+
   selector: 'app',
   templateUrl: './app.component.html'
 })

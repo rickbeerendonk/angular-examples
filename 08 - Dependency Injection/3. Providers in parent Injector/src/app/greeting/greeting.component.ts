@@ -5,11 +5,7 @@ import { Component } from '@angular/core';
 
 import { LoggerService } from '../services/logger.service';
 
-@Component({
-  standalone: true,
-  selector: 'greeting',
-  template: '<h1>Hello World</h1>'
-})
+@Component({ selector: 'greeting', template: '<h1>Hello World</h1>' })
 export class GreetingComponent {
   constructor(logger: LoggerService) {
     logger.warn('GreetingComponent created.');

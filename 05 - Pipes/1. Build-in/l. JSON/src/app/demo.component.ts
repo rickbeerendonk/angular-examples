@@ -2,9 +2,11 @@
 /*! Copyright © 2025 Rick Beerendonk          !*/
 
 import { Component } from '@angular/core';
+import { JsonPipe } from '@angular/common';
 
 @Component({
-  standalone: true,
+  imports: [JsonPipe],
+
   selector: 'demo',
   templateUrl: './demo.component.html'
 })

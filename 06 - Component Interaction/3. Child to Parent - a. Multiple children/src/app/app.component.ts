@@ -6,7 +6,6 @@ import { Component } from '@angular/core';
 import { IChangeEvent } from './greeting/greeting.component';
 
 @Component({
-  standalone: true,
   selector: 'app',
   templateUrl: './app.component.html'
 })

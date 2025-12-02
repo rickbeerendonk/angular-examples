@@ -3,11 +3,7 @@
 
 import { Component, input, Input } from '@angular/core';
 
-@Component({
-  standalone: true,
-  selector: 'middle',
-  template: '<bottom [color]="color" />'
-})
+@Component({ selector: 'middle', template: '<bottom [color]="color" />' })
 export class MiddleComponent {
   @Input() color?: string;
 }

@@ -3,9 +3,5 @@
 
 import { Component } from '@angular/core';
 
-@Component({
-  standalone: true,
-  selector: 'bottom',
-  template: `<h3>Bottom</h3>`
-})
+@Component({ selector: 'bottom', template: `<h3>Bottom</h3>` })
 export class BottomComponent {}

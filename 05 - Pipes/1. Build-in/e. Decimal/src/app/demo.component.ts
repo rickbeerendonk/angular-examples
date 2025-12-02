@@ -11,7 +11,6 @@ Documentation: https://angular.io/guide/i18n#setting-up-locale
 */
 
 @Component({
-  standalone: true,
   selector: 'demo',
   templateUrl: './demo.component.html'
 })

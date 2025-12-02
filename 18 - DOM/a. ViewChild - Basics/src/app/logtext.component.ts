@@ -4,7 +4,6 @@
 import { Component, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
 
 @Component({
-  standalone: true,
   selector: 'logtext',
   template: `
     <input (input)="onInput($event.target)" />

@@ -6,8 +6,7 @@ import { Component, model } from '@angular/core';
 @Component({
   selector: 'edit-box',
   templateUrl: './edit-box.component.html',
-  styleUrls: ['./edit-box.component.css'],
-  standalone: true
+  styleUrls: ['./edit-box.component.css']
 })
 export class EditBoxComponent {
   // model() replaces @Input + @Output combination

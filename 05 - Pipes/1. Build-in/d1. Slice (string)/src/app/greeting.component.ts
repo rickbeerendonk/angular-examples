@@ -7,8 +7,7 @@ import { Component, signal } from '@angular/core';
 @Component({
   selector: 'greeting',
   imports: [SlicePipe],
-  templateUrl: './greeting.component.html',
-  standalone: true
+  templateUrl: './greeting.component.html'
 })
 export class GreetingComponent {
   text = signal('Hello_Slice_Pipe');

@@ -2,11 +2,13 @@
 /*! Copyright © 2025 Rick Beerendonk          !*/
 
 import { Component } from '@angular/core';
+import { AsyncPipe, DatePipe } from '@angular/common';
 import { Observable, interval } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 @Component({
-  standalone: true,
+  imports: [AsyncPipe, DatePipe],
+
   selector: 'queue',
   templateUrl: './queue.component.html'
 })

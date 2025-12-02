@@ -2,6 +2,7 @@
 /*! Copyright © 2025 Rick Beerendonk          !*/
 
 import { Component } from '@angular/core';
+import { AsyncPipe, NgForOf } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
@@ -13,7 +14,8 @@ interface Todo {
 }
 
 @Component({
-  standalone: true,
+  imports: [NgForOf, AsyncPipe],
+
   selector: 'app',
   templateUrl: './app.component.html'
 })

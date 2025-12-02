@@ -4,7 +4,6 @@
 import { Component, signal } from '@angular/core';
 
 @Component({
-  standalone: true,
   selector: 'greetingeditor',
   template: `
     <input autofocus #newname (keyup.enter)="handleNewName(newname.value)" />

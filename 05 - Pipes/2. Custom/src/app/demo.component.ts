@@ -12,8 +12,7 @@ import { CsvPipe } from './csv.pipe';
     <p>{{ text1() | csv }}</p>
     <p>{{ text2() | csv: '-' }}</p>
     <p>{{ text3() | csv: '' : '..' }}</p>
-  `,
-  standalone: true
+  `
 })
 export class DemoComponent {
   text1 = signal('one,two,three');

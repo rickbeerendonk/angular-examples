@@ -9,7 +9,6 @@ import {
 } from '@angular/core';
 
 @Component({
-  standalone: true,
   selector: 'bottom',
   changeDetection: ChangeDetectionStrategy.OnPush, // OnPush change detection
   template: `

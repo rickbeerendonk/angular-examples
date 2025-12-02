@@ -2,11 +2,11 @@
 /*! Copyright © 2024 Rick Beerendonk          !*/
 
 import { Component, signal } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgForOf } from '@angular/common';
 
 @Component({
   selector: 'app',
-  imports: [CommonModule],
+  imports: [CommonModule, NgForOf],
   templateUrl: './app.component.html'
 })
 export class AppComponent {

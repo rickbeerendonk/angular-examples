@@ -4,7 +4,6 @@
 import { Component, input } from '@angular/core';
 
 @Component({
-  standalone: true,
   // Add required property as an attribute to the selector
   selector: 'greet',
   templateUrl: './greet.component.html',

@@ -4,7 +4,6 @@
 import { Component } from '@angular/core';
 
 @Component({
-  standalone: true,
   selector: 'top',
   template: `
     <middle [color]="color" />

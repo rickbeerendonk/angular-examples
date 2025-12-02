@@ -4,7 +4,6 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
-  standalone: true,
   selector: 'greeting',
   //changeDetection: ChangeDetectionStrategy.OnPush, // OnPush change detection
   template: `

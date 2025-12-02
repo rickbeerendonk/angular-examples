@@ -7,7 +7,6 @@ import { Component, signal } from '@angular/core';
   selector: 'greeting',
   template: '<h1>Hello {{ name() }}{{ points() }}</h1>',
   styles: ['h1 { font-family: sans-serif; }'],
-  standalone: true,
 })
 export class GreetingComponent {
   name = signal('World');

@@ -8,7 +8,6 @@ class Person {
 }
 
 @Component({
-  standalone: true,
   selector: 'greeting',
   template: '<h1>Hello {{ person?.name }}!</h1>'
 })

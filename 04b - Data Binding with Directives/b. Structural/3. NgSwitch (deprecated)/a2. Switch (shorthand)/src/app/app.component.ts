@@ -2,9 +2,11 @@
 /*! Copyright © 2025 Rick Beerendonk          !*/
 
 import { Component } from '@angular/core';
+import { NgSwitch, NgSwitchCase, NgSwitchDefault } from '@angular/common';
 
 @Component({
-  standalone: true,
+  imports: [NgSwitch, NgSwitchCase, NgSwitchDefault],
+
   selector: 'app',
   templateUrl: './app.component.html'
 })

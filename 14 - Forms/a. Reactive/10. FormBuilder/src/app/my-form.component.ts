@@ -2,10 +2,12 @@
 /*! Copyright © 2025 Rick Beerendonk          !*/
 
 import { Component, OnInit } from '@angular/core';
+import { JsonPipe, NgIf } from '@angular/common';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
-  standalone: true,
+  imports: [NgIf, JsonPipe],
+
   // moduleId is NOT needed in Angular CLI.
   selector: 'my-form',
   styles: ['span { color: gray }'],

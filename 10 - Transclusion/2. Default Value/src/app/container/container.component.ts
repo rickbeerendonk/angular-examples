@@ -2,9 +2,10 @@
 /*! Copyright © 2025 Rick Beerendonk          !*/
 
 import { Component } from '@angular/core';
+import { NgIf } from '@angular/common';
 
 @Component({
-  standalone: true,
+  imports: [NgIf],
   selector: 'container',
   templateUrl: './container.component.html',
   styleUrls: ['./container.component.css']

@@ -2,11 +2,13 @@
 /*! Copyright © 2025 Rick Beerendonk          !*/
 
 import { Component, OnDestroy } from '@angular/core';
+import { NgForOf } from '@angular/common';
 
 import { Todo, TodosService } from './todos.service';
 
 @Component({
-  standalone: true,
+  imports: [NgForOf],
+
   selector: 'app',
   templateUrl: './app.component.html'
 })

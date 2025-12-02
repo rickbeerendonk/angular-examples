@@ -2,14 +2,16 @@
 /*! Copyright © 2025 Rick Beerendonk          !*/
 
 import { Component, signal } from '@angular/core';
+import { JsonPipe } from '@angular/common';
 
 @Component({
-  standalone: true,
+  imports: [JsonPipe],
+
   selector: 'app',
   templateUrl: './app.component.html'
 })
 export class AppComponent {
-  prop1 = signal('abc');
-  prop2 = signal(123);
-  prop3 = signal(true);
+  prop1 = 'abc';
+  prop2 = 123;
+  prop3 = true;
 }

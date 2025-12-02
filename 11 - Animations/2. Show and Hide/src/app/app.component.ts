@@ -13,7 +13,6 @@ import {
 } from '@angular/animations';
 
 @Component({
-  standalone: true,
   selector: 'app',
   templateUrl: './app.component.html',
   animations: [

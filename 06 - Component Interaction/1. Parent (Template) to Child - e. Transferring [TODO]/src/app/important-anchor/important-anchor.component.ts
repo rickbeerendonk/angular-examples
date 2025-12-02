@@ -4,7 +4,6 @@
 import { AfterViewInit, Component } from '@angular/core';
 
 @Component({
-  standalone: true,
   selector: 'important-anchor',
   templateUrl: './important-anchor.component.html'
 })

@@ -4,7 +4,6 @@
 import { Component, input, Input } from '@angular/core';
 
 @Component({
-  standalone: true,
   selector: 'greet',
   templateUrl: './greet.component.html',
   styleUrls: ['./greet.component.css']

@@ -5,7 +5,6 @@ import { Component } from '@angular/core';
 import { FormControl } from '@angular/forms';
 
 @Component({
-  standalone: true,
   selector: 'my-form',
   template: `
     <label>

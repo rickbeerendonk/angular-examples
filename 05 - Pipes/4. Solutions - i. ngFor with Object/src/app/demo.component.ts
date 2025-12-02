@@ -2,9 +2,11 @@
 /*! Copyright © 2025 Rick Beerendonk          !*/
 
 import { Component } from '@angular/core';
+import { KeyValuePipe, NgForOf } from '@angular/common';
 
 @Component({
-  standalone: true,
+  imports: [NgForOf, KeyValuePipe],
+
   selector: 'demo',
   template: `
     <h1>Build-in</h1>

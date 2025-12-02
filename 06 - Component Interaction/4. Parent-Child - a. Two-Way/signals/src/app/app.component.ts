@@ -8,7 +8,7 @@ import { EditBoxComponent } from './edit-box/edit-box.component';
 @Component({
   selector: 'app',
   templateUrl: './app.component.html',
-  standalone: true,
+
   imports: [EditBoxComponent]
 })
 export class AppComponent {

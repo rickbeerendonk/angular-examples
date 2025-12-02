@@ -4,7 +4,6 @@
 import { Component, ElementRef, AfterViewInit, ViewChild } from '@angular/core';
 
 @Component({
-  standalone: true,
   selector: 'logtext',
   template: `
     <p style="color: gray">Change the value before seeing the unsafe effect.</p>

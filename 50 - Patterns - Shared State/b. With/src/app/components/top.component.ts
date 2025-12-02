@@ -6,7 +6,6 @@ import { Component } from '@angular/core';
 import { StateService } from '../services/state.service';
 
 @Component({
-  standalone: true,
   selector: 'top',
   template: `
     <middle />

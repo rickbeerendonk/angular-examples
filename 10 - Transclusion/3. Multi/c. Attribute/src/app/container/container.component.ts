@@ -4,7 +4,6 @@
 import { Component } from '@angular/core';
 
 @Component({
-  standalone: true,
   selector: 'container',
   templateUrl: './container.component.html',
   styleUrls: ['./container.component.css']

@@ -4,7 +4,6 @@
 import { Component } from '@angular/core';
 
 @Component({
-  standalone: true,
   selector: 'timestamp',
   template: '<h1>Generated on {{ getDateTime() }}!</h1>'
 })

@@ -4,7 +4,6 @@
 import { Component, ChangeDetectorRef } from '@angular/core';
 
 @Component({
-  standalone: true,
   selector: 'app',
   template: `
     <input autofocus #text />

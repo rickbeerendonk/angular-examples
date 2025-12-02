@@ -4,7 +4,6 @@
 import { Component, input, Input } from '@angular/core';
 
 @Component({
-  standalone: true,
   // Required (Angular 15-)
   selector: 'greet[name]',
   templateUrl: './greet.component.html',

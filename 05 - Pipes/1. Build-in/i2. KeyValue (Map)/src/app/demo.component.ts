@@ -2,13 +2,14 @@
 /*! Copyright © 2025 Rick Beerendonk          !*/
 
 import { Component } from '@angular/core';
-import { KeyValue } from '@angular/common';
+import { KeyValue, KeyValuePipe, NgForOf } from '@angular/common';
 
 type KeyType = String | null | undefined;
 type ValueType = String | Number | Boolean;
 
 @Component({
-  standalone: true,
+  imports: [NgForOf, KeyValuePipe],
+
   selector: 'demo',
   templateUrl: './demo.component.html'
 })

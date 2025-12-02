@@ -2,6 +2,7 @@
 /*! Copyright © 2025 Rick Beerendonk          !*/
 
 import { Component } from '@angular/core';
+import { AsyncPipe } from '@angular/common';
 
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
@@ -12,7 +13,8 @@ import {
 import { increment, decrement } from './state/counter.actions';
 
 @Component({
-  standalone: true,
+  imports: [AsyncPipe],
+
   selector: 'counter',
   template: `
     <h1>{{ (counter$ | async)?.count }}</h1>

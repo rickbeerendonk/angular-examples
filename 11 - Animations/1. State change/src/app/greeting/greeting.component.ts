@@ -13,7 +13,6 @@ import {
 } from '@angular/animations';
 
 @Component({
-  standalone: true,
   selector: 'greeting',
   templateUrl: './greeting.component.html',
   styleUrls: ['./greeting.component.css'],

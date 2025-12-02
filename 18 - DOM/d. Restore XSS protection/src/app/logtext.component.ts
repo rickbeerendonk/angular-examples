@@ -11,7 +11,6 @@ import {
 import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
-  standalone: true,
   selector: 'logtext',
   template: `
     <input

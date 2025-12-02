@@ -2,10 +2,12 @@
 /*! Copyright © 2025 Rick Beerendonk          !*/
 
 import { Component } from '@angular/core';
+import { JsonPipe, NgIf } from '@angular/common';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
-  standalone: true,
+  imports: [NgIf, JsonPipe],
+
   selector: 'my-form',
   styles: ['span { color: gray }'],
   templateUrl: './my-form.component.html'

@@ -1,12 +1,12 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2023 Rick Beerendonk          !*/
 
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgForOf } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app',
-  imports: [CommonModule],
+  imports: [CommonModule, NgForOf],
   templateUrl: './app.component.html'
 })
 export class AppComponent {

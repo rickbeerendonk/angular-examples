@@ -11,7 +11,7 @@ import { GreetingComponent } from './greeting/greeting.component';
     <br />
     <button (click)="addPoint()">Add point</button>
   `,
-  standalone: true,
+
   imports: [GreetingComponent],
 })
 export class AppComponent {

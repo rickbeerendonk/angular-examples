@@ -18,7 +18,6 @@ import {
 import { LoggerService } from '../logger/logger.service';
 
 @Component({
-  standalone: true,
   selector: 'greet',
   templateUrl: './greeting.component.html',
   styleUrls: ['./greeting.component.css']
