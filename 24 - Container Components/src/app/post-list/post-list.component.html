@@ -2,7 +2,9 @@
 <!-- Copyright © 2020 Rick Beerendonk -->
 
 <ol>
-  <li *ngFor="let post of posts" [value]="post.id">
-    <post [post]="post"></post>
-  </li>
+  @for (post of posts; track post.id) {
+    <li [value]="post.id">
+      <post [post]="post"></post>
+    </li>
+  }
 </ol>

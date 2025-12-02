@@ -4,5 +4,7 @@
 <button (click)="addItem()">Add item</button>
 
 <ul>
-  <li *ngFor="let item of items()">{{ item }}</li>
+  @for (item of items(); track $index) {
+    <li>{{ item }}</li>
+  }
 </ul>

@@ -1,8 +1,10 @@
 <!-- European Union Public License version 1.2 -->
 <!-- Copyright © 2023 Rick Beerendonk -->
 
-<button (click)="addItem()">Add item</button>
+<button (click)="addItemWrong()">Add item (wrong!)</button>
 
 <ul>
-  <li *ngFor="let item of items()">{{ item }}</li>
+  @for (item of items(); track $index) {
+    <li>{{ item }}</li>
+  }
 </ul>

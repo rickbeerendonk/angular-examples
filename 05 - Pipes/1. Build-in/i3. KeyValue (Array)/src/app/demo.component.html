@@ -5,7 +5,9 @@
 
 <h2>Default order</h2>
 <ul>
-  <li *ngFor="let item of arr | keyvalue">{{ item.key }}: {{ item.value }}</li>
+  @for (item of arr | keyvalue; track item.key) {
+    <li>{{ item.key }}: {{ item.value }}</li>
+  }
 </ul>
 <!-- 
 0: 1

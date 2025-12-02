@@ -5,7 +5,9 @@
   The only item:
   <div class="content">
     <div #ref><ng-content></ng-content></div>
-    <ng-container *ngIf="!ref.hasChildNodes()"> Default Value </ng-container>
+    @if (!ref.hasChildNodes()) {
+      <ng-container>Default Value</ng-container>
+    }
     <!--
       The ng-container element is a logical construct
       that you can use to group other DOM elements

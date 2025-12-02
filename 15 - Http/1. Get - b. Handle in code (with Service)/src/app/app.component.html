@@ -2,5 +2,7 @@
 <!-- Copyright © 2025 Rick Beerendonk -->
 
 <ul>
-  <li *ngFor="let todo of todos">{{ todo.completed }} - {{ todo.title }}</li>
+  @for (todo of todos; track todo.id) {
+    <li>{{ todo.completed }} - {{ todo.title }}</li>
+  }
 </ul>

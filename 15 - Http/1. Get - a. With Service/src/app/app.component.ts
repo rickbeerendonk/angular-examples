@@ -1,14 +1,14 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2025 Rick Beerendonk          !*/
 
-import { Component } from '@angular/core';
-import { AsyncPipe, NgForOf } from '@angular/common';
+import { Component, OnInit } from '@angular/core';
+import { AsyncPipe } from '@angular/common';
 import { Observable } from 'rxjs';
 
 import { Todo, TodosService } from './todos.service';
 
 @Component({
-  imports: [NgForOf, AsyncPipe],
+  imports: [AsyncPipe],
 
   selector: 'app',
   templateUrl: './app.component.html'

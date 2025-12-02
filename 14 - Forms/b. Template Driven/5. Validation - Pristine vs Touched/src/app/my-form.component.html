@@ -17,10 +17,18 @@
     {{ name.errors | json }}
   </span>
   <ul>
-    <li *ngIf="name.pristine">Pristine</li>
-    <li *ngIf="name.dirty">Dirty</li>
-    <li *ngIf="name.touched">Touched</li>
-    <li *ngIf="name.untouched">Untouched</li>
+    @if (name.pristine) {
+      <li>Pristine</li>
+    }
+    @if (name.dirty) {
+      <li>Dirty</li>
+    }
+    @if (name.touched) {
+      <li>Touched</li>
+    }
+    @if (name.untouched) {
+      <li>Untouched</li>
+    }
   </ul>
   <br />
   <label>
@@ -34,10 +42,18 @@
     />
     <span [hidden]="!age.errors" class="error">{{ age.errors | json }}</span>
     <ul>
-      <li *ngIf="age.pristine">Pristine</li>
-      <li *ngIf="age.dirty">Dirty</li>
-      <li *ngIf="age.touched">Touched</li>
-      <li *ngIf="age.untouched">Untouched</li>
+      @if (age.pristine) {
+        <li>Pristine</li>
+      }
+      @if (age.dirty) {
+        <li>Dirty</li>
+      }
+      @if (age.touched) {
+        <li>Touched</li>
+      }
+      @if (age.untouched) {
+        <li>Untouched</li>
+      }
     </ul>
   </label>
   <br />
