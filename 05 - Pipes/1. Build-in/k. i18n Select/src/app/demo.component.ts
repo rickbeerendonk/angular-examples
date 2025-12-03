@@ -18,7 +18,7 @@ Documentation: https://angular.io/guide/i18n#setting-up-locale
   templateUrl: './demo.component.html'
 })
 export class DemoComponent {
-  countryMap: Object = {
+  countryMap: { [key: string]: string } = {
     NL: 'The Netherlands',
     NO: 'Norway',
     US: 'United States',

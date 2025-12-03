@@ -3,7 +3,7 @@
 
 import { Pipe, PipeTransform } from '@angular/core';
 
-@Pipe({ name: 'csv', standalone: true })
+@Pipe({ name: 'csv' })
 export class CsvPipe implements PipeTransform {
   transform(
     value: string,

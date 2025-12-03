@@ -2,11 +2,11 @@
 /*! Copyright © 2025 Rick Beerendonk          !*/
 
 import { Component } from '@angular/core';
-import { AsyncPipe, DatePipe, NgIf } from '@angular/common';
+import { AsyncPipe, DatePipe } from '@angular/common';
 import { from, Observable } from 'rxjs';
 
 @Component({
-  imports: [NgIf, AsyncPipe, DatePipe],
+  imports: [AsyncPipe, DatePipe],
 
   selector: 'queue',
   templateUrl: './queue.component.html'
