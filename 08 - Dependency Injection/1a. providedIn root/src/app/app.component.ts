@@ -7,9 +7,9 @@ import { GreetingComponent } from './greeting/greeting.component';
 import { LoggerService } from './services/logger.service';
 
 @Component({
-  imports: [GreetingComponent],
   selector: 'app',
-  template: '<greeting />'
+  template: '<greeting />',
+  imports: [GreetingComponent]
 })
 export class AppComponent {
   constructor(logger: LoggerService) {

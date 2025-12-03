@@ -4,10 +4,12 @@
 import { Component } from '@angular/core';
 
 import { LoggerService } from './services/logger1.service';
+import { GreetingComponent } from './greeting/greeting.component';
 
 @Component({
   selector: 'app',
-  template: '<greeting />'
+  template: '<greeting />',
+  imports: [GreetingComponent]
 })
 export class AppComponent {
   constructor(logger: LoggerService) {
