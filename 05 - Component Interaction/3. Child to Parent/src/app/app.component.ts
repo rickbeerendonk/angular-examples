@@ -1,16 +1,18 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2018 Rick Beerendonk          !*/
 
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
+import { GreetingComponent } from './greeting/greeting.component';
 
 @Component({
   selector: 'app',
-  templateUrl: './app.component.html'
+  templateUrl: './app.component.html',
+  imports: [GreetingComponent]
 })
 export class AppComponent {
-  greetingText?: string;
+  greetingText = signal<string | undefined>(undefined);
 
   greetingChanged(value: string) {
-    this.greetingText = value;
+    this.greetingText.set(value);
   }
 }

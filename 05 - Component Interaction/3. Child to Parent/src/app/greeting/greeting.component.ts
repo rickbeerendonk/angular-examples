@@ -1,7 +1,7 @@
 /*! European Union Public License version 1.2 !*/
-/*! Copyright © 2018 Rick Beerendonk          !*/
+/*! Copyright © 2018-2025 Rick Beerendonk     !*/
 
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, output } from '@angular/core';
 
 @Component({
   selector: 'greeting[change]',
@@ -9,7 +9,7 @@ import { Component, EventEmitter, Output } from '@angular/core';
   styleUrls: ['./greeting.component.css']
 })
 export class GreetingComponent {
-  @Output() change = new EventEmitter<string>();
+  change = output<string>();
 
   valueChanged(target: EventTarget | null) {
     const value = (target as HTMLInputElement).value;

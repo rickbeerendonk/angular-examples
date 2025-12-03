@@ -1,14 +1,7 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2025 Rick Beerendonk          !*/
 
-import {
-  Component,
-  output,
-  input,
-  EventEmitter,
-  Input,
-  Output
-} from '@angular/core';
+import { Component, output, input, signal } from '@angular/core';
 
 export interface IChangeEvent {
   source: object;
@@ -19,20 +12,22 @@ export interface IChangeEvent {
 @Component({
   selector: 'greeting',
   templateUrl: './greeting.component.html',
-  styleUrls: ['./greeting.component.css']
+  styleUrls: ['./greeting.component.css'],
+  standalone: true
 })
 export class GreetingComponent {
-  @Input() name?: string;
+  name = input<string>();
 
-  value: string = 'Hello World!';
-  @Output() change = new EventEmitter<IChangeEvent>();
+  value = signal('Hello World!');
+  change = output<IChangeEvent>();
 
   valueChanged(target: EventTarget | null) {
-    this.value = (target as HTMLInputElement).value;
+    const newValue = (target as HTMLInputElement).value;
+    this.value.set(newValue);
     this.change.emit({
       source: this,
-      sourceName: this.name,
-      value: this.value
+      sourceName: this.name(),
+      value: this.value()
     });
   }
 }

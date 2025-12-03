@@ -1,20 +1,20 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2025 Rick Beerendonk          !*/
 
-import { Component } from '@angular/core';
-
-import { IChangeEvent } from './greeting/greeting.component';
+import { Component, signal } from '@angular/core';
+import { GreetingComponent, IChangeEvent } from './greeting/greeting.component';
 
 @Component({
   selector: 'app',
-  templateUrl: './app.component.html'
+  templateUrl: './app.component.html',
+  imports: [GreetingComponent]
 })
 export class AppComponent {
-  greetingText?: string;
-  greetingSource?: string;
+  greetingText = signal<string | undefined>(undefined);
+  greetingSource = signal<string | undefined>(undefined);
 
   greetingChanged(eventData: IChangeEvent) {
-    this.greetingText = eventData.value;
-    this.greetingSource = eventData.sourceName;
+    this.greetingText.set(eventData.value);
+    this.greetingSource.set(eventData.sourceName);
   }
 }
