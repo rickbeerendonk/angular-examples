@@ -2,13 +2,15 @@
 /*! Copyright © 2025 Rick Beerendonk          !*/
 
 import { Component } from '@angular/core';
-import { CurrencyPipe } from '@angular/common';
+import { CurrencyPipe, registerLocaleData } from '@angular/common';
+import localeEl from '@angular/common/locales/el';
+
+// Register Greek locale
+registerLocaleData(localeEl);
 
 /*
-To use other locales than the default en-US, 
-call registerLocaleData(): see app.module.ts 
-
-Documentation: https://angular.io/guide/i18n#setting-up-locale
+Locale
+The locale parameter is optional. If not provided, the default locale of the application will be used.
 */
 
 @Component({

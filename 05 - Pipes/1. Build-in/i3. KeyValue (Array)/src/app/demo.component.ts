@@ -2,10 +2,10 @@
 /*! Copyright © 2025 Rick Beerendonk          !*/
 
 import { Component } from '@angular/core';
-import { KeyValue, KeyValuePipe, NgForOf } from '@angular/common';
+import { KeyValue, KeyValuePipe } from '@angular/common';
 
 @Component({
-  imports: [NgForOf, KeyValuePipe],
+  imports: [KeyValuePipe],
 
   selector: 'demo',
   templateUrl: './demo.component.html'

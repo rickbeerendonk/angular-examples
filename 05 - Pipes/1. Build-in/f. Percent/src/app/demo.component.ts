@@ -2,13 +2,15 @@
 /*! Copyright © 2025 Rick Beerendonk          !*/
 
 import { Component } from '@angular/core';
-import { PercentPipe } from '@angular/common';
+import { PercentPipe, registerLocaleData } from '@angular/common';
+import localeFr from '@angular/common/locales/fr';
+
+// Register French locale
+registerLocaleData(localeFr);
 
 /*
-To use other locales than the default en-US, 
-call registerLocaleData(): see app.module.ts 
-
-Documentation: https://angular.io/guide/i18n#setting-up-locale
+Locale
+The locale parameter is optional. If not provided, the default locale of the application will be used.
 */
 
 @Component({

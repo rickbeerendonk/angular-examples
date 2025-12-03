@@ -2,14 +2,15 @@
 /*! Copyright © 2025 Rick Beerendonk          !*/
 
 import { Component } from '@angular/core';
-import { DatePipe } from '@angular/common';
+import { DatePipe, registerLocaleData } from '@angular/common';
+import localeEl from '@angular/common/locales/el';
+import localeNl from '@angular/common/locales/nl';
 
-/*
-To use other locales than the default en-US, 
-call registerLocaleData(): see app.module.ts 
+// Register Dutch locale
+registerLocaleData(localeNl);
 
-Documentation: https://angular.io/guide/i18n#setting-up-locale
-*/
+// Register Greek locale
+registerLocaleData(localeEl);
 
 @Component({
   imports: [DatePipe],

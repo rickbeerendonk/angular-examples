@@ -18,9 +18,9 @@
 
 <h2>Compare function order</h2>
 <ul>
-  <li *ngFor="let item of arr | keyvalue: compareDesc">
-    {{ item.key }}: {{ item.value }}
-  </li>
+  @for (item of arr | keyvalue: compareDesc; track item.key) {
+    <li>{{ item.key }}: {{ item.value }}</li>
+  }
 </ul>
 <!-- 
 3: 4444

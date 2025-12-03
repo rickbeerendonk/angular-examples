@@ -19,9 +19,9 @@ three: 3030
 
 <h2>Compare function order</h2>
 <ul>
-  <li *ngFor="let item of map | keyvalue: compareDesc">
-    {{ item.key }}: {{ item.value }}
-  </li>
+  @for (item of map | keyvalue: compareDesc; track item.key) {
+    <li>{{ item.key }}: {{ item.value }}</li>
+  }
 </ul>
 <!-- 
 second: 444
