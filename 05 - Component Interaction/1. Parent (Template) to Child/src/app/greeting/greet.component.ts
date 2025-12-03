@@ -1,7 +1,7 @@
 /*! European Union Public License version 1.2 !*/
-/*! Copyright © 2018 Rick Beerendonk          !*/
+/*! Copyright © 2018-2025 Rick Beerendonk     !*/
 
-import { Component, Input } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 @Component({
   // Add required property as an attribute to the selector
@@ -10,5 +10,6 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./greet.component.css']
 })
 export class GreetComponent {
-  @Input() name = 'Default';
+  greeting = input('Hello'); // Default value 'Hello'
+  name = input<string>(); // No default value
 }

@@ -1,7 +1,7 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2018 Rick Beerendonk          !*/
 
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { GreetComponent } from './greeting/greet.component';
 
 @Component({
@@ -10,5 +10,5 @@ import { GreetComponent } from './greeting/greet.component';
   templateUrl: './app.component.html'
 })
 export class AppComponent {
-  name: string = 'Angular';
+  name = signal('Angular');
 }
