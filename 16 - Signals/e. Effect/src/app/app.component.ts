@@ -1,6 +1,17 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2024 Rick Beerendonk          !*/
 
+// Use effect() for side effects that should run when signals change:
+// - Logging
+// - Syncing with external systems (localStorage, API calls)
+// - Updating DOM/browser APIs (title, meta tags)
+// - Analytics/tracking
+//
+// DON'T use effect() for:
+// - Deriving values → use computed() instead
+// - Updating other signals → use computed() or direct updates
+// - Template rendering → signals auto-update templates
+
 import { Component, effect, OnInit, signal } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 

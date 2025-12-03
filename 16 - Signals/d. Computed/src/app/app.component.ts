@@ -1,6 +1,20 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2023 Rick Beerendonk          !*/
 
+// Use computed() for deriving values from signals:
+// - Transforming/formatting data (uppercase, lowercase, formatting)
+// - Calculations based on other signals (sum, average, etc.)
+// - Filtering/mapping arrays
+// - Combining multiple signals into one value
+//
+// Benefits:
+// - Memoized: Only recalculates when dependencies change
+// - Read-only: Cannot be directly modified
+// - Automatically tracks dependencies
+//
+// DON'T use computed() for:
+// - Side effects → use effect() instead
+
 import {
   Component,
   computed,
@@ -19,6 +33,8 @@ import {
 })
 export class AppComponent {
   text: WritableSignal<string> = signal('World');
+
+  // Derived signal using computed()
   uppercaseText: Signal<string> = computed(() => this.text().toUpperCase());
 
   onInput(target: EventTarget | null) {
