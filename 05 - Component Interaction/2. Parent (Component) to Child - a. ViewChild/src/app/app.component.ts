@@ -1,27 +1,26 @@
 /*! European Union Public License version 1.2 !*/
-/*! Copyright © 2019 Rick Beerendonk          !*/
+/*! Copyright © 2019-2025 Rick Beerendonk     !*/
 
-import { Component, ViewChild, AfterViewInit } from '@angular/core';
+import { Component, viewChild, AfterViewInit } from '@angular/core';
 import { GreetingComponent } from './greeting/greeting.component';
 
 @Component({
   selector: 'app',
-  templateUrl: './app.component.html'
+  templateUrl: './app.component.html',
+  imports: [GreetingComponent]
 })
 export class AppComponent implements AfterViewInit {
-  // Query first GreetingComponent in the template
-  @ViewChild(GreetingComponent, { static: true })
-  private greetingComponent!: GreetingComponent;
+  // Query first GreetingComponent in the template (signal-based)
+  private greetingComponent = viewChild.required(GreetingComponent);
 
   // Lifecycle method:
   // Called after Angular has fully initialized a component's view.
   ngAfterViewInit() {
-    // Don't immediately manipulate data.
-    // Will throw ExpressionChangedAfterItHasBeenCheckedError.
-    setTimeout(() => (this.greetingComponent.name = 'Angular'), 0);
+    // With signals, we can set directly - no setTimeout needed
+    this.greetingComponent().name.set('Angular');
   }
 
   addPoint() {
-    this.greetingComponent.addPoint();
+    this.greetingComponent().addPoint();
   }
 }

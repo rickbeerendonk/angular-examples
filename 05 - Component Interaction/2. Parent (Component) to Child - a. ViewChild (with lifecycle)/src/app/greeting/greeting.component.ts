@@ -1,18 +1,19 @@
 /*! European Union Public License version 1.2 !*/
-/*! Copyright © 2025 Rick Beerendonk          !*/
+/*! Copyright © 2019 Rick Beerendonk          !*/
 
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 @Component({
   selector: 'greeting',
   templateUrl: './greeting.component.html',
-  styleUrls: ['./greeting.component.css']
+  styleUrls: ['./greeting.component.css'],
+  standalone: true
 })
 export class GreetingComponent {
-  name: string = 'World';
-  points: string = '.';
+  name = signal('World');
+  points = signal('.');
 
   addPoint() {
-    this.points += '.';
+    this.points.update(p => p + '.');
   }
 }
