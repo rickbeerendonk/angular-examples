@@ -2,10 +2,10 @@
 /*! Copyright © 2025 Rick Beerendonk          !*/
 
 import { Component } from '@angular/core';
-import { KeyValuePipe, NgForOf } from '@angular/common';
+import { KeyValuePipe } from '@angular/common';
 
 @Component({
-  imports: [NgForOf, KeyValuePipe],
+  imports: [KeyValuePipe],
 
   selector: 'demo',
   template: `
@@ -13,26 +13,9 @@ import { KeyValuePipe, NgForOf } from '@angular/common';
 
     <h2>KeyValue</h2>
     <ul>
-      <li *ngFor="let entry of obj | keyvalue">
-        {{ entry.key }}: {{ entry.value }}
-      </li>
-    </ul>
-
-    <h1>Custom</h1>
-
-    <h2>Entries</h2>
-    <ul>
-      <li *ngFor="let entry of obj | entries">{{ entry }}</li>
-    </ul>
-
-    <h2>Keys</h2>
-    <ul>
-      <li *ngFor="let key of obj | keys">{{ key }}</li>
-    </ul>
-
-    <h2>Values</h2>
-    <ul>
-      <li *ngFor="let value of obj | values">{{ value }}</li>
+      @for (entry of obj | keyvalue; track entry.key) {
+        <li>{{ entry.key }}: {{ entry.value }}</li>
+      }
     </ul>
   `
 })
