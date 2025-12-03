@@ -1,21 +1,20 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2025 Rick Beerendonk          !*/
 
-import { Component } from '@angular/core';
-import { NgIf } from '@angular/common';
+import { Component, signal } from '@angular/core';
+import { GreetingComponent } from './greeting/greeting.component';
 
 @Component({
-  imports: [NgIf],
-
   selector: 'app',
-  templateUrl: './app.component.html'
+  templateUrl: './app.component.html',
+  imports: [GreetingComponent]
 })
 export class AppComponent {
-  name = 'A';
-  show = true;
+  name = signal('A');
+  show = signal(true);
 
   constructor() {
-    setTimeout(() => (this.name = 'B'), 500);
-    setTimeout(() => (this.show = false), 1000);
+    setTimeout(() => this.name.set('B'), 500);
+    setTimeout(() => this.show.set(false), 1000);
   }
 }
