@@ -1,0 +1,22 @@
+<!-- European Union Public License version 1.2 -->
+<!-- Copyright © 2025 Rick Beerendonk -->
+
+<header>
+  <h1>App</h1>
+  <nav>
+    <a routerLink="/">Home</a>
+    <a routerLink="/page1">Page 1</a>
+  </nav>
+</header>
+
+<main>
+  <div class="main-content">
+    <router-outlet></router-outlet>
+  </div>
+
+  <div class="sidebar">
+    <router-outlet name="sidebar"></router-outlet>
+  </div>
+</main>
+
+<footer>My copyright</footer>

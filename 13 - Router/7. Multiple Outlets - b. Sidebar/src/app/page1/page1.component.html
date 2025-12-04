@@ -1,0 +1,23 @@
+<!-- European Union Public License version 1.2 -->
+<!-- Copyright © 2025 Rick Beerendonk -->
+
+<h1>Page 1</h1>
+
+<nav>
+  <p>Navigate to sidebar:</p>
+  <ul>
+    <li>
+      <a [routerLink]="[{ outlets: { sidebar: ['detail', 123] } }]">
+        Show Details
+      </a>
+    </li>
+    <li>
+      <a [routerLink]="[{ outlets: { sidebar: ['detail', 456] } }]">
+        Show Other Details
+      </a>
+    </li>
+    <li>
+      <a [routerLink]="[{ outlets: { sidebar: null } }]"> Close Sidebar </a>
+    </li>
+  </ul>
+</nav>

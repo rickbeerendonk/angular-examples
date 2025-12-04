@@ -4,16 +4,17 @@
 import { inject } from '@angular/core';
 import { Router } from '@angular/router';
 
+import { AuthService } from './auth.service';
+
 export function authGuard() {
-  // Router through Dependency Injection
   const router = inject(Router);
+  const authService = inject(AuthService);
 
-  const hasRights = false; // hardcoded
+  const isAuthenticated = authService.isLoggedIn();
 
-  if (!hasRights) {
-    // Redirecto to other page
+  if (!isAuthenticated) {
     router.navigate(['/no-rights']);
   }
 
-  return hasRights;
+  return isAuthenticated;
 }
