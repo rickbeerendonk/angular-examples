@@ -3,4 +3,6 @@
 
 <button (click)="toggleState()">Toggle State</button>
 <br />
-<h1 [@fadeInOut]="state">Hello World!</h1>
+@if (show()) {
+  <h1 animate.enter="fade-in" animate.leave="fade-out">Hello World!</h1>
+}

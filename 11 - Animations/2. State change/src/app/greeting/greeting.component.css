@@ -8,4 +8,12 @@ div {
   color: white;
   height: 50px;
   width: 150px;
+  transition: all 500ms ease-out;
+}
+
+div.special {
+  background-color: #d676ff;
+  color: #444;
+  transform: scale(2) translate(50px, 50px);
+  transition: all 2000ms ease-in;
 }

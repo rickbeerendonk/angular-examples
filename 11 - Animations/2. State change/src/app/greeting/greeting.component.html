@@ -1,4 +1,6 @@
 <!-- European Union Public License version 1.2 -->
 <!-- Copyright © 2025 Rick Beerendonk -->
 
-<div [@componentState]="state" (click)="toggleState()">Hello World!</div>
+<div [class.special]="state() === 'special'" (click)="toggleState()">
+  Hello World!
+</div>
