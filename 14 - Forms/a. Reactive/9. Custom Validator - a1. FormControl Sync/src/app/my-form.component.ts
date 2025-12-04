@@ -2,13 +2,13 @@
 /*! Copyright © 2025 Rick Beerendonk          !*/
 
 import { Component, OnInit } from '@angular/core';
-import { JsonPipe, NgIf } from '@angular/common';
+import { JsonPipe } from '@angular/common';
 import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 
 import { prefixValidator } from './prefix.directive';
 
 @Component({
-  imports: [NgIf, JsonPipe, ReactiveFormsModule],
+  imports: [JsonPipe, ReactiveFormsModule],
 
   // moduleId is NOT needed in Angular CLI.
   selector: 'my-form',

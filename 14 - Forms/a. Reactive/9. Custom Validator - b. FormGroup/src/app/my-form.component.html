@@ -30,6 +30,8 @@
     {{ accountGroup.errors | json }}
   </span>
   <br />
-  <button type="submit" [disabled]="!accountGroup.valid">Submit</button>
+  <button type="submit" [disabled]="accountGroup.invalid">Submit</button>
 </form>
-<h3 *ngIf="submittedData">Submitted: {{ submittedData | json }}</h3>
+@if (submittedData) {
+  <h3>Submitted: {{ submittedData | json }}</h3>
+}

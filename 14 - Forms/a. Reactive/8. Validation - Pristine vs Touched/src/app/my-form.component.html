@@ -14,10 +14,18 @@
       >{{ personGroup.controls.name.errors | json }}</span
     >
     <ul>
-      <li *ngIf="personGroup.controls.name.pristine">Pristine</li>
-      <li *ngIf="personGroup.controls.name.dirty">Dirty</li>
-      <li *ngIf="personGroup.controls.name.touched">Touched</li>
-      <li *ngIf="personGroup.controls.name.untouched">Untouched</li>
+      @if (personGroup.controls.name.pristine) {
+        <li>Pristine</li>
+      }
+      @if (personGroup.controls.name.dirty) {
+        <li>Dirty</li>
+      }
+      @if (personGroup.controls.name.touched) {
+        <li>Touched</li>
+      }
+      @if (personGroup.controls.name.untouched) {
+        <li>Untouched</li>
+      }
     </ul>
   </label>
   <br />
@@ -32,13 +40,23 @@
       >{{ personGroup.controls.country.errors | json }}</span
     >
     <ul>
-      <li *ngIf="personGroup.controls.country.pristine">Pristine</li>
-      <li *ngIf="personGroup.controls.country.dirty">Dirty</li>
-      <li *ngIf="personGroup.controls.country.touched">Touched</li>
-      <li *ngIf="personGroup.controls.country.untouched">Untouched</li>
+      @if (personGroup.controls.country.pristine) {
+        <li>Pristine</li>
+      }
+      @if (personGroup.controls.country.dirty) {
+        <li>Dirty</li>
+      }
+      @if (personGroup.controls.country.touched) {
+        <li>Touched</li>
+      }
+      @if (personGroup.controls.country.untouched) {
+        <li>Untouched</li>
+      }
     </ul>
   </label>
   <br />
   <button type="submit" [disabled]="personGroup.invalid">Submit</button>
 </form>
-<h3 *ngIf="submittedData">Submitted: {{ submittedData | json }}</h3>
+@if (submittedData) {
+  <h3>Submitted: {{ submittedData | json }}</h3>
+}

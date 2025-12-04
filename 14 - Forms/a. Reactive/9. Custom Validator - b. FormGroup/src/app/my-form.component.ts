@@ -2,7 +2,7 @@
 /*! Copyright © 2025 Rick Beerendonk          !*/
 
 import { Component, OnInit } from '@angular/core';
-import { JsonPipe, NgIf } from '@angular/common';
+import { JsonPipe } from '@angular/common';
 import {
   FormControl,
   FormGroup,
@@ -13,7 +13,7 @@ import {
 import { passwordMatchValidator } from './password-match.directive';
 
 @Component({
-  imports: [NgIf, JsonPipe, ReactiveFormsModule],
+  imports: [JsonPipe, ReactiveFormsModule],
 
   selector: 'my-form',
   styles: ['span { color: gray }'],

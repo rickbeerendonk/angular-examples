@@ -2,7 +2,6 @@
 /*! Copyright © 2025 Rick Beerendonk          !*/
 
 import { Component } from '@angular/core';
-import { NgForOf } from '@angular/common';
 import {
   FormArray,
   FormControl,
@@ -11,7 +10,7 @@ import {
 } from '@angular/forms';
 
 @Component({
-  imports: [NgForOf, ReactiveFormsModule],
+  imports: [ReactiveFormsModule],
 
   selector: 'my-form',
   template: `
@@ -22,10 +21,12 @@ import {
       </label>
       <br />
       <div formArrayName="nickNames">
-        <label *ngFor="let nickName of nickNames.controls; let i = index">
-          Nickname {{ i + 1 }}:
-          <input [formControlName]="i" />
-        </label>
+        @for (nickName of nickNames.controls; track $index) {
+          <label>
+            Nickname {{ $index + 1 }}:
+            <input [formControlName]="$index" />
+          </label>
+        }
       </div>
       <button (click)="addNickName()">Add Nickname</button>
     </form>

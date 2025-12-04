@@ -61,4 +61,6 @@
   <button type="submit" [disabled]="!myForm.valid">Submit</button>
 </form>
 
-<h3 *ngIf="submittedData">Submitted: {{ submittedData | json }}</h3>
+@if (submittedData) {
+  <h3>Submitted: {{ submittedData | json }}</h3>
+}

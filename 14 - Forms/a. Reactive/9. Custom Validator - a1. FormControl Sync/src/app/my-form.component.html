@@ -18,6 +18,8 @@
     }}</span>
   </label>
   <br />
-  <button type="submit" [disabled]="!personGroup.valid">Submit</button>
+  <button type="submit" [disabled]="personGroup.invalid">Submit</button>
 </form>
-<h3 *ngIf="submittedData">Submitted: {{ submittedData | json }}</h3>
+@if (submittedData) {
+  <h3>Submitted: {{ submittedData | json }}</h3>
+}

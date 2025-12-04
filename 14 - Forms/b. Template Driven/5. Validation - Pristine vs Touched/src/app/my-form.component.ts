@@ -2,11 +2,11 @@
 /*! Copyright © 2025 Rick Beerendonk          !*/
 
 import { Component } from '@angular/core';
-import { JsonPipe, NgIf } from '@angular/common';
+import { JsonPipe } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 @Component({
-  imports: [NgIf, JsonPipe, FormsModule],
+  imports: [JsonPipe, FormsModule],
 
   // moduleId is NOT needed in Angular CLI.
   selector: 'my-form',
