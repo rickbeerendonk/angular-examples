@@ -2,7 +2,7 @@
 <!-- Copyright © 2020 Rick Beerendonk -->
 
 <ol>
-  @for (post of posts; track post.id) {
+  @for (post of posts(); track post.id) {
     <li [value]="post.id">
       <post [post]="post"></post>
     </li>

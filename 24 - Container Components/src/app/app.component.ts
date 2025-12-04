@@ -3,10 +3,11 @@
 
 import { Component } from '@angular/core';
 
-import { Post, PostsService } from './services/posts.service';
+import { PostListContainerComponent } from './post-list-container/post-list-container.component';
 
 @Component({
   selector: 'app',
+  imports: [PostListContainerComponent],
   templateUrl: './app.component.html'
 })
 export class AppComponent {}

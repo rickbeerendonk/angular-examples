@@ -1,17 +1,21 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2020 Rick Beerendonk          !*/
 
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 import { Post } from '../types/types';
 import { PostsService } from '../services/posts.service';
+import { PostListComponent } from '../post-list/post-list.component';
 
 @Component({
   selector: 'post-list-container',
+  imports: [PostListComponent],
   templateUrl: './post-list-container.component.html'
 })
 export class PostListContainerComponent {
-  constructor(private postsService: PostsService) {}
+  posts = signal<Array<Post>>([]);
 
-  posts: Array<Post> = this.postsService.getPosts();
+  constructor(private postsService: PostsService) {
+    this.posts.set(this.postsService.getPosts());
+  }
 }

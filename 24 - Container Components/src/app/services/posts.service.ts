@@ -6,7 +6,9 @@ import { Injectable } from '@angular/core';
 import { Post } from '../types/types';
 
 // Must be added (comment this code and run to see why):
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class PostsService {
   getPosts(): Array<Post> {
     return [
