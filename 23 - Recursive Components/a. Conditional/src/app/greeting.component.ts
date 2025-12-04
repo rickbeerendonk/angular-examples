@@ -2,7 +2,6 @@
 /*! Copyright © 2021 Rick Beerendonk          !*/
 
 import { Component } from '@angular/core';
-import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'greeting',
@@ -10,9 +9,10 @@ import { NgIf } from '@angular/common';
     <button (click)="setRecursive()" [disabled]="recursive">
       Hello World!
     </button>
-    <greeting *ngIf="recursive" />
-  `,
-  imports: [NgIf]
+    @if (recursive) {
+      <greeting />
+    }
+  `
 })
 export class GreetingComponent {
   recursive = false;
