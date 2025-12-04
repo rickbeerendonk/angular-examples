@@ -3,10 +3,10 @@
 
 <greeting-editor>
   <!-- Children MUST be specified, because there is no default -->
-  <greeting-editor-text
-    *ngFor="let number of [].constructor(count)"
-  ></greeting-editor-text>
-  <greeting-editor-input
-    *ngFor="let number of [].constructor(count)"
-  ></greeting-editor-input>
+  @for (number of [].constructor(count); track $index) {
+    <greeting-editor-text></greeting-editor-text>
+  }
+  @for (number of [].constructor(count); track $index) {
+    <greeting-editor-input></greeting-editor-input>
+  }
 </greeting-editor>

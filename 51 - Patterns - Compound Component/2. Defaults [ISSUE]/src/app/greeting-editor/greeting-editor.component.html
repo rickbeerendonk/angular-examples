@@ -2,9 +2,9 @@
 <!-- Copyright © 2023 Rick Beerendonk -->
 
 <div #ref><ng-content></ng-content></div>
-<ng-container *ngIf="!ref.hasChildNodes()">
+@if (!ref.hasChildNodes()) {
   <greeting-editor-default></greeting-editor-default>
-</ng-container>
+}
 <!--
   The ng-container element is a logical construct
   that you can use to group other DOM elements
