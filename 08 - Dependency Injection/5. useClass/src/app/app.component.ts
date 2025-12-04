@@ -5,6 +5,7 @@ import { Component, inject } from '@angular/core';
 
 import Logger from './services/logger';
 import { LoggerService } from './services/logger.service';
+import { LoggerAltService } from './services/logger-alt.service';
 import { GreetingComponent } from './greeting/greeting.component';
 
 @Component({
