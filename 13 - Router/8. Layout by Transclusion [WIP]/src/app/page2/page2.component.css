@@ -1,0 +1,17 @@
+/*! European Union Public License version 1.2 !*/
+/*! Copyright © 2025 Rick Beerendonk          !*/
+
+.alternative-layout {
+  background: lightcoral;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.alternative-layout h1 {
+  color: darkred;
+}
+
+.alternative-layout a {
+  color: darkblue;
+  text-decoration: underline;
+}
