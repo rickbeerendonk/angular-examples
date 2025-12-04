@@ -5,9 +5,12 @@ import { Component } from '@angular/core';
 
 import { LoggerService } from './logger/logger.service';
 
+import { GreetingComponent } from './greeting/greeting.component';
+
 @Component({
   selector: 'app',
-  template: '<greeting>Should be replaced.</greeting>'
+  template: '<greeting>Should be replaced.</greeting>',
+  imports: [GreetingComponent]
 })
 export class AppComponent {
   constructor(loggerService: LoggerService) {
