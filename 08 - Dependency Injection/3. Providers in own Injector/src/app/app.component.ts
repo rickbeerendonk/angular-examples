@@ -8,7 +8,7 @@ import { GreetingComponent } from './greeting/greeting.component';
 
 @Component({
   selector: 'app',
-  template: '<greeting />',
+  template: '<greeting /><greeting />',
   imports: [GreetingComponent],
   providers: [LoggerService]
 })
