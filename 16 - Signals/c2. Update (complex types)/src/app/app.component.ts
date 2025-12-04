@@ -2,11 +2,9 @@
 /*! Copyright © 2023 Rick Beerendonk          !*/
 
 import { Component, signal } from '@angular/core';
-import { CommonModule, NgForOf } from '@angular/common';
 
 @Component({
   selector: 'app',
-  imports: [CommonModule, NgForOf],
   templateUrl: './app.component.html'
 })
 export class AppComponent {

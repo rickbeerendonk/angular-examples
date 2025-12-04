@@ -2,18 +2,18 @@
 /*! Copyright © 2024 Rick Beerendonk          !*/
 
 import { Component, signal } from '@angular/core';
-import { CommonModule, NgForOf } from '@angular/common';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app',
-  imports: [CommonModule, NgForOf],
   templateUrl: './app.component.html'
 })
 export class AppComponent {
   items = signal([1, 2, 3]);
 
-  addItem() {
+  addItemWrong() {
     // Don't mutates value in place
+    // Now works!
     this.items.update(items => {
       items[0] = Math.random();
       return items;
