@@ -2,9 +2,11 @@
 /*! Copyright © 2025 Rick Beerendonk          !*/
 
 import { Component } from '@angular/core';
+import { EmphasisDirective } from './emphasis.directive';
 
 @Component({
   selector: 'app-root',
+  imports: [EmphasisDirective],
   template: `
     <h1>Attribute Directives</h1>
     <p>This is a normal paragraph.</p>

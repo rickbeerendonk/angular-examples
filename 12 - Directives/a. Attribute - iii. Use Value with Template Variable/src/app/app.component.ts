@@ -2,9 +2,11 @@
 /*! Copyright © 2025 Rick Beerendonk          !*/
 
 import { Component } from '@angular/core';
+import { MouseCapturedDirective } from './mouse-captured.directive';
 
 @Component({
   selector: 'app-root',
+  imports: [MouseCapturedDirective],
   template: `
     <h1>Attribute Directives</h1>
     <p mouseCaptured #mouse1="mouseCaptured">

@@ -2,9 +2,11 @@
 /*! Copyright © 2025 Rick Beerendonk          !*/
 
 import { Component } from '@angular/core';
+import { UnlessDirective } from './unless.directive';
 
 @Component({
   selector: 'app-root',
+  imports: [UnlessDirective],
   template: `
     <h1>Structural Directives</h1>
 
