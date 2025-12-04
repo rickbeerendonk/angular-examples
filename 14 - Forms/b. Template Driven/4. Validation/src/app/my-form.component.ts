@@ -2,7 +2,8 @@
 /*! Copyright © 2025 Rick Beerendonk          !*/
 
 import { Component } from '@angular/core';
-import { JsonPipe, NgForOf, NgIf } from '@angular/common';
+import { JsonPipe, NgIf } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 interface Person {
   age: number;
@@ -10,7 +11,7 @@ interface Person {
 }
 
 @Component({
-  imports: [NgIf, NgForOf, JsonPipe],
+  imports: [NgIf, JsonPipe, FormsModule],
 
   // moduleId is NOT needed in Angular CLI.
   selector: 'my-form',

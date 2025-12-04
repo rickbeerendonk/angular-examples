@@ -2,11 +2,12 @@
 /*! Copyright © 2025 Rick Beerendonk          !*/
 
 import { Component } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   // moduleId is NOT needed in Angular CLI.
   selector: 'my-form',
+  imports: [ReactiveFormsModule],
   templateUrl: './my-form.component.html'
 })
 export class MyFormComponent {

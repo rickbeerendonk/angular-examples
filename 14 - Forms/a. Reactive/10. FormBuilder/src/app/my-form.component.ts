@@ -3,10 +3,15 @@
 
 import { Component, OnInit } from '@angular/core';
 import { JsonPipe, NgIf } from '@angular/common';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import {
+  FormBuilder,
+  FormGroup,
+  ReactiveFormsModule,
+  Validators
+} from '@angular/forms';
 
 @Component({
-  imports: [NgIf, JsonPipe],
+  imports: [NgIf, JsonPipe, ReactiveFormsModule],
 
   // moduleId is NOT needed in Angular CLI.
   selector: 'my-form',

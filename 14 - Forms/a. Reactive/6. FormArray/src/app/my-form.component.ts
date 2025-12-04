@@ -3,10 +3,15 @@
 
 import { Component } from '@angular/core';
 import { NgForOf } from '@angular/common';
-import { FormArray, FormControl, FormGroup } from '@angular/forms';
+import {
+  FormArray,
+  FormControl,
+  FormGroup,
+  ReactiveFormsModule
+} from '@angular/forms';
 
 @Component({
-  imports: [NgForOf],
+  imports: [NgForOf, ReactiveFormsModule],
 
   selector: 'my-form',
   template: `

@@ -3,12 +3,17 @@
 
 import { Component, OnInit } from '@angular/core';
 import { JsonPipe, NgIf } from '@angular/common';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import {
+  FormControl,
+  FormGroup,
+  ReactiveFormsModule,
+  Validators
+} from '@angular/forms';
 
 import { passwordMatchValidator } from './password-match.directive';
 
 @Component({
-  imports: [NgIf, JsonPipe],
+  imports: [NgIf, JsonPipe, ReactiveFormsModule],
 
   selector: 'my-form',
   styles: ['span { color: gray }'],

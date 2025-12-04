@@ -2,10 +2,11 @@
 /*! Copyright © 2025 Rick Beerendonk          !*/
 
 import { Component } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { FormControl, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'my-form',
+  imports: [ReactiveFormsModule],
   template: `
     <label>
       Name:

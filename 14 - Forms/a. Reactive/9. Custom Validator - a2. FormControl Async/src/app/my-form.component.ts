@@ -3,12 +3,12 @@
 
 import { Component, OnInit } from '@angular/core';
 import { JsonPipe, NgIf } from '@angular/common';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 
 import { prefixValidator } from './prefix.directive';
 
 @Component({
-  imports: [NgIf, JsonPipe],
+  imports: [NgIf, JsonPipe, ReactiveFormsModule],
 
   // moduleId is NOT needed in Angular CLI.
   selector: 'my-form',

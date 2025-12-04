@@ -2,10 +2,11 @@
 /*! Copyright © 2025 Rick Beerendonk          !*/
 
 import { Component } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   selector: 'my-form',
+  imports: [ReactiveFormsModule],
   template: `
     <form [formGroup]="personGroup">
       <label>

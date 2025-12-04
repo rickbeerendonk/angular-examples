@@ -2,10 +2,10 @@
 /*! Copyright © 2025 Rick Beerendonk          !*/
 
 import { Component, signal } from '@angular/core';
-import { NgForOf } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
-  imports: [NgForOf],
+  imports: [FormsModule],
 
   selector: 'my-form',
   template: `

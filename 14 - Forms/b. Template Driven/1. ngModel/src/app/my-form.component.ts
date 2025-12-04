@@ -2,9 +2,11 @@
 /*! Copyright © 2025 Rick Beerendonk          !*/
 
 import { Component, signal } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'my-form',
+  imports: [FormsModule],
   template: `
     <form>
       <label>
