@@ -2,9 +2,11 @@
 /*! Copyright © 2025 Rick Beerendonk          !*/
 
 import { Component } from '@angular/core';
+import { GreetComponent } from './greeting/greet.component';
 
 @Component({
   selector: 'app',
+  imports: [GreetComponent],
   templateUrl: './app.component.html'
 })
 export class AppComponent {}
