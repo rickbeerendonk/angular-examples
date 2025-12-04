@@ -1,0 +1,14 @@
+{
+  "name": "demo",
+  "version": "0.0.0",
+  "scripts": {
+    "ng": "ng",
+    "start": "npm run start:all",
+    "start:all": "npm run start:server & npm run start:client",
+    "start:client": "ng serve",
+    "start:server": "node server/server.js",
+    "build": "ng build",
+    "watch": "ng build --watch --configuration development",
+    "test": "ng test"
+  }
+}
