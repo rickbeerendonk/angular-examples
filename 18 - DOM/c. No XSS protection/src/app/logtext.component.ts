@@ -21,7 +21,7 @@ export class LogTextComponent implements AfterViewInit {
   inputRef = viewChild<ElementRef<HTMLInputElement>>('inputRef');
   outputRef = viewChild<ElementRef<HTMLHeadingElement>>('outputRef');
 
-  text: string = '<a href="javascript:alert(\'Hi there\')">Click me!</a>';
+  text: string = '<u onmouseover=alert("Hacked!")>Dangerous</u>';
 
   ngAfterViewInit() {
     // View is ready, so inputRef contains the native DOM element

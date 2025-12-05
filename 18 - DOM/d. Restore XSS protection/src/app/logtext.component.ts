@@ -31,7 +31,7 @@ export class LogTextComponent implements AfterViewInit {
   // Modern inject() function
   private sanitizer = inject(DomSanitizer);
 
-  text: string = '<a href="javascript:alert(\'Hi there\')">Click me!</a>';
+  text: string = '<u onmouseover=alert("Hacked!")>Dangerous</u>';
 
   ngAfterViewInit() {
     // View is ready, so inputRef contains the native DOM element
