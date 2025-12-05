@@ -1,22 +1,19 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2025 Rick Beerendonk          !*/
 
-import { Component, OnInit } from '@angular/core';
-import { AsyncPipe } from '@angular/common';
-import { Observable } from 'rxjs';
+import { Component, inject } from '@angular/core';
+import { toSignal } from '@angular/core/rxjs-interop';
 
-import { Todo, TodosService } from './todos.service';
+import { TodosService } from './todos.service';
 
 @Component({
-  imports: [AsyncPipe],
-
   selector: 'app',
-  templateUrl: './app.component.html'
+  templateUrl: './app.component.html',
+  providers: [TodosService]
 })
 export class AppComponent {
-  todos$: Observable<Todo[]>;
+  private todosService = inject(TodosService);
 
-  constructor(todosService: TodosService) {
-    this.todos$ = todosService.getTodos();
-  }
+  // Convert Observable to Signal using toSignal()
+  todos = toSignal(this.todosService.getTodos(), { initialValue: [] });
 }

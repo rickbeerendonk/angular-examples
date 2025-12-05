@@ -2,7 +2,7 @@
 <!-- Copyright © 2025 Rick Beerendonk -->
 
 <ul>
-  @for (todo of todos$ | async; track todo.id) {
+  @for (todo of todos(); track todo.id) {
     <li>{{ todo.completed }} - {{ todo.title }}</li>
   }
 </ul>
