@@ -1,10 +1,9 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2025 Rick Beerendonk          !*/
 
-import { Component } from '@angular/core';
-import { AsyncPipe } from '@angular/common';
+import { Component, inject } from '@angular/core';
+import { toSignal } from '@angular/core/rxjs-interop';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
 
 interface Todo {
   userId: number;
@@ -14,16 +13,13 @@ interface Todo {
 }
 
 @Component({
-  imports: [AsyncPipe],
-
   selector: 'app',
   templateUrl: './app.component.html'
 })
 export class AppComponent {
   private baseUrl = 'https://jsonplaceholder.typicode.com/todos'; // Free online service
-  todos$: Observable<Todo[]>;
+  private http = inject(HttpClient);
 
-  constructor(http: HttpClient) {
-    this.todos$ = http.get<Todo[]>(this.baseUrl);
-  }
+  // Convert Observable to Signal using toSignal()
+  todos = toSignal(this.http.get<Todo[]>(this.baseUrl), { initialValue: [] });
 }
