@@ -1,25 +1,20 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2025 Rick Beerendonk          !*/
 
-import { Component, OnDestroy } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { toSignal } from '@angular/core/rxjs-interop';
 
-import { Todo, TodosService } from './todos.service';
+import { TodosService } from './todos.service';
 
 @Component({
   selector: 'app',
-  templateUrl: './app.component.html'
+  templateUrl: './app.component.html',
+  providers: [TodosService]
 })
-export class AppComponent implements OnDestroy {
-  private subscriber: any;
-  public todos: Todo[] = [];
+export class AppComponent {
+  private todosService = inject(TodosService);
 
-  constructor(todosService: TodosService) {
-    this.subscriber = todosService.getTodos().subscribe((todos: Todo[]) => {
-      this.todos = todos;
-    });
-  }
-
-  ngOnDestroy() {
-    this.subscriber.unsubscribe();
-  }
+  // Convert Observable to Signal using toSignal()
+  // No need for OnDestroy - toSignal() handles cleanup automatically
+  todos = toSignal(this.todosService.getTodos(), { initialValue: [] });
 }
