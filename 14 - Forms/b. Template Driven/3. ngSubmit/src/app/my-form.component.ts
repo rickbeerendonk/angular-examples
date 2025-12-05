@@ -7,8 +7,6 @@ import { FormsModule } from '@angular/forms';
 
 @Component({
   imports: [JsonPipe, FormsModule],
-
-  // moduleId is NOT needed in Angular CLI.
   selector: 'my-form',
   templateUrl: './my-form.component.html'
 })

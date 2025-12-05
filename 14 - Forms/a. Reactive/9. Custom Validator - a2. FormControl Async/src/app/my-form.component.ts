@@ -9,8 +9,6 @@ import { prefixValidator } from './prefix.directive';
 
 @Component({
   imports: [JsonPipe, ReactiveFormsModule],
-
-  // moduleId is NOT needed in Angular CLI.
   selector: 'my-form',
   styles: ['span { color: gray }'],
   templateUrl: './my-form.component.html'

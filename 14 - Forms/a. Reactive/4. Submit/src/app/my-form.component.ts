@@ -7,8 +7,6 @@ import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
   imports: [JsonPipe, ReactiveFormsModule],
-
-  // moduleId is NOT needed in Angular CLI.
   selector: 'my-form',
   templateUrl: './my-form.component.html'
 })
