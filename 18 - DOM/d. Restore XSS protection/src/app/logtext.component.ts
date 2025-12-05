@@ -5,8 +5,9 @@ import {
   Component,
   ElementRef,
   AfterViewInit,
-  ViewChild,
-  SecurityContext
+  viewChild,
+  SecurityContext,
+  inject
 } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 
@@ -23,20 +24,22 @@ import { DomSanitizer } from '@angular/platform-browser';
   `
 })
 export class LogTextComponent implements AfterViewInit {
-  @ViewChild('inputRef') inputRef?: ElementRef<HTMLInputElement>;
-  @ViewChild('outputRef') outputRef?: ElementRef<HTMLHeadingElement>;
+  // Modern signal-based queries
+  inputRef = viewChild<ElementRef<HTMLInputElement>>('inputRef');
+  outputRef = viewChild<ElementRef<HTMLHeadingElement>>('outputRef');
+
+  // Modern inject() function
+  private sanitizer = inject(DomSanitizer);
 
   text: string = '<a href="javascript:alert(\'Hi there\')">Click me!</a>';
 
-  constructor(private sanitizer: DomSanitizer) {}
-
   ngAfterViewInit() {
     // View is ready, so inputRef contains the native DOM element
-    this.inputRef!.nativeElement.select();
+    this.inputRef()!.nativeElement.select();
   }
 
   onInput(target: EventTarget | null) {
-    this.outputRef!.nativeElement.innerHTML =
+    this.outputRef()!.nativeElement.innerHTML =
       this.sanitizer.sanitize(
         SecurityContext.URL,
         (target as HTMLInputElement).value

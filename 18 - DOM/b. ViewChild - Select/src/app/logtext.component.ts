@@ -1,7 +1,7 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2025 Rick Beerendonk          !*/
 
-import { Component, ElementRef, AfterViewInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, AfterViewInit, viewChild } from '@angular/core';
 
 @Component({
   selector: 'logtext',
@@ -16,13 +16,14 @@ import { Component, ElementRef, AfterViewInit, ViewChild } from '@angular/core';
   `
 })
 export class LogTextComponent implements AfterViewInit {
-  @ViewChild('inputRef') inputRef?: ElementRef<HTMLInputElement>;
+  // Modern signal-based query
+  inputRef = viewChild<ElementRef<HTMLInputElement>>('inputRef');
 
   text: string = 'initial';
 
   ngAfterViewInit() {
     // View is ready, so inputRef contains the native DOM element
-    this.inputRef!.nativeElement.select();
+    this.inputRef()!.nativeElement.select();
   }
 
   onInput(target: EventTarget | null) {

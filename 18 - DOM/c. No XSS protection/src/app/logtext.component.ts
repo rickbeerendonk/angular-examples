@@ -1,7 +1,7 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2025 Rick Beerendonk          !*/
 
-import { Component, ElementRef, AfterViewInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, AfterViewInit, viewChild } from '@angular/core';
 
 @Component({
   selector: 'logtext',
@@ -17,18 +17,19 @@ import { Component, ElementRef, AfterViewInit, ViewChild } from '@angular/core';
   `
 })
 export class LogTextComponent implements AfterViewInit {
-  @ViewChild('inputRef') inputRef?: ElementRef<HTMLInputElement>;
-  @ViewChild('outputRef') outputRef?: ElementRef<HTMLHeadingElement>;
+  // Modern signal-based queries
+  inputRef = viewChild<ElementRef<HTMLInputElement>>('inputRef');
+  outputRef = viewChild<ElementRef<HTMLHeadingElement>>('outputRef');
 
   text: string = '<a href="javascript:alert(\'Hi there\')">Click me!</a>';
 
   ngAfterViewInit() {
     // View is ready, so inputRef contains the native DOM element
-    this.inputRef!.nativeElement.select();
+    this.inputRef()!.nativeElement.select();
   }
 
   onInput(target: EventTarget | null) {
-    this.outputRef!.nativeElement.innerHTML = (
+    this.outputRef()!.nativeElement.innerHTML = (
       target as HTMLInputElement
     ).value;
   }
