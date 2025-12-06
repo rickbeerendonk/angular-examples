@@ -3,7 +3,7 @@
 
 import {
   Component,
-  Input,
+  input,
   effect,
   signal,
   AfterContentChecked,
@@ -36,17 +36,17 @@ export class GreetingComponent
     OnDestroy,
     OnInit
 {
-  @Input() name?: string;
+  name = input<string>();
   count = signal(0);
 
   constructor(private loggerService: LoggerService) {
-    this.loggerService.logEvent('constructor', this.name, this.count());
+    this.loggerService.logEvent('constructor', this.name(), this.count());
 
     // React to count signal changes
     effect(() => {
       this.loggerService.logEvent(
         'effect (count changed)',
-        this.name,
+        this.name(),
         this.count()
       );
     });
@@ -59,20 +59,20 @@ export class GreetingComponent
   // Init & Destroy
 
   ngOnInit() {
-    this.loggerService.logEvent('ngOnInit', this.name, this.count());
+    this.loggerService.logEvent('ngOnInit', this.name(), this.count());
   }
 
   ngOnDestroy() {
-    this.loggerService.logEvent('ngOnDestroy', this.name, this.count());
+    this.loggerService.logEvent('ngOnDestroy', this.name(), this.count());
   }
 
   // Changes
 
   ngOnChanges(changes: SimpleChanges) {
-    // Only triggers when @Input() properties change, not when internal signals change
+    // Note: With signal inputs, ngOnChanges still triggers when input values change
     this.loggerService.logEvent(
       `ngOnChanges(${JSON.stringify(changes)})`,
-      this.name,
+      this.name(),
       this.count()
     );
   }
@@ -81,28 +81,36 @@ export class GreetingComponent
 
   ngDoCheck() {
     // In zoneless Angular, this doesn't run on every change detection cycle
-    this.loggerService.logEvent('ngDoCheck', this.name, this.count());
+    this.loggerService.logEvent('ngDoCheck', this.name(), this.count());
   }
 
   ngAfterContentInit() {
-    this.loggerService.logEvent('ngAfterContentInit', this.name, this.count());
+    this.loggerService.logEvent(
+      'ngAfterContentInit',
+      this.name(),
+      this.count()
+    );
   }
 
   ngAfterContentChecked() {
     // Only runs after content checks, not on every signal update
     this.loggerService.logEvent(
       'ngAfterContentChecked',
-      this.name,
+      this.name(),
       this.count()
     );
   }
 
   ngAfterViewInit() {
-    this.loggerService.logEvent('ngAfterViewInit', this.name, this.count());
+    this.loggerService.logEvent('ngAfterViewInit', this.name(), this.count());
   }
 
   ngAfterViewChecked() {
     // Only runs after view checks, not on every signal update
-    this.loggerService.logEvent('ngAfterViewChecked', this.name, this.count());
+    this.loggerService.logEvent(
+      'ngAfterViewChecked',
+      this.name(),
+      this.count()
+    );
   }
 }
