@@ -5,16 +5,17 @@ import {
   AfterViewChecked,
   ChangeDetectionStrategy,
   Component,
-  Input
+  input
 } from '@angular/core';
 
 @Component({
   selector: 'display',
+  standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush, // OnPush change detection
-  template: `<span>{{ value }}</span>`
+  template: `<span>{{ value() }}</span>`
 })
 export class DisplayComponent implements AfterViewChecked {
-  @Input() value: Number = 0;
+  value = input<Number>(0);
 
   ngAfterViewChecked(): void {
     console.count('DisplayComponent.AfterViewChecked');
