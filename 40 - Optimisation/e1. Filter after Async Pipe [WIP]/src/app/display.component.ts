@@ -5,23 +5,23 @@ import {
   AfterViewChecked,
   ChangeDetectionStrategy,
   Component,
-  Input
+  effect,
+  input
 } from '@angular/core';
 
 @Component({
   selector: 'display',
+  standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush, // OnPush change detection
-  template: `<span>{{ value }}</span>`
+  template: `<span>{{ value() }}</span>`
 })
 export class DisplayComponent implements AfterViewChecked {
-  private _value: Number = 0;
-  public get value(): Number {
-    return this._value;
-  }
-  @Input()
-  public set value(value: Number) {
-    console.log('DisplayComponent.value', value);
-    this._value = value;
+  value = input<Number>(0);
+
+  constructor() {
+    effect(() => {
+      console.log('DisplayComponent.value', this.value());
+    });
   }
 
   ngAfterViewChecked(): void {
