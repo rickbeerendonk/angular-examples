@@ -1,7 +1,7 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2025 Rick Beerendonk          !*/
 
-import { Component, input, Input } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { NgTemplateOutlet } from '@angular/common';
 
 @Component({
@@ -11,5 +11,5 @@ import { NgTemplateOutlet } from '@angular/common';
   styleUrls: ['./container.component.css']
 })
 export class ContainerComponent {
-  @Input() show = true;
+  show = input(true);
 }

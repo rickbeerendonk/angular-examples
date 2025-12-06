@@ -2,8 +2,8 @@
 <!-- Copyright © 2025 Rick Beerendonk -->
 
 <div class="container">
-  <span [class.unavailable]="!show">The conditional item:</span>
-  @if (show) {
+  <span [class.unavailable]="!show()">The conditional item:</span>
+  @if (show()) {
     <div class="content">
       <!--
         Don't use ng-content directly.
