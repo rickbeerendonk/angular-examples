@@ -1,0 +1,12 @@
+<!-- European Union Public License version 1.2 -->
+<!-- Copyright © 2026 Rick Beerendonk -->
+
+<button (click)="addItem()">Add Item</button>
+<button (click)="reset()">Reset</button>
+<ul>
+  @for (item of items(); track item; let i = $index) {
+    <li [style.animation-delay]="i * 50 + 'ms'" animate.enter="slide-in">
+      {{ item }}
+    </li>
+  }
+</ul>

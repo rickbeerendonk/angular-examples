@@ -1,0 +1,7 @@
+<!-- European Union Public License version 1.2 -->
+<!-- Copyright © 2026 Rick Beerendonk -->
+
+<button (click)="show.set(!show())">Toggle</button>
+@if (show()) {
+  <div animate.enter="fade-in" animate.leave="fade-out">Hello!</div>
+}

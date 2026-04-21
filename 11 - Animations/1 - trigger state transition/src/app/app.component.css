@@ -1,0 +1,27 @@
+/*! European Union Public License version 1.2 !*/
+/*! Copyright © 2026 Rick Beerendonk !*/
+
+div {
+  color: white;
+  background: #444;
+  height: 100px;
+  margin-top: 10px;
+  transition: all 300ms; /* open → closed */
+
+  &.open {
+    color: black;
+    background: #d676ff;
+    height: 200px;
+    transition: all 1000ms; /* closed → open */
+  }
+}
+
+button {
+  &::after {
+    content: ' (open)';
+  }
+
+  &:has(+ div.open)::after {
+    content: ' (close)';
+  }
+}
