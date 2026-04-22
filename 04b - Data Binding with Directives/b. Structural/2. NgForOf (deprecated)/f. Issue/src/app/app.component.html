@@ -8,5 +8,7 @@
 <button (click)="insertTop()">Insert at Top</button>
 
 <ul>
-  <li *ngFor="let item of items"><input [placeholder]="item" /></li>
+  <li *ngFor="let item of items">
+    <input [placeholder]="item.label" />
+  </li>
 </ul>

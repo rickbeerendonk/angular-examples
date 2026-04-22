@@ -10,9 +10,13 @@ import { Component } from '@angular/core';
   templateUrl: './app.component.html'
 })
 export class AppComponent {
-  items: string[] = ['one', 'two', 'three'];
+  items = [{ label: 'one' }, { label: 'two' }, { label: 'three' }];
 
   insertTop() {
-    this.items = [String(this.items.length + 1), ...this.items];
+    // .map() returns brand-new object references for every item
+    this.items = [
+      { label: String(this.items.length + 1) },
+      ...this.items.map(i => ({ label: i.label }))
+    ];
   }
 }
