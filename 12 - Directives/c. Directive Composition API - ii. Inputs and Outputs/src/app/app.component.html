@@ -1,0 +1,7 @@
+<h1>Inputs and Outputs</h1>
+<p>Hover over a button to trigger the tooltip output (aliased as "shown").</p>
+<p>Last shown: {{ lastTooltip() }}</p>
+<app-button tooltip="Save changes" (shown)="onShown($event)">Save</app-button>
+<app-button tooltip="Discard changes" (shown)="onShown($event)"
+  >Cancel</app-button
+>
