@@ -1,0 +1,28 @@
+<h1>Shipping</h1>
+
+<form novalidate>
+  <label>
+    <input type="checkbox" [field]="shippingForm.sameAsBilling" />
+    Ship to billing address
+  </label>
+
+  @if (!shippingForm.shippingAddress().hidden()) {
+    <label>
+      Shipping address
+      <input type="text" [field]="shippingForm.shippingAddress" />
+      @if (
+        shippingForm.shippingAddress().touched() &&
+        shippingForm.shippingAddress().invalid()
+      ) {
+        @for (
+          error of shippingForm.shippingAddress().errors();
+          track error.kind
+        ) {
+          <p class="errors">{{ error.message }}</p>
+        }
+      }
+    </label>
+  }
+
+  <button type="submit" [disabled]="!shippingForm().valid()">Continue</button>
+</form>
