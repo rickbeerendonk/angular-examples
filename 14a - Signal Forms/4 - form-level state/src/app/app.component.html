@@ -1,0 +1,20 @@
+<h1>Sign In</h1>
+
+<form novalidate>
+  <label>
+    Email
+    <input type="email" [field]="loginForm.email" />
+  </label>
+
+  <label>
+    Password
+    <input type="password" [field]="loginForm.password" />
+  </label>
+
+  <!-- Form-level signals aggregate the whole tree -->
+  <button type="submit" [disabled]="!loginForm().valid()">Sign In</button>
+</form>
+
+<p>Form valid: {{ loginForm().valid() }}</p>
+<p>Form touched: {{ loginForm().touched() }}</p>
+<p>Form dirty: {{ loginForm().dirty() }}</p>
