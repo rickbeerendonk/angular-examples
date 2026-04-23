@@ -51,6 +51,6 @@ export class AppComponent {
 
   // Re-computes only when count changes — not when multiplier changes
   result: Signal<number> = computed(
-    () => this.count() * untracked(this.multiplier)
+    () => this.count() * untracked(() => this.multiplier())
   );
 }
