@@ -1,0 +1,23 @@
+<h1>Sign In</h1>
+
+<form novalidate>
+  <label>
+    Email
+    <input type="email" [field]="loginForm.email" />
+    @if (loginForm.email().touched() && loginForm.email().invalid()) {
+      @for (error of loginForm.email().errors(); track error.kind) {
+        <p class="errors">{{ error.message }}</p>
+      }
+    }
+  </label>
+
+  <label>
+    Password
+    <input type="password" [field]="loginForm.password" />
+    @if (loginForm.password().touched() && loginForm.password().invalid()) {
+      @for (error of loginForm.password().errors(); track error.kind) {
+        <p class="errors">{{ error.message }}</p>
+      }
+    }
+  </label>
+</form>
