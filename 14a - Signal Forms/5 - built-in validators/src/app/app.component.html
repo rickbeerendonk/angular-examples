@@ -1,0 +1,35 @@
+<h1>Sign Up</h1>
+
+<form novalidate>
+  <label>
+    Email
+    <input type="email" [field]="signupForm.email" />
+    @if (signupForm.email().touched() && signupForm.email().invalid()) {
+      @for (error of signupForm.email().errors(); track error.kind) {
+        <p class="errors">{{ error.message }}</p>
+      }
+    }
+  </label>
+
+  <label>
+    Username
+    <input type="text" [field]="signupForm.username" />
+    @if (signupForm.username().touched() && signupForm.username().invalid()) {
+      @for (error of signupForm.username().errors(); track error.kind) {
+        <p class="errors">{{ error.message }}</p>
+      }
+    }
+  </label>
+
+  <label>
+    Password
+    <input type="password" [field]="signupForm.password" />
+    @if (signupForm.password().touched() && signupForm.password().invalid()) {
+      @for (error of signupForm.password().errors(); track error.kind) {
+        <p class="errors">{{ error.message }}</p>
+      }
+    }
+  </label>
+
+  <button type="submit" [disabled]="!signupForm().valid()">Sign Up</button>
+</form>
