@@ -1,0 +1,35 @@
+<h1>Sign In</h1>
+
+<form novalidate>
+  <label>
+    Email
+    <input type="email" [field]="loginForm.email" />
+  </label>
+
+  <label>
+    Password
+    <input type="password" [field]="loginForm.password" />
+  </label>
+</form>
+
+<!-- Field state — every field exposes signals -->
+<table>
+  <tr>
+    <th></th>
+    <th>value()</th>
+    <th>touched()</th>
+    <th>dirty()</th>
+  </tr>
+  <tr>
+    <th>email</th>
+    <td>{{ loginForm.email().value() }}</td>
+    <td>{{ loginForm.email().touched() }}</td>
+    <td>{{ loginForm.email().dirty() }}</td>
+  </tr>
+  <tr>
+    <th>password</th>
+    <td>{{ loginForm.password().value() }}</td>
+    <td>{{ loginForm.password().touched() }}</td>
+    <td>{{ loginForm.password().dirty() }}</td>
+  </tr>
+</table>
