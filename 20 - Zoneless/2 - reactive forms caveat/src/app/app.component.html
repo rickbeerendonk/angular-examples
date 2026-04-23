@@ -1,0 +1,15 @@
+<h1>Reactive Forms + Zoneless</h1>
+
+<form [formGroup]="form">
+  <label>
+    Name
+    <input formControlName="name" />
+  </label>
+</form>
+
+<p>Value: {{ form.value.name }}</p>
+
+<button (click)="setAlice()">
+  Set "Alice" after 500ms (with markForCheck)
+</button>
+<button (click)="setBob()">Set "Bob" after 500ms (no markForCheck)</button>
