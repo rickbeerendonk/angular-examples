@@ -1,0 +1,22 @@
+<h1>NgOptimizedImage — Priority (LCP)</h1>
+<p>
+  Adding <code>priority</code> generates a preload link in the
+  <code>&lt;head&gt;</code> and sets <code>fetchpriority="high"</code>.
+</p>
+
+<!-- Above-the-fold hero image — mark as priority -->
+<img
+  ngSrc="https://picsum.photos/id/1015/1200/630"
+  width="1200"
+  height="630"
+  priority
+  alt="Hero landscape"
+/>
+
+<!-- Below-the-fold — lazy by default (no priority) -->
+<img
+  ngSrc="https://picsum.photos/id/1016/800/450"
+  width="800"
+  height="450"
+  alt="Secondary image"
+/>
