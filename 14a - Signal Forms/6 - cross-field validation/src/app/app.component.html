@@ -1,0 +1,28 @@
+<h1>Set Password</h1>
+
+<form novalidate>
+  <label>
+    Password
+    <input type="password" [field]="signupForm.password" />
+    @if (signupForm.password().touched() && signupForm.password().invalid()) {
+      @for (error of signupForm.password().errors(); track error.kind) {
+        <p class="errors">{{ error.message }}</p>
+      }
+    }
+  </label>
+
+  <label>
+    Confirm Password
+    <input type="password" [field]="signupForm.confirmPassword" />
+    @if (
+      signupForm.confirmPassword().touched() &&
+      signupForm.confirmPassword().invalid()
+    ) {
+      @for (error of signupForm.confirmPassword().errors(); track error.kind) {
+        <p class="errors">{{ error.message }}</p>
+      }
+    }
+  </label>
+
+  <button type="submit" [disabled]="!signupForm().valid()">Save</button>
+</form>
