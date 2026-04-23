@@ -1,0 +1,8 @@
+<!-- Copyright © 2026 Rick Beerendonk -->
+
+<h1>Logging Interceptor</h1>
+<p>Open DevTools console, then click the button.</p>
+<button (click)="loadTodo()">Load Todo</button>
+@if (todo()) {
+  <pre>{{ todo() | json }}</pre>
+}
