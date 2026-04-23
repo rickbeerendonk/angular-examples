@@ -1,0 +1,16 @@
+<h1>Sign In</h1>
+
+<form novalidate>
+  <label>
+    Email
+    <input type="email" [field]="loginForm.email" />
+  </label>
+
+  <label>
+    Password
+    <input type="password" [field]="loginForm.password" />
+  </label>
+</form>
+
+<p>Email: {{ loginModel().email }}</p>
+<p>Password: {{ loginModel().password }}</p>
