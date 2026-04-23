@@ -1,0 +1,9 @@
+<!-- European Union Public License version 1.2 -->
+<!-- Copyright © 2026 Rick Beerendonk -->
+
+<input (input)="onInput($event)" placeholder="Search todos" />
+<ul>
+  @for (todo of results(); track todo.id) {
+    <li>{{ todo.title }}</li>
+  }
+</ul>
