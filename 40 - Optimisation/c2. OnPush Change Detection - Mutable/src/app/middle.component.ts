@@ -7,6 +7,7 @@ import {
   ChangeDetectionStrategy,
   Input
 } from '@angular/core';
+import { BottomComponent } from './bottom.component';
 
 @Component({
   selector: 'middle',
@@ -17,7 +18,8 @@ import {
     <hr />
 
     <bottom [obj]="obj" />
-  `
+  `,
+  imports: [BottomComponent]
 })
 export class MiddleComponent {
   @Input() obj = { text: '' };

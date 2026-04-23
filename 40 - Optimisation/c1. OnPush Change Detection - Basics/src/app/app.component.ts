@@ -2,6 +2,7 @@
 /*! Copyright © 2025 Rick Beerendonk          !*/
 
 import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { GreetingComponent } from './greeting.component';
 
 @Component({
   selector: 'app',
@@ -13,6 +14,7 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
     <hr />
 
     <greeting />
-  ` // onKeyUp not handled, but Angular will update bindings after event.
+  `, // onKeyUp not handled, but Angular will update bindings after event.
+  imports: [GreetingComponent]
 })
 export class AppComponent {}

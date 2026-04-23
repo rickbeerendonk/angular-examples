@@ -2,6 +2,7 @@
 /*! Copyright © 2025 Rick Beerendonk          !*/
 
 import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { MiddleComponent } from "./middle.component";
 
 @Component({
   selector: 'app',
@@ -17,6 +18,8 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
 
     <middle [obj]="myObj"></middle>
   ` // onKeyUp not handled, but Angular will update bindings after event.
+  ,
+  imports: [MiddleComponent]
 })
 export class AppComponent {
   myObj = { text: 'World' };
