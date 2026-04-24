@@ -1,0 +1,23 @@
+<h1>Union Type</h1>
+
+<p>
+  <button (click)="state.set('idle')">idle</button>
+  <button (click)="state.set('loading')">loading</button>
+  <button (click)="state.set('loaded')">loaded</button>
+  <button (click)="state.set('error')">error</button>
+</p>
+
+@switch (state()) {
+  @case ('idle') {
+    <p>Press a button.</p>
+  }
+  @case ('loading') {
+    <p>Loading…</p>
+  }
+  @case ('loaded') {
+    <p>Loaded ✓</p>
+  }
+  @case ('error') {
+    <p>Error</p>
+  }
+}

@@ -1,0 +1,49 @@
+<h1>Boolean Flags (Problem)</h1>
+
+<label>
+  <input
+    type="checkbox"
+    [checked]="isLoading()"
+    (change)="isLoading.set(!isLoading())"
+  />
+  isLoading
+</label>
+<label>
+  <input
+    type="checkbox"
+    [checked]="isLoaded()"
+    (change)="isLoaded.set(!isLoaded())"
+  />
+  isLoaded
+</label>
+<label>
+  <input
+    type="checkbox"
+    [checked]="hasError()"
+    (change)="hasError.set(!hasError())"
+  />
+  hasError
+</label>
+
+<!-- 4 valid states -->
+@if (!isLoading() && !isLoaded() && !hasError()) {
+  <p>Idle</p>
+}
+@if (isLoading() && !isLoaded() && !hasError()) {
+  <p>Loading…</p>
+}
+@if (!isLoading() && isLoaded() && !hasError()) {
+  <p>Loaded ✓</p>
+}
+@if (!isLoading() && !isLoaded() && hasError()) {
+  <p>Error</p>
+}
+
+<!-- 4 impossible combinations — yet representable -->
+@if (
+  (isLoading() && isLoaded()) ||
+  (isLoading() && hasError()) ||
+  (isLoaded() && hasError())
+) {
+  <p class="warning">⚠ Impossible state</p>
+}

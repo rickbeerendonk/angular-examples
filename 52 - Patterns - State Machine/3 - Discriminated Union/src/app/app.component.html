@@ -1,0 +1,31 @@
+<h1>Discriminated Union</h1>
+
+<p>
+  <button (click)="load()">load</button>
+  <button (click)="succeed()">succeed</button>
+  <button (click)="fail()">fail</button>
+</p>
+
+@let s = state();
+@switch (s.kind) {
+  @case ('idle') {
+    <p>Idle</p>
+  }
+  @case ('loading') {
+    <p>Loading…</p>
+  }
+  @case ('loaded') {
+    @if (s.kind === 'loaded') {
+      <ul>
+        @for (order of s.orders; track order) {
+          <li>{{ order }}</li>
+        }
+      </ul>
+    }
+  }
+  @case ('error') {
+    @if (s.kind === 'error') {
+      <p>Error: {{ s.message }}</p>
+    }
+  }
+}

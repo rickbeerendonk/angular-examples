@@ -1,0 +1,17 @@
+<h1>Guarded Transitions</h1>
+
+<p>
+  <button (click)="load()" [disabled]="!canLoad()">load</button>
+  <button (click)="succeed()" [disabled]="!canFinish()">succeed</button>
+  <button (click)="fail()" [disabled]="!canFinish()">fail</button>
+  <button (click)="reset()" [disabled]="!canReset()">reset</button>
+</p>
+
+<p>
+  State: <code>{{ state().kind }}</code>
+</p>
+
+<p>
+  Allowed transitions:<br />
+  idle → loading → (loaded | error) → idle
+</p>

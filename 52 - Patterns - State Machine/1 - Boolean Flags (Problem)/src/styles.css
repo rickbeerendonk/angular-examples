@@ -1,0 +1,15 @@
+/*! European Union Public License version 1.2 !*/
+/*! Copyright © 2026 Rick Beerendonk !*/
+
+* {
+  font-family: sans-serif;
+}
+
+label {
+  display: block;
+}
+
+.warning {
+  color: #b00;
+  font-weight: bold;
+}
