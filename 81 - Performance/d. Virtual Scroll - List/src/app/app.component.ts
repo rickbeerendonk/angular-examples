@@ -1,6 +1,13 @@
 /*! Copyright © 2026 Rick Beerendonk !*/
 
-import { Component, signal } from '@angular/core';
+import {
+  Component,
+  DestroyRef,
+  ElementRef,
+  afterNextRender,
+  inject,
+  signal
+} from '@angular/core';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 
 interface User {
@@ -13,15 +20,13 @@ interface User {
   selector: 'app-root',
   imports: [ScrollingModule],
   template: `
-    <h1>Virtual scroll — 10 000 rows</h1>
-    <p>Open Elements panel: only the visible rows exist in the DOM.</p>
+    <h1>Virtual scroll — {{ users().length }} rows</h1>
+    <p>In DOM: {{ domRowCount() }} rows</p>
 
     <cdk-virtual-scroll-viewport itemSize="32" class="viewport">
-      @for (user of users(); track user.id) {
-        <div class="row">
-          {{ user.id }} — {{ user.name }} &lt;{{ user.email }}&gt;
-        </div>
-      }
+      <div *cdkVirtualFor="let user of users(); trackBy: trackById" class="row">
+        {{ user.id }} — {{ user.name }} &lt;{{ user.email }}&gt;
+      </div>
     </cdk-virtual-scroll-viewport>
   `,
   styles: [
@@ -41,6 +46,10 @@ interface User {
   ]
 })
 export class AppComponent {
+  private host = inject(ElementRef<HTMLElement>);
+
+  domRowCount = signal(0);
+
   users = signal<User[]>(
     Array.from({ length: 10_000 }, (_, i) => ({
       id: i + 1,
@@ -48,4 +57,25 @@ export class AppComponent {
       email: `user${i + 1}@example.com`
     }))
   );
+
+  constructor() {
+    const destroyRef = inject(DestroyRef);
+
+    afterNextRender(() => {
+      const viewport = this.host.nativeElement.querySelector('.viewport');
+      if (!viewport) return;
+
+      const update = () => {
+        this.domRowCount.set(viewport.querySelectorAll('.row').length);
+      };
+
+      const observer = new MutationObserver(update);
+      observer.observe(viewport, { childList: true, subtree: true });
+      destroyRef.onDestroy(() => observer.disconnect());
+    });
+  }
+
+  trackById(_index: number, user: User) {
+    return user.id;
+  }
 }

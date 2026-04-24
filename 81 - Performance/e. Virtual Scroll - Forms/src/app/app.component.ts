@@ -1,6 +1,13 @@
 /*! Copyright © 2026 Rick Beerendonk !*/
 
-import { Component, signal } from '@angular/core';
+import {
+  Component,
+  DestroyRef,
+  ElementRef,
+  afterNextRender,
+  inject,
+  signal
+} from '@angular/core';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import {
   FormArray,
@@ -25,13 +32,20 @@ interface RowForm {
       visible rows participate in change detection.
     </p>
 
+    <p>
+      Items in array: <strong>{{ rows.controls.length }}</strong> — Rows
+      currently in DOM: <strong>{{ domRowCount() }}</strong>
+    </p>
+
     <cdk-virtual-scroll-viewport itemSize="40" class="viewport">
-      @for (group of rows.controls; track $index) {
-        <form [formGroup]="group" class="row">
-          <input formControlName="name" placeholder="name" />
-          <input formControlName="email" placeholder="email" />
-        </form>
-      }
+      <form
+        *cdkVirtualFor="let group of rows.controls"
+        [formGroup]="group"
+        class="row"
+      >
+        <input formControlName="name" placeholder="name" />
+        <input formControlName="email" placeholder="email" />
+      </form>
     </cdk-virtual-scroll-viewport>
 
     <p>Dirty rows: {{ dirtyCount() }}</p>
@@ -57,6 +71,8 @@ interface RowForm {
   ]
 })
 export class AppComponent {
+  private host = inject(ElementRef<HTMLElement>);
+
   rows = new FormArray<FormGroup<RowForm>>(
     Array.from(
       { length: 1_000 },
@@ -71,10 +87,28 @@ export class AppComponent {
   );
 
   dirtyCount = signal(0);
+  domRowCount = signal(0);
 
   constructor() {
     this.rows.valueChanges.subscribe(() => {
       this.dirtyCount.set(this.rows.controls.filter(c => c.dirty).length);
+    });
+
+    const destroyRef = inject(DestroyRef);
+
+    afterNextRender(() => {
+      const viewport = this.host.nativeElement.querySelector('.viewport');
+      if (!viewport) return;
+
+      const update = () => {
+        this.domRowCount.set(viewport.querySelectorAll('.row').length);
+      };
+
+      update();
+
+      const observer = new MutationObserver(update);
+      observer.observe(viewport, { childList: true, subtree: true });
+      destroyRef.onDestroy(() => observer.disconnect());
     });
   }
 }
