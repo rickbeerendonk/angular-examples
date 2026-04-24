@@ -1,0 +1,15 @@
+<h1>&#64;defer on viewport</h1>
+<p>Scroll down to trigger the deferred component.</p>
+<div style="height: 150vh; background: linear-gradient(white, #f0f0f0)">
+  <p style="padding: 16px">↓ Keep scrolling…</p>
+</div>
+
+@defer (on viewport) {
+  <app-heavy-chart />
+} @placeholder {
+  <div style="padding: 16px; background: #fff9c4">
+    Chart placeholder (visible before scroll)
+  </div>
+} @loading {
+  <div style="padding: 16px">Loading chart…</div>
+}

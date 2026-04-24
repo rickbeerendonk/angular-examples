@@ -1,0 +1,10 @@
+<h1>&#64;defer on interaction</h1>
+<p>Click the button below to load the comments component.</p>
+
+@defer (on interaction; prefetch on idle) {
+  <app-comments />
+} @placeholder {
+  <button>Show comments</button>
+} @loading (minimum 500ms; after 100ms) {
+  <p>Loading comments…</p>
+}
