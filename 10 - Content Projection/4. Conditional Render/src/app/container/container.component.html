@@ -5,17 +5,7 @@
   <span [class.unavailable]="!show()">The conditional item:</span>
   @if (show()) {
     <div class="content">
-      <!--
-        Don't use ng-content directly.
-        ng-content should not always be created, so us ng-container + ng-template instead:
-        * ng-container acts as the host to structural directives.
-        * ngTemplateOutlet acts as a placeholder to render a template
-      -->
-      <ng-container *ngTemplateOutlet="tempOutlet"></ng-container>
+      <ng-content></ng-content>
     </div>
   }
 </div>
-
-<ng-template #tempOutlet>
-  <ng-content></ng-content>
-</ng-template>

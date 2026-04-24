@@ -4,17 +4,7 @@
 <div class="container">
   The only item:
   <div class="content">
-    <!-- Wrapper span allows us to detect if content was projected -->
-    <span #contentWrapper><ng-content></ng-content></span>
-    @if (!contentRef()) {
-      Default Value
-    }
-    <!--
-      ng-content: Projects content from parent component into the span.
-      #contentWrapper: Template reference on the wrapper span.
-      contentChild(): Signal-based query with read: ElementRef option.
-                      Checks if the wrapper has child nodes (projected content).
-      @if (!contentRef()): Shows default when no content is projected.
-    -->
+    <!-- Content placed inside <ng-content> is used as fallback when nothing is projected. -->
+    <ng-content>Default Value</ng-content>
   </div>
 </div>
