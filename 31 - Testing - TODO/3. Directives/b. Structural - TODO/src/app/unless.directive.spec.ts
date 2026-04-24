@@ -1,61 +1,53 @@
-import { Component } from '@angular/core';
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+/*! Copyright © 2026 Rick Beerendonk !*/
+
+import { Component, signal } from '@angular/core';
+import { TestBed } from '@angular/core/testing';
 import { UnlessDirective } from './unless.directive';
-import { ViewContainerRef, TemplateRef } from '@angular/core';
-import { By } from '@angular/platform-browser';
 
 @Component({
-  template: `
-    <ng-template [unless]="condition">
-      <p>Content will be displayed when condition is false</p>
-    </ng-template>
-  `
+  imports: [UnlessDirective],
+  template: `<p *unless="condition()">Content</p>`
 })
 class TestComponent {
-  condition = false;
+  condition = signal(false);
 }
 
 describe('UnlessDirective', () => {
-  let component: TestComponent;
-  let fixture: ComponentFixture<TestComponent>;
-  let viewContainerRef: ViewContainerRef;
-
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [UnlessDirective, TestComponent]
+      imports: [TestComponent]
     });
-
-    fixture = TestBed.createComponent(TestComponent);
-    component = fixture.componentInstance;
-    viewContainerRef = fixture.debugElement.injector.get(ViewContainerRef);
-    spyOn(viewContainerRef, 'createEmbeddedView').and.callThrough();
-    spyOn(viewContainerRef, 'clear').and.callThrough();
-    component.condition = true;
-    fixture.detectChanges();
   });
 
-  it('should clear the view container when condition is true', () => {
-    expect(viewContainerRef.clear).toHaveBeenCalled();
+  it('should render the content when the condition is false', async () => {
+    const fixture = TestBed.createComponent(TestComponent);
+    await fixture.whenStable();
+
+    const el = fixture.nativeElement as HTMLElement;
+    expect(el.querySelector('p')?.textContent).toBe('Content');
   });
 
-  it('should create an embedded view when condition is false', () => {
-    component.condition = false;
-    fixture.detectChanges();
-    const templateRef = fixture.debugElement
-      .query(By.css('ng-template'))
-      .injector.get(TemplateRef);
-    expect(viewContainerRef.createEmbeddedView).toHaveBeenCalled();
+  it('should not render the content when the condition is true', async () => {
+    const fixture = TestBed.createComponent(TestComponent);
+    fixture.componentInstance.condition.set(true);
+    await fixture.whenStable();
+
+    const el = fixture.nativeElement as HTMLElement;
+    expect(el.querySelector('p')).toBeNull();
   });
 
-  it('should create an embedded view when condition is false', () => {
-    component.condition = false;
-    fixture.detectChanges();
-    expect(viewContainerRef.length).toBe(1);
-  });
+  it('should toggle the content when the condition changes', async () => {
+    const fixture = TestBed.createComponent(TestComponent);
+    const el = fixture.nativeElement as HTMLElement;
+    await fixture.whenStable();
+    expect(el.querySelector('p')?.textContent).toBe('Content');
 
-  it('should clear the view container when condition is true', () => {
-    component.condition = true;
-    fixture.detectChanges();
-    expect(viewContainerRef.length).toBe(0);
+    fixture.componentInstance.condition.set(true);
+    await fixture.whenStable();
+    expect(el.querySelector('p')).toBeNull();
+
+    fixture.componentInstance.condition.set(false);
+    await fixture.whenStable();
+    expect(el.querySelector('p')?.textContent).toBe('Content');
   });
 });
