@@ -15,6 +15,8 @@ interface Row {
 
 type RowGroup = FormGroup<{ name: FormControl<string> }>;
 
+let buildCount = 0;
+
 @Component({
   selector: 'app-root',
   imports: [ReactiveFormsModule],
@@ -27,7 +29,7 @@ type RowGroup = FormGroup<{ name: FormControl<string> }>;
     </p>
 
     <button type="button" (click)="nudge = nudge + 1">Trigger CD</button>
-    <span>nudges: {{ nudge }}</span>
+    <span>nudges: {{ nudge }} · builds: {{ buildCount }}</span>
 
     <ul>
       @for (group of form.controls; track rows[$index].id) {
@@ -56,7 +58,7 @@ type RowGroup = FormGroup<{ name: FormControl<string> }>;
   ]
 })
 export class AppComponent implements OnInit {
-  rows: Row[] = Array.from({ length: 1_000 }, (_, i) => ({
+  rows: Row[] = Array.from({ length: 5_000 }, (_, i) => ({
     id: i + 1,
     name: `Row ${i + 1}`
   }));
@@ -65,14 +67,21 @@ export class AppComponent implements OnInit {
 
   nudge = 0;
 
+  get buildCount(): number {
+    return buildCount;
+  }
+
   ngOnInit(): void {
     // ✅ Build controls ONCE — never inside the template.
     for (const row of this.rows) {
-      this.form.push(
-        new FormGroup({
-          name: new FormControl(row.name, { nonNullable: true })
-        })
-      );
+      this.form.push(this.createGroup(row.name));
     }
+  }
+
+  private createGroup(name: string): RowGroup {
+    buildCount++;
+    return new FormGroup({
+      name: new FormControl(name, { nonNullable: true })
+    });
   }
 }

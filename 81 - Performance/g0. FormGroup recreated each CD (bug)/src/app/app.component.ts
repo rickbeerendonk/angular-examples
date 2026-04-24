@@ -53,7 +53,7 @@ let buildCount = 0;
   ]
 })
 export class AppComponent {
-  rows: Row[] = Array.from({ length: 1_000 }, (_, i) => ({
+  rows: Row[] = Array.from({ length: 5_000 }, (_, i) => ({
     id: i + 1,
     name: `Row ${i + 1}`
   }));
@@ -62,7 +62,7 @@ export class AppComponent {
 
   buildGroup(row: Row): FormGroup<{ name: FormControl<string> }> {
     buildCount++;
-    if (buildCount % 1_000 === 0) {
+    if (buildCount % 5_000 === 0) {
       console.warn(`buildGroup has now been called ${buildCount} times`);
     }
     return new FormGroup({
