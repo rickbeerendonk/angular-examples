@@ -2,14 +2,14 @@
 
 <form novalidate>
   <label>
-    <input type="checkbox" [field]="shippingForm.sameAsBilling" />
+    <input type="checkbox" [formField]="shippingForm.sameAsBilling" />
     Ship to billing address
   </label>
 
   @if (!shippingForm.shippingAddress().hidden()) {
     <label>
       Shipping address
-      <input type="text" [field]="shippingForm.shippingAddress" />
+      <input type="text" [formField]="shippingForm.shippingAddress" />
       @if (
         shippingForm.shippingAddress().touched() &&
         shippingForm.shippingAddress().invalid()

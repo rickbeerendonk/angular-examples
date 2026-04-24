@@ -3,7 +3,7 @@
 <form (submit)="$event.preventDefault(); onSubmit()" novalidate>
   <label>
     Email
-    <input type="email" [field]="loginForm.email" />
+    <input type="email" [formField]="loginForm.email" />
     @if (loginForm.email().touched() && loginForm.email().invalid()) {
       @for (error of loginForm.email().errors(); track error.kind) {
         <p class="errors">{{ error.message }}</p>
@@ -13,7 +13,7 @@
 
   <label>
     Password
-    <input type="password" [field]="loginForm.password" />
+    <input type="password" [formField]="loginForm.password" />
     @if (loginForm.password().touched() && loginForm.password().invalid()) {
       @for (error of loginForm.password().errors(); track error.kind) {
         <p class="errors">{{ error.message }}</p>

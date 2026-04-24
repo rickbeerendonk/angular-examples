@@ -3,7 +3,7 @@
 import { Component, signal } from '@angular/core';
 import {
   form,
-  Field,
+  FormField,
   required,
   minLength,
   validate,
@@ -12,7 +12,7 @@ import {
 
 @Component({
   selector: 'app-root',
-  imports: [Field],
+  imports: [FormField],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })

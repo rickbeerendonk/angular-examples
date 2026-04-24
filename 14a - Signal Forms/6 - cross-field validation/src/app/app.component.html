@@ -3,7 +3,7 @@
 <form novalidate>
   <label>
     Password
-    <input type="password" [field]="signupForm.password" />
+    <input type="password" [formField]="signupForm.password" />
     @if (signupForm.password().touched() && signupForm.password().invalid()) {
       @for (error of signupForm.password().errors(); track error.kind) {
         <p class="errors">{{ error.message }}</p>
@@ -13,7 +13,7 @@
 
   <label>
     Confirm Password
-    <input type="password" [field]="signupForm.confirmPassword" />
+    <input type="password" [formField]="signupForm.confirmPassword" />
     @if (
       signupForm.confirmPassword().touched() &&
       signupForm.confirmPassword().invalid()

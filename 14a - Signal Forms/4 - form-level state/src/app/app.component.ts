@@ -1,11 +1,11 @@
 /*! Copyright © 2026 Rick Beerendonk !*/
 
 import { Component, signal } from '@angular/core';
-import { form, Field, required } from '@angular/forms/signals';
+import { form, FormField, required } from '@angular/forms/signals';
 
 @Component({
   selector: 'app-root',
-  imports: [Field],
+  imports: [FormField],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })

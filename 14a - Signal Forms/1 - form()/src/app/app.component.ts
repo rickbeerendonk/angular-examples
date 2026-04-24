@@ -1,11 +1,11 @@
 /*! Copyright © 2026 Rick Beerendonk !*/
 
 import { Component, signal } from '@angular/core';
-import { form, Field } from '@angular/forms/signals';
+import { form, FormField } from '@angular/forms/signals';
 
 @Component({
   selector: 'app-root',
-  imports: [Field],
+  imports: [FormField],
   templateUrl: './app.component.html'
 })
 export class AppComponent {
