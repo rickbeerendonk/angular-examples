@@ -1,5 +1,4 @@
 <!-- European Union Public License version 1.2 -->
 <!-- Copyright © 2023 Rick Beerendonk -->
 
-<edit-box></edit-box>
-<greeting />
+<input (input)="valueChanged($event.target)" [value]="greetingEditor.value()" />
