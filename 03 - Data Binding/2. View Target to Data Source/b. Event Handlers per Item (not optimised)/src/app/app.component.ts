@@ -2,15 +2,13 @@
 /*! Copyright © 2023 Rick Beerendonk          !*/
 
 import { Component } from '@angular/core';
-import { NgFor, NgForOf } from '@angular/common';
 
 @Component({
-  imports: [NgForOf],
   selector: 'app',
   template: `
-    <button *ngFor="let nr of [1, 2, 3]" (mousedown)="handleMouseDown($event)">
-      {{ nr }}
-    </button>
+    @for (nr of [1, 2, 3]; track nr) {
+      <button (mousedown)="handleMouseDown($event)">{{ nr }}</button>
+    }
     <div style="color: gray">
       <p>Open console, tab "Elements", sub-tab "Event Listeners".</p>
       <div>
