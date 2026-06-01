@@ -10,7 +10,7 @@ import { DataService } from './data.service';
     <p style="color: gray">Open the console to see the result.</p>`
 })
 export class AppComponent {
-  private dataService = inject(DataService);
+  private readonly dataService = inject(DataService);
 
   constructor() {
     this.dataService.fetchData();

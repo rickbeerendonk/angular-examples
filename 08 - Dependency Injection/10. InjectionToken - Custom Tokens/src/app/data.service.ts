@@ -5,7 +5,7 @@ import { inject } from '@angular/core';
 import { API_ENDPOINT } from './api.token';
 
 export class DataService {
-  private apiEndpoint = inject(API_ENDPOINT);
+  private readonly apiEndpoint = inject(API_ENDPOINT);
 
   fetchData(): void {
     console.log(`Fetching data from ${this.apiEndpoint}`);
