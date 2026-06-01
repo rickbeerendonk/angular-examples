@@ -2,7 +2,7 @@
 /*! Copyright © 2025 Rick Beerendonk          !*/
 
 import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { MiddleComponent } from "./middle.component";
+import { MiddleComponent } from './middle.component';
 
 @Component({
   selector: 'app',
@@ -17,8 +17,7 @@ import { MiddleComponent } from "./middle.component";
     <hr />
 
     <middle [obj]="myObj"></middle>
-  ` // onKeyUp not handled, but Angular will update bindings after event.
-  ,
+  `, // onKeyUp not handled, but Angular will update bindings after event.
   imports: [MiddleComponent]
 })
 export class AppComponent {
