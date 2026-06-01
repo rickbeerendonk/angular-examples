@@ -19,6 +19,8 @@ export class AppComponent implements AfterViewInit, OnInit {
     this.greetingComponent().name.set('Angular');
   }
 
+  // Lifecycle method:
+  // Called once, after the first ngOnChanges() and before ngAfterViewInit().
   ngOnInit() {
     debugger;
     this.greetingComponent().addPoint();

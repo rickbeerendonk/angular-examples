@@ -8,7 +8,7 @@ import { ChildComponent } from './child.component';
 @Component({
   selector: 'greeting',
   imports: [ChildComponent],
-  styleUrls: ['./greeting.component.css'],
+  styleUrl: './greeting.component.css',
   template: `
     <div>Hello World</div>
     <child />

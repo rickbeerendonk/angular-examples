@@ -1,7 +1,7 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2025 Rick Beerendonk          !*/
 
-import { Component, ElementRef } from '@angular/core';
+import { Component, ElementRef, inject } from '@angular/core';
 
 @Component({
   selector: 'important-anchor',
@@ -9,7 +9,7 @@ import { Component, ElementRef } from '@angular/core';
   standalone: true
 })
 export class ImportantAnchorComponent {
-  constructor(private elementRef: ElementRef) {}
+  private readonly elementRef = inject(ElementRef<HTMLElement>);
 
   ngAfterViewInit() {
     // Get all attributes from host element
@@ -18,9 +18,8 @@ export class ImportantAnchorComponent {
 
     if (anchor) {
       // Transfer all attributes from host to anchor
-      for (let i = 0; i < hostElement.attributes.length; i++) {
-        const attr = hostElement.attributes[i];
-        anchor.setAttribute(attr.name, attr.value);
+      for (const { name, value } of hostElement.attributes) {
+        anchor.setAttribute(name, value);
       }
     }
   }
