@@ -6,8 +6,7 @@ import { Component, input } from '@angular/core';
 @Component({
   selector: 'greet',
   templateUrl: './greet.component.html',
-  styleUrl: './greet.component.css',
-  standalone: true
+  styleUrl: './greet.component.css'
 })
 export class GreetComponent {
   greeting = input('Hello');

@@ -12,8 +12,7 @@ export interface IChangeEvent {
 @Component({
   selector: 'greeting',
   templateUrl: './greeting.component.html',
-  styleUrl: './greeting.component.css',
-  standalone: true
+  styleUrl: './greeting.component.css'
 })
 export class GreetingComponent {
   name = input<string>();

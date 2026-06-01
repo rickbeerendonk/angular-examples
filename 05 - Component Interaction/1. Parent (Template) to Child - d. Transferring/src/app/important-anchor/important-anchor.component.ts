@@ -5,8 +5,7 @@ import { Component, ElementRef, inject } from '@angular/core';
 
 @Component({
   selector: 'important-anchor',
-  templateUrl: './important-anchor.component.html',
-  standalone: true
+  templateUrl: './important-anchor.component.html'
 })
 export class ImportantAnchorComponent {
   private readonly elementRef = inject(ElementRef<HTMLElement>);
