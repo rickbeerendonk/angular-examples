@@ -12,7 +12,7 @@ export interface IChangeEvent {
 @Component({
   selector: 'greeting',
   templateUrl: './greeting.component.html',
-  styleUrls: ['./greeting.component.css'],
+  styleUrl: './greeting.component.css',
   standalone: true
 })
 export class GreetingComponent {

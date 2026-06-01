@@ -6,7 +6,7 @@ import { Component, model } from '@angular/core';
 @Component({
   selector: 'edit-box',
   templateUrl: './edit-box.component.html',
-  styleUrls: ['./edit-box.component.css']
+  styleUrl: './edit-box.component.css'
 })
 export class EditBoxComponent {
   // model() creates a two-way binding signal
