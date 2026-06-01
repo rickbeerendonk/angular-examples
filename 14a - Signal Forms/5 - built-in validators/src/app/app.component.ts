@@ -14,7 +14,7 @@ import {
   selector: 'app-root',
   imports: [FormField],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrl: './app.component.css'
 })
 export class AppComponent {
   signupModel = signal({ email: '', username: '', password: '' });

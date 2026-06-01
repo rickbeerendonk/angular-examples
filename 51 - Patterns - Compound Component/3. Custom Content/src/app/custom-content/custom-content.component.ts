@@ -8,7 +8,7 @@ import { GreetingEditorComponent } from '../greeting-editor/greeting-editor.comp
 @Component({
   selector: 'custom-content',
   templateUrl: './custom-content.component.html',
-  styleUrls: ['./custom-content.component.css']
+  styleUrl: './custom-content.component.css'
 })
 export class CustomContentComponent {
   protected greetingEditor = inject(GreetingEditorComponent);

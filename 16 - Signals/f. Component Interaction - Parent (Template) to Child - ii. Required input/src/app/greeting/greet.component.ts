@@ -7,7 +7,7 @@ import { Component, input } from '@angular/core';
   // Add required property as an attribute to the selector
   selector: 'greet',
   templateUrl: './greet.component.html',
-  styleUrls: ['./greet.component.css']
+  styleUrl: './greet.component.css'
 })
 export class GreetComponent {
   // Required property

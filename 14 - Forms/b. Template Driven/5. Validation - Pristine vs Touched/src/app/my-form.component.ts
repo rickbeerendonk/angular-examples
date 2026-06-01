@@ -8,7 +8,7 @@ import { FormsModule } from '@angular/forms';
 @Component({
   imports: [JsonPipe, FormsModule],
   selector: 'my-form',
-  styleUrls: ['./my-form.component.css'],
+  styleUrl: './my-form.component.css',
   templateUrl: './my-form.component.html'
 })
 export class MyFormComponent {

@@ -8,7 +8,7 @@ import { GreetingEditorComponent } from '../greeting-editor/greeting-editor.comp
 @Component({
   selector: 'greeting',
   templateUrl: './greeting.component.html',
-  styleUrls: ['./greeting.component.css']
+  styleUrl: './greeting.component.css'
 })
 export class GreetingComponent {
   protected greetingEditor = inject(GreetingEditorComponent);

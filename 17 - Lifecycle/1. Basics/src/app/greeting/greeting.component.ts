@@ -13,6 +13,7 @@ import {
   OnChanges,
   OnDestroy,
   DoCheck,
+  inject,
   OnInit,
   SimpleChanges
 } from '@angular/core';
@@ -22,7 +23,7 @@ import { LoggerService } from '../logger/logger.service';
 @Component({
   selector: 'greet',
   templateUrl: './greeting.component.html',
-  styleUrls: ['./greeting.component.css'],
+  styleUrl: './greeting.component.css',
   standalone: true
 })
 export class GreetingComponent
@@ -36,10 +37,12 @@ export class GreetingComponent
     OnDestroy,
     OnInit
 {
+  private readonly loggerService = inject(LoggerService);
+
   name = input<string>();
   count = signal(0);
 
-  constructor(private loggerService: LoggerService) {
+  constructor() {
     this.loggerService.logEvent('constructor', this.name(), this.count());
 
     // React to count signal changes
