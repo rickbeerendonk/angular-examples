@@ -1,7 +1,7 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2025 Rick Beerendonk          !*/
 
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 
 import { LoggerService } from './logger/logger.service';
 
@@ -14,7 +14,9 @@ import { GreetingComponent } from './greeting/greeting.component';
   providers: [LoggerService]
 })
 export class AppComponent {
-  constructor(loggerService: LoggerService) {
-    loggerService.log('AppComponent created.');
+  private readonly loggerService = inject(LoggerService);
+
+  constructor() {
+    this.loggerService.log('AppComponent created.');
   }
 }

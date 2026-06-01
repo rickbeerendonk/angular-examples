@@ -18,8 +18,8 @@ import { GreetingComponent } from './greeting/greeting.component';
   template: '<greeting />'
 })
 export class AppComponent {
-  private logger = inject(Logger);
-  private loggerService = inject(LoggerService);
+  private readonly logger = inject(Logger);
+  private readonly loggerService = inject(LoggerService);
 
   constructor() {
     this.logger.info('AppComponent created.');

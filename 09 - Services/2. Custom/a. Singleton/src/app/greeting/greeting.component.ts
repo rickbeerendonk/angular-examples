@@ -1,14 +1,16 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2025 Rick Beerendonk          !*/
 
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 
 import { LoggerService } from '../logger/logger.service';
 
 @Component({ selector: 'greeting', template: '<h1>Hello {{getName()}}</h1>' })
 export class GreetingComponent {
-  constructor(private loggerService: LoggerService) {
-    loggerService.log('GreetingComponent created.');
+  private readonly loggerService = inject(LoggerService);
+
+  constructor() {
+    this.loggerService.log('GreetingComponent created.');
   }
 
   getName(): string {

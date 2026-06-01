@@ -12,7 +12,7 @@
 // - Updating other signals → use computed() or direct updates
 // - Template rendering → signals auto-update templates
 
-import { Component, effect, OnInit, signal } from '@angular/core';
+import { Component, effect, inject, OnInit, signal } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 
 @Component({
@@ -23,12 +23,13 @@ import { Title } from '@angular/platform-browser';
   `
 })
 export class AppComponent implements OnInit {
+  private readonly title = inject(Title);
   name = signal('World');
 
-  constructor(title: Title) {
+  constructor() {
     // Side effect: Set document title
     effect(() => {
-      title.setTitle(`Hello ${this.name()}`);
+      this.title.setTitle(`Hello ${this.name()}`);
     });
 
     // Side effect: Store in localstorage

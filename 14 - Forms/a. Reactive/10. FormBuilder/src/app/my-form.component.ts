@@ -1,7 +1,7 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2025 Rick Beerendonk          !*/
 
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { JsonPipe } from '@angular/common';
 import {
   FormBuilder,
@@ -20,10 +20,8 @@ import {
   providers: [FormBuilder]
 })
 export class MyFormComponent implements OnInit {
+  private readonly formBuilder = inject(FormBuilder);
   personGroup!: FormGroup;
-
-  // Inject FormBuilder
-  constructor(private formBuilder: FormBuilder) {}
 
   ngOnInit(): void {
     // Use FormBuilder

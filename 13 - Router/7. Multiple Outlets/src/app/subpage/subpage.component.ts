@@ -1,7 +1,7 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2025 Rick Beerendonk          !*/
 
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, inject, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs';
 
@@ -11,11 +11,10 @@ import { Subscription } from 'rxjs';
   templateUrl: './subpage.component.html'
 })
 export class SubpageComponent implements OnInit, OnDestroy {
+  private readonly route = inject(ActivatedRoute);
   id!: number;
 
   subscriberParams!: Subscription;
-
-  constructor(private route: ActivatedRoute) {}
 
   ngOnInit() {
     this.subscriberParams = this.route.paramMap.subscribe(paramMap => {

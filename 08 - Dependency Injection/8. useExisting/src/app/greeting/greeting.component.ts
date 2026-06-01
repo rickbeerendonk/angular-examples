@@ -12,7 +12,7 @@ import { Logger } from '../services/logger';
 export class GreetingComponent {
   // Injects Logger, which is aliased to LoggerService in AppComponent
   // Both will receive the same instance
-  private logger = inject(Logger);
+  private readonly logger = inject(Logger);
 
   constructor() {
     this.logger.warn('GreetingComponent created.');

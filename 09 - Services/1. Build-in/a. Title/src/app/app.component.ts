@@ -1,7 +1,7 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2025 Rick Beerendonk          !*/
 
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 
 @Component({
@@ -12,10 +12,11 @@ import { Title } from '@angular/platform-browser';
   `
 })
 export class AppComponent {
+  private readonly title = inject(Title);
   oldTitle?: string;
 
-  constructor(title: Title) {
-    this.oldTitle = title.getTitle();
-    title.setTitle('Title Demo');
+  constructor() {
+    this.oldTitle = this.title.getTitle();
+    this.title.setTitle('Title Demo');
   }
 }

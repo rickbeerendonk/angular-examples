@@ -18,7 +18,7 @@ import { GreetingComponent } from './greeting/greeting.component';
   template: '<greeting />'
 })
 export class AppComponent {
-  private logger = inject(Logger);
+  private readonly logger = inject(Logger);
 
   constructor() {
     this.logger.info('AppComponent created.');

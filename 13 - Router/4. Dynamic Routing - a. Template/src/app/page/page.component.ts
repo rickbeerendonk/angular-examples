@@ -1,7 +1,7 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2025 Rick Beerendonk          !*/
 
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -9,5 +9,5 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './page.component.html'
 })
 export class PageComponent {
-  constructor(protected route: ActivatedRoute) {}
+  protected readonly route = inject(ActivatedRoute);
 }

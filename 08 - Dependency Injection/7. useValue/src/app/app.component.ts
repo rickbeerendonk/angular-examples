@@ -15,5 +15,5 @@ import { APP_CONFIG, Config } from './config.token';
 export class AppComponent {
   // Inject the configuration object using the InjectionToken
   // The injected value is type-safe thanks to the Config interface
-  public config: Config = inject(APP_CONFIG);
+  public readonly config: Config = inject(APP_CONFIG);
 }

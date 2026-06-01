@@ -10,7 +10,7 @@ import { Logger } from '../services/logger';
   template: '<h1>Hello World</h1>'
 })
 export class GreetingComponent {
-  private logger = inject(Logger);
+  private readonly logger = inject(Logger);
 
   constructor() {
     this.logger.warn('GreetingComponent created.');
