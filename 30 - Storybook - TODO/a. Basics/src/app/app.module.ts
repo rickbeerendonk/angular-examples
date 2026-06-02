@@ -9,8 +9,7 @@ import { EditComponent } from './edit/edit.component';
 import { GreetingComponent } from './greeting/greeting.component';
 
 @NgModule({
-  declarations: [AppComponent, EditComponent, GreetingComponent],
-  imports: [BrowserModule],
+  imports: [BrowserModule, AppComponent, EditComponent, GreetingComponent],
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -1,10 +1,12 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2025 Rick Beerendonk          !*/
 
-import { Component, ChangeDetectorRef } from '@angular/core';
+import { Component, ChangeDetectorRef, inject } from '@angular/core';
+import { GreetingComponent } from './greeting.component';
 
 @Component({
   selector: 'app',
+  imports: [GreetingComponent],
   template: `
     <input autofocus #text />
     <h1>App: Hello {{ text.value }}</h1>
@@ -15,13 +17,15 @@ import { Component, ChangeDetectorRef } from '@angular/core';
   ` // onKeyUp not handled, but Angular will update bindings after event.
 })
 export class AppComponent {
-  constructor(changeDetectorRef: ChangeDetectorRef) {
+  private readonly changeDetectorRef = inject(ChangeDetectorRef);
+
+  constructor() {
     // No automatic change detection
-    changeDetectorRef.detach();
+    this.changeDetectorRef.detach();
 
     // Manual change detection
     setInterval(() => {
-      changeDetectorRef.detectChanges();
+      this.changeDetectorRef.detectChanges();
     }, 2000);
   }
 }

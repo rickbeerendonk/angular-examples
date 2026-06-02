@@ -2,9 +2,11 @@
 /*! Copyright © 2025 Rick Beerendonk          !*/
 
 import { Component } from '@angular/core';
+import { GreetingComponent } from './greeting.component';
 
 @Component({
   selector: 'app',
+  imports: [GreetingComponent],
   template: `
     <greeting>Should be replaced.</greeting>
     <div>Should not be replaced.</div>

@@ -11,7 +11,6 @@ import {
 
 @Component({
   selector: 'display',
-  standalone: true,
   changeDetection: ChangeDetectionStrategy.OnPush, // OnPush change detection
   template: `<span>{{ value() }}</span>`
 })

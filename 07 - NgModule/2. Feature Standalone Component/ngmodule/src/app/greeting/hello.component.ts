@@ -5,7 +5,6 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'hello',
-  standalone: true,
   template: 'Hello'
 })
 export class HelloComponent {}

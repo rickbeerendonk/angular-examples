@@ -2,11 +2,11 @@
 /*! Copyright © 2025 Rick Beerendonk          !*/
 
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'page4',
-  imports: [RouterModule],
+  imports: [RouterLink],
   templateUrl: './page4.component.html'
 })
 export class Page4Component {}

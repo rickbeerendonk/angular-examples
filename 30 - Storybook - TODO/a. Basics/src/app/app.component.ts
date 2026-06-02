@@ -2,9 +2,12 @@
 /*! Copyright © 2019 Rick Beerendonk          !*/
 
 import { Component } from '@angular/core';
+import { EditComponent } from './edit/edit.component';
+import { GreetingComponent } from './greeting/greeting.component';
 
 @Component({
   selector: 'app-root',
+  imports: [EditComponent, GreetingComponent],
   template: `
     <edit [value]="name" (change)="changed($event)"></edit>
     <br />

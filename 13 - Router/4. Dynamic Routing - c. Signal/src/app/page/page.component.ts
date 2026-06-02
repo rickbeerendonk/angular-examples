@@ -7,7 +7,6 @@ import { toSignal } from '@angular/core/rxjs-interop';
 import { map } from 'rxjs/operators';
 
 @Component({
-  standalone: true,
   selector: 'page',
   templateUrl: './page.component.html'
 })

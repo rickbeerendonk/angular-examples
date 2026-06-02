@@ -1,7 +1,7 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2025 Rick Beerendonk          !*/
 
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { AsyncPipe } from '@angular/common';
 
 import { Store } from '@ngrx/store';
@@ -26,11 +26,9 @@ import { increment, decrement } from './state/counter.actions';
   `
 })
 export class CounterComponent {
-  counter$: Observable<CounterFeatureState>;
-
-  constructor(private store: Store) {
-    this.counter$ = this.store.select(selectCounterFeature);
-  }
+  private readonly store = inject(Store);
+  counter$: Observable<CounterFeatureState> =
+    this.store.select(selectCounterFeature);
 
   increment(value: number = 1) {
     this.store.dispatch(increment({ value }));

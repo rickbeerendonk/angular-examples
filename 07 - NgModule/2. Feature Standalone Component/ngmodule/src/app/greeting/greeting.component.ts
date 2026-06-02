@@ -7,7 +7,6 @@ import { HelloComponent } from './hello.component';
 
 @Component({
   selector: 'greeting',
-  standalone: true,
   imports: [HelloComponent],
   template: '<h1><hello /> World</h1>'
 })

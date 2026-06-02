@@ -1,6 +1,6 @@
 /*! Copyright © 2026 Rick Beerendonk !*/
 
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { CounterService } from './counter.service';
 
 @Component({
@@ -10,5 +10,5 @@ import { CounterService } from './counter.service';
   templateUrl: './app.component.html'
 })
 export class AppComponent {
-  constructor(readonly service: CounterService) {}
+  readonly service = inject(CounterService);
 }
