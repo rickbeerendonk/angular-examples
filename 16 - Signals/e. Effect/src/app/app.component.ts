@@ -12,7 +12,7 @@
 // - Updating other signals → use computed() or direct updates
 // - Template rendering → signals auto-update templates
 
-import { Component, effect, inject, OnInit, signal } from '@angular/core';
+import { Component, effect, inject, signal } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 
 @Component({
@@ -22,9 +22,10 @@ import { Title } from '@angular/platform-browser';
     <h1>Hello {{ name() }}</h1>
   `
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   private readonly title = inject(Title);
-  name = signal('World');
+  // Initialize directly from localStorage — no ngOnInit needed
+  name = signal(localStorage.getItem('name') || 'World');
 
   constructor() {
     // Side effect: Set document title
@@ -36,11 +37,6 @@ export class AppComponent implements OnInit {
     effect(() => {
       localStorage.setItem('name', this.name());
     });
-  }
-
-  ngOnInit(): void {
-    // Read from localstorage
-    this.name.set(localStorage.getItem('name') || 'World');
   }
 
   onInput(target: EventTarget | null) {
