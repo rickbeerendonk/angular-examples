@@ -1,0 +1,17 @@
+<h1>Sanitization</h1>
+
+<label>
+  HTML input:<br />
+  <textarea
+    rows="4"
+    cols="60"
+    [value]="html()"
+    (input)="html.set($any($event.target).value)"
+  ></textarea>
+</label>
+
+<h2>Interpolation — always plain text</h2>
+<p>{{ html() }}</p>
+
+<h2>[innerHTML] — sanitized by Angular</h2>
+<p [innerHTML]="html()"></p>
