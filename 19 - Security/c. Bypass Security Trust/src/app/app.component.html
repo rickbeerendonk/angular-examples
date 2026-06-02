@@ -1,0 +1,25 @@
+<h1>Bypass Security Trust</h1>
+
+<h2>SafeUrl — javascript: link</h2>
+<p>Unsafe (blocked by Angular):</p>
+<a [href]="dangerousUrl">Click me (unsafe)</a>
+
+<p>Trusted:</p>
+<a [href]="trustedUrl">Click me (trusted)</a>
+
+<h2>SafeResourceUrl — YouTube iframe</h2>
+<p>Unsafe (blocked by Angular):</p>
+<iframe
+  [src]="dangerousVideoUrl"
+  width="400"
+  height="225"
+  title="unsafe"
+></iframe>
+
+<p>Trusted:</p>
+<iframe
+  [src]="trustedVideoUrl"
+  width="400"
+  height="225"
+  title="trusted"
+></iframe>
