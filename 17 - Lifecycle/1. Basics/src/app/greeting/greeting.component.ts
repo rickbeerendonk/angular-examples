@@ -23,8 +23,7 @@ import { LoggerService } from '../logger/logger.service';
 @Component({
   selector: 'greet',
   templateUrl: './greeting.component.html',
-  styleUrl: './greeting.component.css',
-  standalone: true
+  styleUrl: './greeting.component.css'
 })
 export class GreetingComponent
   implements
