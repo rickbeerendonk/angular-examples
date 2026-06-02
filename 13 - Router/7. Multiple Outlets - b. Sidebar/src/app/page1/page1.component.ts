@@ -2,18 +2,23 @@
 /*! Copyright © 2025 Rick Beerendonk          !*/
 
 import { Component, inject } from '@angular/core';
-import { Router, RouterLink } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
-  imports: [RouterLink],
+  imports: [],
   selector: 'page1',
   templateUrl: './page1.component.html'
 })
 export class Page1Component {
   private router = inject(Router);
 
-  // Example: programmatic navigation to named outlet
+  // router.navigate (without relativeTo) navigates from root,
+  // generating /page1(sidebar:detail/id) — correct for root-level outlets.
   showDetails(id: number) {
     this.router.navigate([{ outlets: { sidebar: ['detail', id] } }]);
+  }
+
+  closeSidebar() {
+    this.router.navigate([{ outlets: { sidebar: null } }]);
   }
 }

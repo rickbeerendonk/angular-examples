@@ -7,17 +7,15 @@
   <p>Navigate to sidebar:</p>
   <ul>
     <li>
-      <a [routerLink]="[{ outlets: { sidebar: ['detail', 123] } }]">
-        Show Details
-      </a>
+      <!-- routerLink generates relative URL /page1/(sidebar:...) which is wrong -->
+      <!-- for root-level outlets; use router.navigate() from root instead       -->
+      <button (click)="showDetails(123)">Show Details</button>
     </li>
     <li>
-      <a [routerLink]="[{ outlets: { sidebar: ['detail', 456] } }]">
-        Show Other Details
-      </a>
+      <button (click)="showDetails(456)">Show Other Details</button>
     </li>
     <li>
-      <a [routerLink]="[{ outlets: { sidebar: null } }]"> Close Sidebar </a>
+      <button (click)="closeSidebar()">Close Sidebar</button>
     </li>
   </ul>
 </nav>

@@ -1,28 +1,18 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2025 Rick Beerendonk          !*/
 
-import { Component, inject, OnInit, OnDestroy } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { Subscription } from 'rxjs';
+import { toSignal } from '@angular/core/rxjs-interop';
+import { map } from 'rxjs/operators';
 
 @Component({
-  standalone: true,
   selector: 'subpage',
   templateUrl: './subpage.component.html'
 })
-export class SubpageComponent implements OnInit, OnDestroy {
+export class SubpageComponent {
   private readonly route = inject(ActivatedRoute);
-  id!: number;
 
-  subscriberParams!: Subscription;
-
-  ngOnInit() {
-    this.subscriberParams = this.route.paramMap.subscribe(paramMap => {
-      this.id = +paramMap.get('id')!; // (+) converts string 'id' to a number
-    });
-  }
-
-  ngOnDestroy() {
-    this.subscriberParams.unsubscribe();
-  }
+  // toSignal() handles subscription and cleanup automatically
+  id = toSignal(this.route.paramMap.pipe(map(params => +params.get('id')!)));
 }
