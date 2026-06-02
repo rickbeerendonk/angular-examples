@@ -1,8 +1,8 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2025 Rick Beerendonk          !*/
 
-import { Component } from '@angular/core';
-import { httpResource } from '@angular/common/http';
+import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 interface Todo {
   userId: number;
@@ -15,9 +15,16 @@ interface Todo {
   selector: 'app',
   templateUrl: './app.component.html'
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   private baseUrl = 'https://jsonplaceholder.typicode.com/todos'; // Free online service
 
-  // httpResource: signal-native HTTP GET with automatic reloads, loading & error state
-  todos = httpResource<Todo[]>(() => this.baseUrl);
+  todos: Todo[] = [];
+
+  constructor(private httpClient: HttpClient) {}
+
+  ngOnInit(): void {
+    this.httpClient.get<Todo[]>(this.baseUrl).subscribe(data => {
+      this.todos = data;
+    });
+  }
 }

@@ -3,12 +3,12 @@
 
 @if (todos.isLoading()) {
   <p>Loading...</p>
-}
-@if (todos.error()) {
+} @else if (todos.error()) {
   <p>Error loading todos</p>
+} @else {
+  <ul>
+    @for (todo of todos.value() ?? []; track todo.id) {
+      <li>{{ todo.completed }} - {{ todo.title }}</li>
+    }
+  </ul>
 }
-<ul>
-  @for (todo of todos.value() ?? []; track todo.id) {
-    <li>{{ todo.completed }} - {{ todo.title }}</li>
-  }
-</ul>
