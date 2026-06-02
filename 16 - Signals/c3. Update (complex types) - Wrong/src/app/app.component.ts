@@ -2,7 +2,6 @@
 /*! Copyright © 2024 Rick Beerendonk          !*/
 
 import { Component, signal } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app',
