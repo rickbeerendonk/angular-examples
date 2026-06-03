@@ -8,6 +8,7 @@ import { LoggerService } from '../services/logger.service';
 @Component({
   selector: 'greeting',
   template: '<h1>Hello World</h1>',
+  //providers: [{ provide: LoggerService, useClass: LoggerService }]
   providers: [LoggerService]
 })
 export class GreetingComponent {
