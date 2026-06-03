@@ -1,7 +1,8 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2025 Rick Beerendonk          !*/
 
-import { Component, OnInit } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { toSignal } from '@angular/core/rxjs-interop';
 import { HttpClient } from '@angular/common/http';
 
 interface Todo {
@@ -15,16 +16,8 @@ interface Todo {
   selector: 'app',
   templateUrl: './app.component.html'
 })
-export class AppComponent implements OnInit {
-  private baseUrl = 'https://jsonplaceholder.typicode.com/todos'; // Free online service
-
-  todos: Todo[] = [];
-
-  constructor(private httpClient: HttpClient) {}
-
-  ngOnInit(): void {
-    this.httpClient.get<Todo[]>(this.baseUrl).subscribe(data => {
-      this.todos = data;
-    });
-  }
+export class AppComponent {
+  private url = 'https://jsonplaceholder.typicode.com/todos'; // Free online service
+  private http = inject(HttpClient);
+  todos = toSignal(this.http.get<Todo[]>(this.url), { initialValue: [] });
 }

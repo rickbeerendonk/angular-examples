@@ -20,4 +20,13 @@ export class AppComponent {
 
   // httpResource: signal-native HTTP GET with automatic reloads, loading & error state
   todos = httpResource<Todo[]>(() => this.baseUrl);
+  other1 = httpResource(() => {
+    todos.value();
+  });
+  other2 = httpResource(() => {
+    todos.value();
+  });
+  result = computed(() => {
+    return other1 + other2;
+  });
 }

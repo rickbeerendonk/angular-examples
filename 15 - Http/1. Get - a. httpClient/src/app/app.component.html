@@ -1,14 +1,8 @@
 <!-- European Union Public License version 1.2 -->
 <!-- Copyright © 2025 Rick Beerendonk -->
 
-@if (todos.isLoading()) {
-  <p>Loading...</p>
-} @else if (todos.error()) {
-  <p>Error loading todos</p>
-} @else {
-  <ul>
-    @for (todo of todos.value() ?? []; track todo.id) {
-      <li>{{ todo.completed }} - {{ todo.title }}</li>
-    }
-  </ul>
-}
+<ul>
+  @for (todo of todos(); track todo.id) {
+    <li>{{ todo.completed }} - {{ todo.title }}</li>
+  }
+</ul>
