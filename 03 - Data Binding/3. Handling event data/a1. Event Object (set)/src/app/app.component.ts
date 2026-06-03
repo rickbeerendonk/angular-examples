@@ -15,7 +15,7 @@ export class AppComponent {
 
   text = signal('World');
 
-  onInput(target: EventTarget | null) {
-    this.text.set((target as HTMLInputElement).value);
+  onInput(target: HTMLInputElement) {
+    this.text.set(target.value);
   }
 }

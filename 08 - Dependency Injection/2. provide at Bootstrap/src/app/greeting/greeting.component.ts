@@ -5,10 +5,7 @@ import { Component, inject } from '@angular/core';
 
 import { LoggerService } from '../services/logger.service';
 
-@Component({
-  selector: 'greeting',
-  template: '<h1>Hello World</h1>'
-})
+@Component({ selector: 'greeting', template: '<h1>Hello World</h1>' })
 export class GreetingComponent {
   private readonly logger = inject(LoggerService);
 
