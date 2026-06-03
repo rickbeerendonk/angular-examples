@@ -11,8 +11,7 @@ import { Component, output } from '@angular/core';
 export class GreetingComponent {
   change = output<string>();
 
-  valueChanged(target: EventTarget | null) {
-    const value = (target as HTMLInputElement).value;
-    this.change.emit(value);
+  valueChanged(target: HTMLInputElement) {
+    this.change.emit(target.value);
   }
 }

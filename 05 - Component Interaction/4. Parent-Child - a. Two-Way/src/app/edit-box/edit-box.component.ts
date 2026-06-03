@@ -13,7 +13,7 @@ export class EditBoxComponent {
   // No need for separate input() and output()
   value = model('World');
 
-  valueChanged(target: EventTarget | null) {
-    this.value.set((target as HTMLInputElement).value);
+  valueChanged(target: HTMLInputElement) {
+    this.value.set(target.value);
   }
 }
