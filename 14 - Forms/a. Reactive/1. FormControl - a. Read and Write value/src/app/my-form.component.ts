@@ -13,13 +13,13 @@ import { FormControl, ReactiveFormsModule } from '@angular/forms';
       <input type="text" [formControl]="name" />
     </label>
     <h1>Hello {{ name.value }}</h1>
-    <button (click)="changeNameToWorld()">Change name...</button>
+    <button (click)="changeName()">Change name...</button>
   `
 })
 export class MyFormComponent {
   name = new FormControl('Angular Form');
 
-  changeNameToWorld() {
+  changeName() {
     debugger;
     this.name.setValue(this.name.value + '.');
     console.log(`New name: ${this.name.getRawValue()}`);
