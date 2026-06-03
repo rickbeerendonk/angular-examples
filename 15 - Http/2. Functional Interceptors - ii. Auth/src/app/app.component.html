@@ -1,0 +1,8 @@
+<h1>Auth Interceptor</h1>
+<p>Open DevTools console to see the Authorization header being added.</p>
+<p>Token: {{ authService.getToken() ?? 'none' }}</p>
+<button (click)="loadTodo()">Load Todo (with token)</button>
+<button (click)="clearToken()">Clear Token</button>
+@if (todo()) {
+  <pre>{{ todo() | json }}</pre>
+}
