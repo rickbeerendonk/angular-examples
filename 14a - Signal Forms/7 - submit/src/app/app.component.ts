@@ -26,9 +26,11 @@ export class AppComponent {
 
   submitted = signal<{ email: string; password: string } | null>(null);
 
-  // submit(form, action) marks all fields touched, gates on validity,
-  // then awaits the action.
-  async onSubmit() {
+  async onSubmit(event: SubmitEvent) {
+    event.preventDefault();
+
+    // submit(form, action) marks all fields touched, gates on validity,
+    // then awaits the action.
     await submit(this.loginForm, async f => {
       this.submitted.set(f().value());
     });

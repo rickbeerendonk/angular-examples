@@ -1,6 +1,6 @@
 <h1>Sign In</h1>
 
-<form (submit)="$event.preventDefault(); onSubmit()" novalidate>
+<form (submit)="onSubmit($event)" novalidate>
   <label>
     Email
     <input type="email" [formField]="loginForm.email" />
