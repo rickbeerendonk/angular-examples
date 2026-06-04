@@ -1,0 +1,7 @@
+<h1>NgComponentOutlet with Inputs</h1>
+<button (click)="toggle()">Switch Component</button>
+<hr />
+<ng-container
+  [ngComponentOutlet]="currentComponent"
+  [ngComponentOutletInputs]="{ name: userName }"
+/>
