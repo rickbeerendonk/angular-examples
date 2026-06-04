@@ -6,8 +6,7 @@ import {
   FormField,
   required,
   minLength,
-  validate,
-  customError
+  validate
 } from '@angular/forms/signals';
 
 @Component({
@@ -28,11 +27,12 @@ export class AppComponent {
     // Cross-field rule: read another field's value via valueOf().
     validate(path.confirmPassword, ({ value, valueOf }) => {
       if (value() !== valueOf(path.password)) {
-        return customError({
+        return {
           kind: 'mismatch',
           message: 'Passwords do not match'
-        });
+        };
       }
+
       return null;
     });
   });
