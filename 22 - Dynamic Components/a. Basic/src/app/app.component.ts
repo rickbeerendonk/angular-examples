@@ -1,9 +1,8 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2023 Rick Beerendonk          !*/
 
-import { CommonModule } from '@angular/common';
-import { Component, OnInit, Type } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { Component, computed, signal, Type } from '@angular/core';
+import { NgComponentOutlet } from '@angular/common';
 
 import { GreetingDutchComponent } from './greeting-dutch.component';
 import { GreetingEnglishComponent } from './greeting-english.component';
@@ -11,63 +10,51 @@ import { GreetingSpanishComponent } from './greeting-spanish.component';
 
 @Component({
   selector: 'app',
-  imports: [CommonModule, FormsModule],
+  imports: [NgComponentOutlet],
   template: `
     <label>
       <input
-        [(ngModel)]="language"
-        name="language"
         type="radio"
+        name="language"
         value="dutch"
+        [checked]="language() === 'dutch'"
+        (change)="language.set('dutch')"
       />
       Dutch
     </label>
     <label>
       <input
-        [(ngModel)]="language"
-        name="language"
         type="radio"
+        name="language"
         value="english"
+        [checked]="language() === 'english'"
+        (change)="language.set('english')"
       />
       English
     </label>
     <label>
       <input
-        [(ngModel)]="language"
-        name="language"
         type="radio"
+        name="language"
         value="spanish"
+        [checked]="language() === 'spanish'"
+        (change)="language.set('spanish')"
       />
       Spanish
     </label>
 
     <div style="background: bisque">
       <ng-container
-        *ngComponentOutlet="greetingLanguageComponent"
+        *ngComponentOutlet="greetingLanguageComponent()"
       ></ng-container>
     </div>
   `
 })
-export class AppComponent implements OnInit {
-  private _language = 'english';
+export class AppComponent {
+  language = signal('english');
 
-  get language(): string {
-    return this._language;
-  }
-
-  set language(value: string) {
-    this._language = value;
-    this.greetingLanguageComponent = this.getGreetingLanguageComponent();
-  }
-
-  greetingLanguageComponent!: Type<any>;
-
-  ngOnInit() {
-    this.greetingLanguageComponent = this.getGreetingLanguageComponent();
-  }
-
-  getGreetingLanguageComponent() {
-    switch (this.language) {
+  greetingLanguageComponent = computed((): Type<any> => {
+    switch (this.language()) {
       case 'dutch':
         return GreetingDutchComponent;
       case 'spanish':
@@ -76,7 +63,7 @@ export class AppComponent implements OnInit {
         // english
         return GreetingEnglishComponent;
     }
-  }
+  });
 }
 
 export default AppComponent;
