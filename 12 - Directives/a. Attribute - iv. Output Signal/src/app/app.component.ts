@@ -1,7 +1,7 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2025 Rick Beerendonk          !*/
 
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 import { EmphasisDirective } from './emphasis.directive';
 
@@ -10,7 +10,7 @@ import { EmphasisDirective } from './emphasis.directive';
   imports: [EmphasisDirective],
   template: `
     <h1>Attribute Directives - output()</h1>
-    <p>Hover state: {{ hoverState }}</p>
+    <p>Hover state: {{ hoverState() }}</p>
     <hr />
     <p>This is a normal paragraph.</p>
     <p emphasis (hoverStateChanged)="onHoverChange($event)">
@@ -19,9 +19,9 @@ import { EmphasisDirective } from './emphasis.directive';
   `
 })
 export class AppComponent {
-  hoverState = 'not hovering';
+  hoverState = signal('not hovering');
 
   onHoverChange(isHovering: boolean): void {
-    this.hoverState = isHovering ? 'hovering' : 'not hovering';
+    this.hoverState.set(isHovering ? 'hovering' : 'not hovering');
   }
 }
