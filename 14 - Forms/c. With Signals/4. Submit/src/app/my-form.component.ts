@@ -3,7 +3,7 @@
 
 import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 import { JsonPipe } from '@angular/common';
-import { form, Field } from '@angular/forms/signals';
+import { form, FormField } from '@angular/forms/signals';
 
 interface LoginData {
   email: string;
@@ -12,21 +12,21 @@ interface LoginData {
 
 @Component({
   selector: 'my-form',
-  imports: [Field, JsonPipe],
+  imports: [FormField, JsonPipe],
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <form (submit)="onSubmit($event)">
       <label>
         Email:
-        <input type="email" [field]="loginForm.email" />
+        <input type="email" [formField]="loginForm.email" />
       </label>
       <label>
         Password:
-        <input type="password" [field]="loginForm.password" />
+        <input type="password" [formField]="loginForm.password" />
       </label>
       <button type="submit">Log In</button>
     </form>
-    @if (submitted) {
+    @if (submitted()) {
       <p>Submitted: {{ loginModel() | json }}</p>
     }
   `,
@@ -46,13 +46,13 @@ export class MyFormComponent {
   });
 
   loginForm = form(this.loginModel);
-  submitted = false;
+  submitted = signal(false);
 
   onSubmit(event: Event) {
     event.preventDefault();
     // Access the form data from the model signal
     const credentials = this.loginModel();
     console.log('Logging in with:', credentials);
-    this.submitted = true;
+    this.submitted.set(true);
   }
 }
