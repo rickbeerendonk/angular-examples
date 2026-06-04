@@ -1,7 +1,7 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2025 Rick Beerendonk          !*/
 
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { NgSwitch, NgSwitchCase, NgSwitchDefault } from '@angular/common';
 
 @Component({
@@ -11,5 +11,5 @@ import { NgSwitch, NgSwitchCase, NgSwitchDefault } from '@angular/common';
   templateUrl: './app.component.html'
 })
 export class AppComponent {
-  countryCode: string = 'NL';
+  countryCode = signal('NL');
 }

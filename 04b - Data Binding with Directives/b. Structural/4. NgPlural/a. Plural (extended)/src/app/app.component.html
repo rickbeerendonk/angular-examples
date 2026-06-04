@@ -1,7 +1,7 @@
 <!-- European Union Public License version 1.2 -->
 <!-- Copyright © 2025 Rick Beerendonk -->
 
-<div [ngPlural]="count">
+<div [ngPlural]="count()">
   <!-- Values: zero, one, two, few, many, other -->
   <!-- Cases covered depend on the language in angular.json:
     https://unicode-org.github.io/cldr-staging/charts/latest/supplemental/language_plural_rules.html -->
@@ -10,5 +10,5 @@
   <ng-template ngPluralCase="=2">There is two things</ng-template>
   <ng-template ngPluralCase="few">There are a few things</ng-template>
   <ng-template ngPluralCase="many">There are many things</ng-template>
-  <ng-template ngPluralCase="other">There are {{ count }} things</ng-template>
+  <ng-template ngPluralCase="other">There are {{ count() }} things</ng-template>
 </div>
