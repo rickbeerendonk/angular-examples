@@ -1,23 +1,23 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2021 Rick Beerendonk          !*/
 
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 @Component({
   selector: 'greeting',
   template: `
-    <button (click)="setRecursive()" [disabled]="recursive">
+    <button (click)="setRecursive()" [disabled]="recursive()">
       Hello World!
     </button>
-    @if (recursive) {
+    @if (recursive()) {
       <greeting />
     }
   `
 })
 export class GreetingComponent {
-  recursive = false;
+  recursive = signal(false);
 
   setRecursive() {
-    this.recursive = true;
+    this.recursive.set(true);
   }
 }

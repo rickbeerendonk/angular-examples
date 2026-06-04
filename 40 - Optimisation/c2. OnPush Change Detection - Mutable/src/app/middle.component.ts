@@ -1,7 +1,7 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2025 Rick Beerendonk          !*/
 
-import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
+import { Component, ChangeDetectionStrategy, input } from '@angular/core';
 import { BottomComponent } from './bottom.component';
 
 @Component({
@@ -12,10 +12,10 @@ import { BottomComponent } from './bottom.component';
 
     <hr />
 
-    <bottom [obj]="obj" />
+    <bottom [obj]="obj()" />
   `,
   imports: [BottomComponent]
 })
 export class MiddleComponent {
-  @Input() obj = { text: '' };
+  obj = input({ text: '' });
 }

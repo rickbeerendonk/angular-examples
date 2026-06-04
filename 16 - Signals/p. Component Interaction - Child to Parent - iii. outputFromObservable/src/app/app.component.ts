@@ -1,7 +1,7 @@
 /*! European Union Public License version 1.2 !*/
 /*! Copyright © 2026 Rick Beerendonk          !*/
 
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 import { TimerComponent } from './timer/timer.component';
 
@@ -10,13 +10,13 @@ import { TimerComponent } from './timer/timer.component';
   imports: [TimerComponent],
   template: `
     <timer (tick)="onTick($event)" />
-    <p>Ticks received: {{ count }}</p>
+    <p>Ticks received: {{ count() }}</p>
   `
 })
 export class AppComponent {
-  count = 0;
+  count = signal(0);
 
   onTick(value: number) {
-    this.count = value + 1;
+    this.count.set(value + 1);
   }
 }
